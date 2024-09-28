@@ -1,0 +1,20 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

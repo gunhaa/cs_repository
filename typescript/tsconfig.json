@@ -1,0 +1,19 @@
+{
+    "include": ["src"],
+    "compilerOptions": {
+        // 컴파일 명령어
+        "outDir": "build" ,
+        // 컴파일할 js의 버전을 고른다.
+        "target": "ES6",
+        // 어떤 환경에서 코드가 실행되고, 어떤 API를 실행하는지를 알려준다.
+        // 즉 DOM을 적어준다면, DOM 관련 자동완성을 할 수있음
+        "lib" : ["ES6"],
+        // "allowJs" : true, js와 ts를 동시에 사용할수 있게
+        "strict" : true,
+        "esModuleInterop": true,
+        "module" : "CommonJS",
+        "noEmitOnError": false  // 에러가 있어도 컴파일을 진행
+    }
+
+    
+}
