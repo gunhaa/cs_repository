@@ -29,7 +29,7 @@ phone_book	return
 첫 번째 전화번호, “12”가 두 번째 전화번호 “123”의 접두사입니다. 따라서 답은 false입니다.
 
 */
-function solution(phone_book) {
+function solution51(phone_book) {
     let answer = true;
     let sortArr = phone_book.sort();
     for (let i = 0; i < sortArr.length; i++) {
