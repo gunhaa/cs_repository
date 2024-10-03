@@ -10,7 +10,7 @@ class Stack {
     pop() {
         let popElemnet = this.arr[this.arr.length - 1];
         console.log(popElemnet);
-        this.arr.splice(this.arr.length - 1);
+        this.arr.splice(this.arr.length - 1, 1);
         return popElemnet;
     }
 }
