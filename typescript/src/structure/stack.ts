@@ -1,38 +1,93 @@
-class Stack<T>{
+class Stack<T> {
 
-    arr : T[];
+    items: T[];
+    topIndex: number;
+    capacity: number;
 
-    virus : number;
-
-    constructor(arr : T[]){
-        this.arr = arr;
-        this.virus = 1;
+    constructor(capacity: number) {
+        this.items = new Array(capacity);
+        this.capacity = capacity;
+        this.topIndex = -1;
     }
 
-    push(param : any){
-        return this.arr.push(param);
+    push(item: T) {
+
+
+        if (this.topIndex + 1 >= this.capacity) {
+            console.log(`resize 실행, topindex : ${this.topIndex}`);
+            this.resize();
+        }
+
+        this.items[++this.topIndex]=item;
+
+    }
+
+    resize() {
+
+        this.capacity *= 2;
+
+        let newitems = new Array(this.capacity);
+
+        newitems = [...this.items];
+
+        this.items = newitems;
+    }
+
+    print(){
+        return console.log(this.items.join(", "));
+    }
+
+    top(){
+        return console.log(`맨 위 element : ${this.items[this.topIndex]}`);
     }
 
     pop(){
+        console.log(`해당 element를 반환하고 삭제 하였음 : ${this.items[this.topIndex]}`);
+        this.topIndex--;
 
-        let popElemnet = this.arr[this.arr.length-1];
-        console.log(popElemnet);
+        console.log(`그 결과 topIndex : ${this.topIndex}`);
 
-        this.arr.splice(this.arr.length-1,1);
-        return popElemnet;
+        return this.items[this.topIndex];
+    }
+
+    isEmpty(){
+
+        let bool = true;
+
+        if(this.items.filter(item => item !== undefined).length > 0){ // 
+            bool = false;
+        }
+
+        return bool;
+    
+    }
+
+    popAll(){
+
+        let newitems = new Array(this.capacity);
+
+        this.items=[...newitems];
+
+        this.topIndex = -1;
+
     }
 
 }
 
-
-
-
-let stack = new Stack([1,2]);
-
-console.log(stack);
-
+let stack = new Stack<Number>(2);
+let stack2 = new Stack<Number>(3);
+stack.push(1);
+stack.push(2);
 stack.push(3);
-console.log(stack);
-
+stack.push(4);
+stack.push(5);
+stack.push(6);
+stack.push(7);
+stack.push(8);
+stack.print();
+stack.top();
 stack.pop();
-console.log(stack);
+console.log(stack.isEmpty());
+console.log(stack2.isEmpty());
+stack.popAll();
+stack.print();
