@@ -1,11 +1,11 @@
 class Stack<T> {
 
-    items: T[];
-    topIndex: number;
+    stack: T[];
+    topIndex: number; // 최근에 삽입된 원소의 인덱스
     capacity: number;
 
     constructor(capacity: number) {
-        this.items = new Array(capacity);
+        this.stack = new Array(capacity);
         this.capacity = capacity;
         this.topIndex = -1;
     }
@@ -18,43 +18,38 @@ class Stack<T> {
             this.resize();
         }
 
-        this.items[++this.topIndex]=item;
+        this.stack[++this.topIndex]=item;
 
     }
 
     resize() {
-
-        this.capacity *= 2;
-
-        let newitems = new Array(this.capacity);
-
-        newitems = [...this.items];
-
-        this.items = newitems;
+        let resizeLength = this.capacity*2
+        this.stack.length = resizeLength;
+        this.capacity = resizeLength;
     }
 
     print(){
-        return console.log(this.items.join(", "));
+        return console.log(this.stack.join(", "));
     }
 
     top(){
-        return console.log(`맨 위 element : ${this.items[this.topIndex]}`);
+        return console.log(`맨 위 element : ${this.stack[this.topIndex]}`);
     }
 
     pop(){
-        console.log(`해당 element를 반환하고 삭제 하였음 : ${this.items[this.topIndex]}`);
+        console.log(`해당 element를 반환하고 삭제 하였음 : ${this.stack[this.topIndex]}`);
         this.topIndex--;
 
         console.log(`그 결과 topIndex : ${this.topIndex}`);
 
-        return this.items[this.topIndex];
+        return this.stack[this.topIndex];
     }
 
     isEmpty(){
 
         let bool = true;
 
-        if(this.items.filter(item => item !== undefined).length > 0){ // 
+        if(this.stack.filter(item => item !== undefined).length > 0){ // 
             bool = false;
         }
 
@@ -64,9 +59,9 @@ class Stack<T> {
 
     popAll(){
 
-        let newitems = new Array(this.capacity);
+        let newstack = new Array(this.capacity);
 
-        this.items=[...newitems];
+        this.stack=[...newstack];
 
         this.topIndex = -1;
 
