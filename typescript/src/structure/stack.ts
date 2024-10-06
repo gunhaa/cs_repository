@@ -22,7 +22,7 @@ class Stack<T> {
 
     }
 
-    resize() {
+    private resize() {
         let resizeLength = this.capacity*2
         this.stack.length = resizeLength;
         this.capacity = resizeLength;

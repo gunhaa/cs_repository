@@ -26,7 +26,7 @@ class Queue<T>{
         this.tail++;
     }
 
-    resize(){
+    private resize(){
         let resizeLength = this.capacity*2
         this.queue.length = resizeLength;
         this.capacity = resizeLength;
