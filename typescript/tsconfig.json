@@ -1,5 +1,5 @@
 {
-    "include": ["src"],
+    "include": ["src", "src/structure/sort/.ts"],
     "compilerOptions": {
         // 컴파일 명령어
         "outDir": "build" ,

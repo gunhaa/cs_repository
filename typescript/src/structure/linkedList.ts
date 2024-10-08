@@ -21,7 +21,7 @@ class linkedList<T> {
     }
 
     // append는 연결리스트의 마지막에 node를 추가시킨다.
-    append(value: T) {
+    public append(value: T) {
 
         let newNode = new Node<T>(value);
 
@@ -48,7 +48,7 @@ class linkedList<T> {
 
     }
 
-    print() {
+    public print() {
 
         let element : T[] = [];
 

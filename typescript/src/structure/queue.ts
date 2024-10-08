@@ -15,7 +15,7 @@ class Queue<T>{
         this.tail = 0;
     }
 
-    enqueue(item : T){
+    public enqueue(item : T){
 
         if(this.numItems >= this.capacity){
             this.resize();
@@ -33,7 +33,7 @@ class Queue<T>{
         console.log(`용량이 부족해서 추가됨`);
     }
 
-    dequeue(){
+    public dequeue(){
         if(this.isEmpty()){
             console.log("삭제 할 원소가 없음");
             return;
@@ -45,16 +45,16 @@ class Queue<T>{
     }
 
 
-    frontElement(){
+    public frontElement(){
         return console.log(this.queue[this.front]);
     }
 
-    isEmpty(){
+    public isEmpty(){
         console.log(this.queue.filter(item => item !== undefined).length === 0)
         return this.queue.filter(item => item !== undefined).length === 0;
     }
 
-    dequeueAll(){
+    public dequeueAll(){
         let newQueue = new Array(this.capacity);
         this.queue = [...newQueue];
         this.numItems = 0;

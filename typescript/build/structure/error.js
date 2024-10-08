@@ -30,3 +30,11 @@ const test = (length, iterate, item) => {
     }
 };
 test(5, 6, 1);
+//test
+//test2
+//test2
+//test2
+//test2
+//test2
+//test2
+//ArrayBufferOverFlow: Buffer has maximum size, date : Mon Oct 07 2024 15:43:01 GMT+0900 (대한민국 표준시)

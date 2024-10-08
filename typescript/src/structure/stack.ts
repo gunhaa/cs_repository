@@ -10,7 +10,7 @@ class Stack<T> {
         this.topIndex = -1;
     }
 
-    push(item: T) {
+    public push(item: T) {
 
 
         if (this.topIndex + 1 >= this.capacity) {
@@ -28,15 +28,15 @@ class Stack<T> {
         this.capacity = resizeLength;
     }
 
-    print(){
+    public print(){
         return console.log(this.stack.join(", "));
     }
 
-    top(){
+    public top(){
         return console.log(`맨 위 element : ${this.stack[this.topIndex]}`);
     }
 
-    pop(){
+    public pop(){
         console.log(`해당 element를 반환하고 삭제 하였음 : ${this.stack[this.topIndex]}`);
         this.topIndex--;
 
@@ -45,7 +45,7 @@ class Stack<T> {
         return this.stack[this.topIndex];
     }
 
-    isEmpty(){
+    public isEmpty(){
 
         let bool = true;
 
