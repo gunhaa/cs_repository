@@ -41,7 +41,7 @@ face에 해당하는 의상이 crow_mask, blue_sunglasses, smoky_makeup이므로
 2. blue_sunglasses
 3. smoky_makeup
 */
-function solution(clothes) {
+function solution61(clothes) {
     let answer = 0;
     let arrHeadgear;
     let arr;
