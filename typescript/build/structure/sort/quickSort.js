@@ -16,6 +16,7 @@ const qSort = (p, r, list) => {
 };
 const partition = (p, r, list) => {
     console.log(`partition`);
+    // pivot
     let x = list[r];
     let i = p - 1;
     let temp;
