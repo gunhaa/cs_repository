@@ -12,7 +12,7 @@
 */
 
 
-function solution (s: string){
+function solution10 (s: string){
 
     let stack : any = [];
 
@@ -77,8 +77,8 @@ function solutionTimeOut(s: string) {
     }
 
 }
-solution("()()");
-console.log(solution("()()"));
-console.log(solution("(())()"));
-console.log(solution(")()("));
-console.log(solution("(()("));
+// solution("()()");
+// console.log(solution("()()"));
+// console.log(solution("(())()"));
+// console.log(solution(")()("));
+// console.log(solution("(()("));

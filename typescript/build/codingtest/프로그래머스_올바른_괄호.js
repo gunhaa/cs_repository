@@ -11,7 +11,7 @@
 문자열 s의 길이 : 100,000 이하의 자연수
 문자열 s는 '(' 또는 ')' 로만 이루어져 있습니다.
 */
-function solution(s) {
+function solution10(s) {
     let stack = [];
     for (let item of s) {
         if (item === "(") {
@@ -54,8 +54,8 @@ function solutionTimeOut(s) {
         return false;
     }
 }
-solution("()()");
-console.log(solution("()()"));
-console.log(solution("(())()"));
-console.log(solution(")()("));
-console.log(solution("(()("));
+// solution("()()");
+// console.log(solution("()()"));
+// console.log(solution("(())()"));
+// console.log(solution(")()("));
+// console.log(solution("(()("));
