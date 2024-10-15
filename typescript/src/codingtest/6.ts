@@ -41,19 +41,44 @@ face에 해당하는 의상이 crow_mask, blue_sunglasses, smoky_makeup이므로
 3. smoky_makeup
 */
 
-function solution61(clothes : string[][]) {
+function solution61(clothes: string[][]) {
 
+    let kind: any[] = [];
 
-    let answer = 0;
-    
-    let arrHeadgear;
-    let arr
+    for (let i = 0; i < clothes.length; i++) {
 
-    for(let i=0; i<clothes.length ; i++){
-        if(clothes[i][1]=="headgear"){
+        const currentKind = clothes[i][1];
+
+        // 없으면 false 반환
+        const exist = kind.some(item => item.kind === currentKind);
+        // console.log(currentKind);
+        // console.log(exist);
+        if(!exist){
+            
+            kind.push({kind : currentKind , count : 1 })
+        
+        } else {
+
+            kind.find(item => item.kind === currentKind).count++;
 
         }
+
+
     }
+
     
-    return answer;
+    let answer = 1;
+
+    for(let item of kind){
+
+        answer=(item.count+1)*answer;
+        console.log(answer);
+
+    }
+
+
+    return answer-1;
+
 }
+
+solution61([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]);

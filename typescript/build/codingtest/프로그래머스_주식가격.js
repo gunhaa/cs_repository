@@ -19,7 +19,7 @@ prices      	return
 
 
 */
-function solution(prices) {
+function solution_stock1(prices) {
     let answer = [];
     for (let i = 0; i < prices.length; i++) {
         let t = 0;
@@ -36,4 +36,22 @@ function solution(prices) {
     }
     return answer;
 }
-console.log(solution([1, 2, 3, 2, 3]));
+function solution_stock2(prices) {
+    const answer = new Array(prices.length).fill(0);
+    const stack = []; // 스택을 사용하여 인덱스를 저장
+    for (let i = 0; i < prices.length; i++) {
+        // 스택이 비어있지 않고 현재 가격이 스택의 가장 위 인덱스 가격보다 작으면
+        while (stack.length > 0 && prices[i] < prices[stack[stack.length - 1]]) {
+            const idx = stack.pop(); // 인덱스를 꺼내고
+            answer[idx] = i - idx; // 가격이 떨어지는 시간을 계산
+        }
+        stack.push(i); // 현재 인덱스를 스택에 추가
+    }
+    // 남아있는 인덱스는 가격이 떨어지지 않으므로, 전체 길이에서 인덱스를 빼서 계산
+    while (stack.length > 0) {
+        const idx = stack.pop();
+        answer[idx] = prices.length - 1 - idx;
+    }
+    return answer;
+}
+// console.log(solution([1, 2, 3, 2, 3]));

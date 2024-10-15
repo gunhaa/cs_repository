@@ -45,7 +45,7 @@ function solution_stock1(prices : any[]) {
 
 function solution_stock2(prices : any[]) {
     const answer = new Array(prices.length).fill(0);
-    const stack = []; // 스택을 사용하여 인덱스를 저장합니다.
+    const stack = []; // 스택을 사용하여 인덱스를 저장
 
     for (let i = 0; i < prices.length; i++) {
         // 스택이 비어있지 않고 현재 가격이 스택의 가장 위 인덱스 가격보다 작으면
