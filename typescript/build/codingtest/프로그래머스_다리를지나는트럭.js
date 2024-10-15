@@ -26,7 +26,7 @@ truck_weights의 길이는 1 이상 10,000 이하입니다.
 
 */
 // 이상한문제임
-function solution(bridge_length, weight, truck_weights) {
+function solution_truck(bridge_length, weight, truck_weights) {
     let bridge = new Array(bridge_length).fill(0);
     let time = 0;
     while (bridge.length) {
@@ -45,5 +45,5 @@ function solution(bridge_length, weight, truck_weights) {
     console.log(time);
     return time;
 }
-solution(2, 10, [7, 4, 5, 6]);
-solution(100, 100, [10]);
+// solution(2,10,[7,4,5,6]);
+// solution(100,100,[10]);
