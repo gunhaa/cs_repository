@@ -22,7 +22,7 @@ n	wires	                                            result
 
 */
 
-function solution(n : number, wires : number[][]) {
+function solution_divide(n : number, wires : number[][]) {
     var answer = Infinity;
     const tree = initializeTree(n, wires);
     
