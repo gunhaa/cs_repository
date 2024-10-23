@@ -12,7 +12,7 @@
 <br>
 
 
-# 데이터 구조/CS STUDY
+# CS STUDY
 
 ## 목표
 
