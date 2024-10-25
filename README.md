@@ -19,7 +19,7 @@
 
 > https://github.com/jwasham/coding-interview-university 같은 github repository 만드는 것을 목표로한다.
 > https://velog.io/@gunhaa/posts<br>
-> https://www.notion.so/STUDY-111e604cdb0580bfab1bf6ecaef59f5c 에 정리된 내용을 다시 한번 정리한다.
+> https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62 에 정리된 내용을 다시 한번 정리한다.
 
 - 다음의 항목들을 목차로 CS를 정리한다.
    - [개발 상식](#개발-상식)
