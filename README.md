@@ -18,8 +18,10 @@
 ## 목표
 
 > https://github.com/jwasham/coding-interview-university 같은 github repository 만드는 것을 목표로한다.
+
 > https://velog.io/@gunhaa/posts<br>
 > https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62 에 정리된 내용을 다시 한번 정리한다.
+
 
 - 다음의 항목들을 목차로 CS를 정리한다.
    - [개발 상식](#개발-상식)
@@ -32,29 +34,42 @@
 ---
 
 ### 개발 상식
-
+- [프로그래밍이란?](CS/CommonSense/Programing.md)
 - [클린코드/주석](CS/CommonSense/CleanCode.md)
 - [TDD(Test Driven Development)](CS/CommonSense/TDD.md)
-- [객체 지향 프로그래밍(OOP)](CS/CommonSense/OOP.md)
+- [OOP(Object-Oriented Programming)](CS/CommonSense/OOP.md)
 - [SOLID](CS/CommonSense/SOLID.md)
 - [DRY](CS/CommonSense/DRY.md)
 - [WATERFALL](CS/CommonSense/WaterFall.md)
 - [AGILE](CS/CommonSense/Agile.md) 
+- [프로토콜](CS/CommonSense/Protocol.md)
+- [Base64](CS/CommonSense/Base64.md)
+- [CRDT]
+- [CORS]
+- [CI/CD]
+- [Load Balancing]
 - [개발 상식 인터뷰 예상 질문]
-
----
-
-### 네트워크
-
 
 
 ---
 
 ### 운영체제
 
+- [컴퓨터의 기본 구조](CS/OS/Computer.md)
+- [운영체제란?](CS/OS/OperationSystem.md)
+- [가상메모리/페이지교체](CS/OS/paging.md)
+- [파일시스템](CS/OS/File.md)
+- [System Call](CS/OS/SystemCall.md)
+- [프로세스와 스레드](CS/OS/Process&Thread.md)
+
 ---
 
-### 데이터
+### 네트워크
+
+
+---
+
+### 데이터베이스
 
 ---
 
