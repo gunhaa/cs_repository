@@ -44,10 +44,10 @@
 - [AGILE](CS/CommonSense/Agile.md) 
 - [프로토콜](CS/CommonSense/Protocol.md)
 - [Base64](CS/CommonSense/Base64.md)
-- [CRDT]
-- [CORS]
-- [CI/CD]
-- [Load Balancing]
+- [CRDT(Conflict-free Replicated Data Type)/LWW-Register](CS/CommonSense/CRDT.md)
+- [CORS](CS/CommonSense/CORS.md)
+- [CI/CD](CS/CommonSense/CI_CD.md)
+- [Load Balancing](CS/CommonSense/Load_Balancing.md)
 - [개발 상식 인터뷰 예상 질문]
 
 
@@ -61,12 +61,14 @@
 - [파일시스템](CS/OS/File.md)
 - [System Call](CS/OS/SystemCall.md)
 - [프로세스와 스레드](CS/OS/Process&Thread.md)
+- [동시성제어](CS/OS/Concurrency.md)
 
 ---
 
 ### 네트워크
 
-
+- [네트워크의 목표](CS/Network/object.md)
+- [OSI 7 계층](CS/Network/OSI7.md)
 ---
 
 ### 데이터베이스
