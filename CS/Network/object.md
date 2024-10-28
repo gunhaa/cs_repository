@@ -23,3 +23,7 @@
 ### 무선 유선이 둘다 연결되있으면 무엇을 사용하는가?
 
 라우팅 테이블에서 메트릭 값이 낮은 경로를 사용한다.
+
+### network흐름 요약
+
+![networkrecap](images/networkrecap.png)

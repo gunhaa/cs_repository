@@ -3,10 +3,9 @@
 ## 목표
 - 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
   - 코드를 보지 않고 pseudo-code와 개념만 보고 구현하기
-- 프로그래머스 문제(lv1 ~ lv3) 일 1~2개씩 풀기 or 자료구조 이미 공부한것 다시 빠르게 구현
-- 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 github에 기록하면서 다시 풀기
-- lv0~lv1 프로그래머스 문제 전부 풀기
-- 다른 할 것이 많더라도 쉬운문제라도 한 문제는 풀기
+- 자료구조 이미 공부한것 다시 빠르게 구현
+- 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 해당 레포지토리에 기록하면서 다시 풀기
+- 하루에 한 문제는 꼭 풀기
 
 ---
 
@@ -48,7 +47,6 @@
 - [CORS](CS/CommonSense/CORS.md)
 - [CI/CD](CS/CommonSense/CI_CD.md)
 - [Load Balancing](CS/CommonSense/Load_Balancing.md)
-- [개발 상식 인터뷰 예상 질문]
 
 
 ---
@@ -57,7 +55,7 @@
 
 - [컴퓨터의 기본 구조](CS/OS/Computer.md)
 - [운영체제란?](CS/OS/OperationSystem.md)
-- [가상메모리/페이지교체](CS/OS/paging.md)
+- [가상메모리/페이지교체](CS/OS/Paging.md)
 - [파일시스템](CS/OS/File.md)
 - [System Call](CS/OS/SystemCall.md)
 - [프로세스와 스레드](CS/OS/Process&Thread.md)
@@ -69,9 +67,29 @@
 
 - [네트워크의 목표](CS/Network/object.md)
 - [OSI 7 계층](CS/Network/OSI7.md)
+- [TCP/IP 모델](CS/Network/TCP_IP.md)
+- [TCP/UDP 프로토콜](CS/Network/TCP_UDP.md)
+- [HTTP/HTTPS 프로토콜](CS/Network/Http.md)
+- [Http 상태코드](CS/Network/HttpError.md)
+- [WebSocket 프로토콜](CS/Network/Websocket.md)
+- [3-way-hanshake(http - Keep-alive, stateless)](CS/Network/3way.md)
+- [http프로토콜 버전 별 차이](CS/Network/Httpversion.md)
+- [Socket이란?](CS/Network/Socket.md)
+
 ---
 
 ### 데이터베이스
+
+- [데이터베이스의 정의](CS/Database/Database.md)
+- [SQL]
+- [DDL, DML, DCL, TCL]()
+- [SQL vs NoSQL]()
+- [Transaction]()
+- [Index]()
+- [SQL injection]()
+- [ACID]()
+- [데이터 정규화]()
+
 
 ---
 
