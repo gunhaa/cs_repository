@@ -81,24 +81,25 @@
 ### 데이터베이스
 
 - [데이터베이스의 정의](CS/Database/Database.md)
-- [SQL]
-- [DDL, DML, DCL, TCL]()
-- [SQL vs NoSQL]()
-- [Transaction]()
-- [Index]()
-- [SQL injection]()
-- [ACID]()
-- [데이터 정규화]()
+- [SQL](CS/Database/SQL.md)
+- [DDL, DML, DCL, TCL](CS/Database/DDL.md)
+- [Transaction](CS/Database/Transaction.md)
+- [ACID](CS/Database/ACID.md)
+- [SQL vs NoSQL](CS/Database/SqlnoSql.md)
+- [Index](CS/Database/Index.md)
+- [데이터 정규화](CS/Database/normalization.md)
 
 
 ---
 
+### 언어별 특징(JAVA)
+- [JAVA란?](CS/JAVA/JAVA.md)
+- [JAVA 컴파일 과정]
+
+
+### 언여별 특징(Javascript)
+
+
 ### 디자인 패턴
 
 --- 
-
-### 언어별 특징
-
-- JAVA
-
-- Javascript
