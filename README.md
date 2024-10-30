@@ -4,8 +4,9 @@
 - 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
   - 코드를 보지 않고 pseudo-code와 개념만 보고 구현하기
 - 자료구조 이미 공부한것 다시 빠르게 구현
-- 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 해당 레포지토리에 기록하면서 다시 풀기
-- 하루에 한 문제는 꼭 풀기
+- 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 해당 레포지토리에 기록
+- 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push
+- 하루에 한 문제는 풀기
 
 ---
 
@@ -20,6 +21,22 @@
 
 > https://velog.io/@gunhaa/posts<br>
 > https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62 에 정리된 내용을 다시 한번 정리한다.
+
+---
+
+### 참고 영상/책
+
+> https://www.youtube.com/@nullnull_not_eq_null/playlists
+
+> 자바스크립트 패턴과 테스트 / https://www.yes24.com/Product/Goods/33211518
+
+> 이펙티브 자바 / https://www.yes24.com/Product/Goods/65551284
+
+> 쉽게 배우는 자료구조 with JAVA / https://www.yes24.com/Product/Goods/106400387
+
+> JVM 밑바닥까지 파헤치기 / https://www.yes24.com/Product/Goods/126114513
+
+---
 
 
 - 다음의 항목들을 목차로 CS를 정리한다.
