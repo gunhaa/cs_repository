@@ -19,14 +19,16 @@
 
 > https://github.com/jwasham/coding-interview-university 같은 github repository 만드는 것을 목표로한다.
 
-> https://velog.io/@gunhaa/posts<br>
-> https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62 에 정리된 내용을 다시 한번 정리한다.
 
 ---
 
-### 참고 영상/책
+### 참고
 
-> https://www.youtube.com/@nullnull_not_eq_null/playlists
+> 이전에 정리한 내용 / https://velog.io/@gunhaa/posts
+
+> 이전에 정리한 내용 / https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62
+
+> 유튜브/인프런 널널한 개발자 / https://www.youtube.com/@nullnull_not_eq_null/playlists
 
 > 자바스크립트 패턴과 테스트 / https://www.yes24.com/Product/Goods/33211518
 
@@ -118,5 +120,25 @@
 
 
 ### 디자인 패턴
+
+- [디자인 패턴이란?](CS/DesignPattern/DesignPattern.md)
+
+- 생성 패턴
+
+  - [싱글톤 패턴](CS/DesignPattern/Singleton.md)
+  - [팩토리 메서드 패턴](CS/DesignPattern/FactoryMethod.md)
+  - [빌더 패턴](CS/DesignPattern/Builder.md)
+
+- 구조 패턴
+
+  - [어댑터 패턴](CS/DesignPattern/Adapter.md)
+  - [데코레이터 패턴](CS/DesignPattern/Decorator.md)
+  - [퍼사드 패턴](CS/DesignPattern/Facade.md)
+
+- 행위 패턴
+  - [옵저버 패턴](CS/DesignPattern/Observer.md)
+  - [전략 패턴](CS/DesignPattern/Strategy.md)
+  - [커맨드 패턴](CS/DesignPattern/Command.md)
+
 
 --- 
