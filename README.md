@@ -66,7 +66,7 @@
 - [CORS](CS/CommonSense/CORS.md)
 - [CI/CD](CS/CommonSense/CI_CD.md)
 - [Load Balancing](CS/CommonSense/Load_Balancing.md)
-
+- [Compiler vs Interpreter]
 
 ---
 
@@ -113,8 +113,9 @@
 
 ### 언어별 특징(JAVA)
 - [JAVA란?](CS/JAVA/JAVA.md)
-- [JAVA 컴파일 과정]
-
+- [컴파일 과정](CS/JAVA/Compile.md)
+- ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
+- [버전별 특징](CS/JAVA/Version.md)
 
 ### 언여별 특징(Javascript)
 
