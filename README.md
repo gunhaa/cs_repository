@@ -30,6 +30,8 @@
 
 > 유튜브/인프런 널널한 개발자 / https://www.youtube.com/@nullnull_not_eq_null/playlists
 
+> 유튜브/포프티비 / https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos
+
 > 자바스크립트 패턴과 테스트 / https://www.yes24.com/Product/Goods/33211518
 
 > 이펙티브 자바 / https://www.yes24.com/Product/Goods/65551284
@@ -53,6 +55,7 @@
 
 ### 개발 상식
 - [프로그래밍이란?](CS/CommonSense/Programing.md)
+- [서버란 무엇인가?](CS/CommonSense/Server.md)
 - [클린코드/주석](CS/CommonSense/CleanCode.md)
 - [TDD(Test Driven Development)](CS/CommonSense/TDD.md)
 - [OOP(Object-Oriented Programming)](CS/CommonSense/OOP.md)
@@ -66,7 +69,10 @@
 - [CORS](CS/CommonSense/CORS.md)
 - [CI/CD](CS/CommonSense/CI_CD.md)
 - [Load Balancing](CS/CommonSense/Load_Balancing.md)
-- [Compiler vs Interpreter]
+- [Managed language / Unmanaged language](CS/CommonSense/Managed.md)
+- [REST API]
+- [GraphQL]
+
 
 ---
 
@@ -94,6 +100,7 @@
 - [3-way-hanshake(http - Keep-alive, stateless)](CS/Network/3way.md)
 - [http프로토콜 버전 별 차이](CS/Network/Httpversion.md)
 - [Socket이란?](CS/Network/Socket.md)
+- [브라우저](CS/Network/Browser.md)
 
 ---
 
@@ -113,12 +120,37 @@
 
 ### 언어별 특징(JAVA)
 - [JAVA란?](CS/JAVA/JAVA.md)
+- [JAVA의 메모리]
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
-- [버전별 특징](CS/JAVA/Version.md)
+- [String, StringBuilder, StringBuffer](CS/JAVA/String.md)
+- [JAVA의 접근 제어자](CS/JAVA/Encapsulation.md)
+- [System.out.println를 실무에서 절대 사용안하는 이유](CS/JAVA/sysout.md)
+
+- [!!버전별 특징](CS/JAVA/Version.md)
+
+
+---
 
 ### 언여별 특징(Javascript)
 
+- [EventLoop](CS/Javascript/Eventloop.md)
+- [Prototype](CS/Javascript/Prototype.md)
+- [This](Cs/Javascript/This.md)
+- [Closure](CS/Javascript/Closure.md)
+- [Currying]
+- [Destructuring Assignment](CS/Javascript/Destructuring.md)
+- [Spread Operator](CS/Javascript/Spread.md)
+- [Object vs object](CS/Javascript/Ob_ob.md)
+- [Truthy / Falsy]
+
+---
+
+### JAVA 와 JS의 차이
+
+- [Compiler vs Interpreter](CS/JAVAvsJS/Compiler_Interpreter.md)
+
+---
 
 ### 디자인 패턴
 
@@ -142,3 +174,7 @@
   - [커맨드 패턴](CS/DesignPattern/Command.md)
 
 --- 
+
+### 알고리즘
+
+- [투포인터]
