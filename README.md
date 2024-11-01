@@ -24,9 +24,9 @@
 
 ### 참고
 
-> 이전에 정리한 내용 / https://velog.io/@gunhaa/posts
+> velog 정리 / https://velog.io/@gunhaa/posts
 
-> 이전에 정리한 내용 / https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62
+> notion 정리 / https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62
 
 > 유튜브/인프런 널널한 개발자 / https://www.youtube.com/@nullnull_not_eq_null/playlists
 
@@ -70,7 +70,9 @@
 - [CI/CD](CS/CommonSense/CI_CD.md)
 - [Load Balancing](CS/CommonSense/Load_Balancing.md)
 - [Managed language / Unmanaged language](CS/CommonSense/Managed.md)
-- [REST API]
+- [단축평가](CS/CommonSense/Short_evaluation.md)
+- [API](CS/CommonSense/API.md)
+- [REST](CS/CommonSense/Restapi.md)
 - [GraphQL]
 
 
@@ -120,13 +122,13 @@
 
 ### 언어별 특징(JAVA)
 - [JAVA란?](CS/JAVA/JAVA.md)
-- [JAVA의 메모리]
+- [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
 - [String, StringBuilder, StringBuffer](CS/JAVA/String.md)
 - [JAVA의 접근 제어자](CS/JAVA/Encapsulation.md)
 - [System.out.println를 실무에서 절대 사용안하는 이유](CS/JAVA/sysout.md)
-
+- [Serializable]
 - [!!버전별 특징](CS/JAVA/Version.md)
 
 
@@ -138,11 +140,12 @@
 - [Prototype](CS/Javascript/Prototype.md)
 - [This](Cs/Javascript/This.md)
 - [Closure](CS/Javascript/Closure.md)
-- [Currying]
+- [Currying](CS/Javascript/Currying.md)
 - [Destructuring Assignment](CS/Javascript/Destructuring.md)
 - [Spread Operator](CS/Javascript/Spread.md)
 - [Object vs object](CS/Javascript/Ob_ob.md)
-- [Truthy / Falsy]
+- [Truthy / Falsy](CS/Javascript/Truthy.md)
+- [Nullish coalescing operator](CS/Javascript/NullOperator.md)
 
 ---
 
