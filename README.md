@@ -87,6 +87,7 @@
 - [System Call](CS/OS/SystemCall.md)
 - [프로세스와 스레드](CS/OS/Process&Thread.md)
 - [동시성제어](CS/OS/Concurrency.md)
+- [부동 소수점](CS/OS/FloatingPoint.md)
 
 ---
 
@@ -181,3 +182,4 @@
 ### 알고리즘
 
 - [투포인터]
+- [유클리드 호제법(최대공약수/최소공배수)]
