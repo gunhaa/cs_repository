@@ -63,7 +63,7 @@
 - [DRY](CS/CommonSense/DRY.md)
 - [WATERFALL](CS/CommonSense/WaterFall.md)
 - [AGILE](CS/CommonSense/Agile.md) 
-- [프로토콜](CS/CommonSense/Protocol.md)
+- [프로토콜/인터페이스](CS/CommonSense/Protocol.md)
 - [Base64](CS/CommonSense/Base64.md)
 - [CRDT(Conflict-free Replicated Data Type)/LWW-Register](CS/CommonSense/CRDT.md)
 - [CORS](CS/CommonSense/CORS.md)
