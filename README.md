@@ -38,6 +38,8 @@
 
 > 쉽게 배우는 자료구조 with JAVA / https://www.yes24.com/Product/Goods/106400387
 
+> 자바로 배우는 핵심 자료구조와 알고리즘 / https://product.kyobobook.co.kr/detail/S000001810058
+
 > JVM 밑바닥까지 파헤치기 / https://www.yes24.com/Product/Goods/126114513
 
 ---
