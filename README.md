@@ -42,6 +42,8 @@
 
 > JVM 밑바닥까지 파헤치기 / https://www.yes24.com/Product/Goods/126114513
 
+> 이것이 컴퓨터 과학이다 / https://www.yes24.com/Product/Goods/130179291 
+
 ---
 
 

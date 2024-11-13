@@ -44,8 +44,16 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public boolean add(T element) {
-		// TODO: FILL THIS IN!
-		return false;
+
+		if(size >= array.length){
+			T[] bigger = (T[]) new Object[array.length*2];
+			System.arraycopy(array,0,bigger,0,array.length);
+			array = bigger;
+		}
+
+		array[size] = element;
+		size++;
+		return true;
 	}
 
 	@Override
@@ -201,7 +209,9 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public T set(int index, T element) {
-		// TODO: FILL THIS IN!
+
+		array[index] = element;
+		
 		return null;
 	}
 
