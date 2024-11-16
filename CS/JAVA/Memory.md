@@ -13,7 +13,7 @@
 
 설명: 객체와 배열이 저장되는 메모리 공간이다.<br>
 특징: 런타임에 동적으로 메모리를 할당하고 해제할 수 있다.
-JVM이 가비지 컬렉션을 통해 사용하지 않는 메모리를 자동으로 회수한다다.
+JVM이 가비지 컬렉션을 통해 사용하지 않는 메모리를 자동으로 회수한다.
 모든 객체 인스턴스는 이 영역에 저장된다.
 
 2. Stack
@@ -46,6 +46,38 @@ JVM에 의해 클래스가 로드될 때 이 영역에 할당된다.
 특징: JNI(Java Native Interface)를 통해 호출된 네이티브 메서드의 정보를 저장한다.
 Java 스택과 유사하게 동작하지만, Java 외부의 메서드를 호출할 때 사용된다.
 
+## JVM의 메모리할당 예시
+
+![img4](images/memory4.png)
+
+> 다음 코드들 에서 JVM의 메모리 할당은 어떻게 될까?
+```java
+    int i = 10;
+    // 원시형 int는 4bytes 를 차지하므로 JVM이 4bytes의 공간을 할당한다.
+    // 할당되는 공간은 어디인가?
+    // 메서드 내부에 선언된 원시형 변수는 스택 메모리에 저장된다.
+    // 클래스의 멤버 변수로 선언된 원시형은 힙(Heap) 메모리에 저장된다.
+    // static으로 선언된 원시형은 메서드 영역(Method Area)에 저장된다.
+    Student s = new Student();
+    // 이 경우, s는 Stack Memory 4bytes공간에 저장된다.
+    // 해당 공간은 객체 s에 대한 상태를 가지고 있고, heap영역에서 student객체가 저장된 부분을 가르키는 포인터이다. (Metadata를 가지고있는 저장공간)
+```
+![img5](images/memory5.png)
+> 메모리 할당과 형변환 가능 불가능한 이유
+
+```java
+    Undergraduate u = new Undergraduate();
+    // 해당 코드는 stack에 4bytes의 공간을 할당한 후 이 공간에 상속받은 모든 정보들(Person, student, undergraduate)의 정보를 넣는다.
+    Student s = new Undergraduate();
+    // 해당 코드는 컴파일 에러를 일으키지 않는다.
+    // 이유 : Undergraduate를 stack에 클래스 정보를 넣고 heap에 객체를 할당했을때, Student에 대한
+    // 정보가 들어갈 공간이 존재하기 때문이다. (없다고 넣으면 되기 때문)
+    Undergraduate u = new Student();
+    // 해당 코드는 컴파일 에러를 발생시킨다.
+    // 이유 : Student를 stack에 클래스 정보를 넣고 heap에 객체를 할당했을때, 이 stack 공간에는
+    // Undergraduate 클래스 정보가 들어갈 공간이 존재하지 않는다.
+    // 그래서 해당 코드는 컴파일 에러를 발생시킨다.(넣을 수 있는 공간 자체가 할당안됬기 때문)
+```
 
 ## Recap
 

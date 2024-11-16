@@ -28,9 +28,9 @@
 
 > notion 정리 / https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62
 
-> 유튜브/인프런 널널한 개발자 / https://www.youtube.com/@nullnull_not_eq_null/playlists
+> 인프런 널널한 개발자 / https://www.youtube.com/@nullnull_not_eq_null/playlists
 
-> 유튜브/포프티비 / https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos
+> 포프티비 / https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos
 
 > 자바스크립트 패턴과 테스트 / https://www.yes24.com/Product/Goods/33211518
 
@@ -44,6 +44,11 @@
 
 > 이것이 컴퓨터 과학이다 / https://www.yes24.com/Product/Goods/130179291 
 
+> 자바를 위한 자료구조 (Rod Edwards) / https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk
+
+> 모두를 위한 컴퓨터 과학 (David J.Malan) / https://www.boostcourse.org/cs112
+
+> 김영한 스프링 로드맵 / https://www.inflearn.com/roadmaps/373
 ---
 
 
@@ -183,6 +188,11 @@
   - [커맨드 패턴](CS/DesignPattern/Command.md)
 
 --- 
+
+### 자료구조
+
+- [시간복잡도/빅오표기법](CS/DataStructure/TimeComplexity.md)
+
 
 ### 알고리즘
 
