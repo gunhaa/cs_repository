@@ -1,4 +1,4 @@
-package com.note.test.JavaMethod;
+package com.note.test.JavaMethod.String;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

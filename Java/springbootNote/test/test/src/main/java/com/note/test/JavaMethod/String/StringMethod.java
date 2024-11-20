@@ -1,4 +1,4 @@
-package com.note.test.JavaMethod;
+package com.note.test.JavaMethod.String;
 
 import java.nio.charset.StandardCharsets;
 
