@@ -1,4 +1,4 @@
-package com.note.test.JavaMethod.Collection;
+package com.note.test.javaMethod.collection;
 
 import org.junit.jupiter.api.Test;
 
@@ -68,7 +68,7 @@ public class ListTest {
         //List<String> arrayList = new ArrayList<String>();
         List<String> arrayList = new ArrayList<>();
         // 위 코드와 아래코드는 같다. 다이아몬드 연산자로써, JAVA7 부터 등장한 기능이다.
-        
+        //ArrayList는 배열은 아니지만 배열 기반이라 자바에서 크기가 동적으로 변경되는 배열이 필요할 때 활용한다.
         // 타입검사를 통한 컴파일에러
         //arrayList.add(1);
 
