@@ -42,7 +42,43 @@ public class ExtendTest {
         */
         System.out.println("animal1.walking() = " + animal1.walking());
                                                        // 다운 캐스팅을 사용해 메소드를 사용할 수 있다.
+                                                       // 이런 형변환은 타입을 바꾸는 방식이 아니다. 일시적으로 다운캐스팅 시키는 것이다.
         System.out.println("animal1.goSchool() = " + ((Student)animal1).goSchool());
+
+        Student student1 = new Student();
+
+        // 업캐스팅 , 생략 가능
+        Animal animal2 = (Animal) student1;
+        System.out.println(animal2.walking());
+
+    }
+
+    @Test
+    void test2(){
+        // 업 캐스팅은 자동으로 되는데
+        // 다운 캐스팅을 자동으로 하지 않는 이유
+        // 심각한 런타임 오류가 날 수 있기 대문이다
+
+        Human human1 = new Student();
+        Student student1 = (Student) human1;
+        System.out.println("student1.goSchool() = " + student1.goSchool());
+        Student human2 = new Student();
+        Human human3 = new Human();
+
+/*
+        Human human2 = new Human();
+        Student student2 = (Student) human2; // 런타임 오류 - ClassCastException
+        System.out.println("student2.goSchool() = " + student2.goSchool()); // 실행불가
+        해당 코드가 안되는 이유 ?
+        - 객체를 생성하면 본인과 본인의 부모만 생성되지 , 하위는 생성되지 않는다.
+        - 다운 캐스팅은 위험할 수 있어서 자바에서 기본적으로 막는다.
+*/
+        System.out.println(Human.class);
+
+        // Student(우측이)가 human1(왼쪽의)의 클래스의 메모리에 들어있는가?
+        System.out.println(human1 instanceof Student);
+        System.out.println(human2 instanceof Student);
+        System.out.println(human3 instanceof Student);
     }
 
     private static class Animal {
