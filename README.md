@@ -107,6 +107,7 @@
     - [URI](CS/Network/URI.md)
     - [쿠키](CS/Network/Cookie.md)
     - [캐시](CS/Network/Cache.md)
+- [브라우저에서의 요청처리(클라이언트<->서버)](CS/Network/ClientToServer.md)
 - [네트워크의 목표](CS/Network/object.md)
 - [OSI 7 계층](CS/Network/OSI7.md)
 - [TCP/IP 모델](CS/Network/TCP_IP.md)
@@ -187,6 +188,7 @@
   - [어댑터 패턴](CS/DesignPattern/Adapter.md)
   - [데코레이터 패턴](CS/DesignPattern/Decorator.md)
   - [퍼사드 패턴](CS/DesignPattern/Facade.md)
+  - [프록시 패턴](CS/DesignPattern/Proxy.md)
 
 - 행위 패턴
   - [옵저버 패턴](CS/DesignPattern/Observer.md)
