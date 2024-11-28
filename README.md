@@ -82,6 +82,7 @@
 - [단축평가](CS/CommonSense/Short_evaluation.md)
 - [API](CS/CommonSense/API.md)
 - [REST](CS/CommonSense/Restapi.md)
+- [Refactoring](CS/CommonSense/Refactoring.md)
 - [GraphQL]
 
 
