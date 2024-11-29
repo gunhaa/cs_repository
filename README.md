@@ -49,12 +49,16 @@
 > 모두를 위한 컴퓨터 과학 (David J.Malan) / https://www.boostcourse.org/cs112
 
 > 김영한 스프링 로드맵 / https://www.inflearn.com/roadmaps/373
+
+> Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지/ https://www.udemy.com/course/linux-command-line-colt/?couponCode=BFCPSALE24
+
 ---
 
 
 - 다음의 항목들을 목차로 CS를 정리한다.
    - [개발 상식](#개발-상식)
    - [운영체제](#운영체제)
+       - [리눅스](#리눅스)
    - [네트워크](#네트워크)
    - [데이터 베이스](#데이터베이스)
    - [디자인 패턴](#디자인-패턴)
@@ -98,6 +102,10 @@
 - [프로세스와 스레드](CS/OS/Process&Thread.md)
 - [동시성제어](CS/OS/Concurrency.md)
 - [부동 소수점](CS/OS/FloatingPoint.md)
+
+### 리눅스 
+
+- [리눅스란?](CS/OS/Linux/Linux.md)
 
 ---
 
