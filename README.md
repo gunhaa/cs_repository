@@ -44,13 +44,13 @@
 
 > 이것이 컴퓨터 과학이다 / https://www.yes24.com/Product/Goods/130179291 
 
-> 자바를 위한 자료구조 (Rod Edwards) / https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk
+> 자바를 위한 자료구조  / https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk
 
-> 모두를 위한 컴퓨터 과학 (David J.Malan) / https://www.boostcourse.org/cs112
+> 모두를 위한 컴퓨터 과학 / https://www.boostcourse.org/cs112
 
 > 김영한 스프링 로드맵 / https://www.inflearn.com/roadmaps/373
 
-> Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지/ https://www.udemy.com/course/linux-command-line-colt/?couponCode=BFCPSALE24
+> Linux Command Line / https://www.udemy.com/course/linux-command-line-colt/?couponCode=BFCPSALE24
 
 ---
 
