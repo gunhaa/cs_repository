@@ -108,6 +108,7 @@
 - [리눅스란?](CS/OS/Linux/Linux.md)
 - [WSL](CS/OS/Linux/WSL.md)
 - [명령어 구조](CS/OS/Linux/Command.md)
+- [WSL2를 이용한 파일시스템](CS/OS/Linux/File.md)
 
 ---
 
