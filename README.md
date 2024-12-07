@@ -109,7 +109,7 @@
 - [WSL](CS/OS/Linux/WSL.md)
 - [명령어 구조](CS/OS/Linux/Command.md)
 - [파일시스템](CS/OS/Linux/File.md)
-- [파일 생성 및 폴더생성](CS/OS/Linux/CreateFile.md)
+- [파일](CS/OS/Linux/CreateFile.md)
 
 ---
 
