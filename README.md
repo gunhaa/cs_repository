@@ -110,6 +110,7 @@
 - [명령어 구조](CS/OS/Linux/Command.md)
 - [파일시스템](CS/OS/Linux/File.md)
 - [파일](CS/OS/Linux/CreateFile.md)
+- [Nano](CS/OS/Linux/Nano.md)
 
 ---
 
