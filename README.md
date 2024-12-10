@@ -111,6 +111,7 @@
 - [파일시스템](CS/OS/Linux/File.md)
 - [파일](CS/OS/Linux/CreateFile.md)
 - [Nano](CS/OS/Linux/Nano.md)
+- [삭제,복사,이동](CS/OS/Linux/Rm.md)
 
 ---
 
