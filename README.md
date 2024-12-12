@@ -188,6 +188,12 @@
 - [Compiler vs Interpreter](CS/JAVAvsJS/Compiler_Interpreter.md)
 
 ---
+### JPA
+
+- [JPA 최적화 순서](CS/JPA/JPA_Optimization.md)
+
+
+---
 
 ### 디자인 패턴
 
