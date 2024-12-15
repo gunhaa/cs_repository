@@ -73,7 +73,7 @@ app.listen(3000);
 
 > https://anweh.tistory.com/67
 
-> https://kjw1313.tistory.com/91
+> https://kjw1313.tistory.com/91 -> 가상화에 대한 설명까지 매우 잘되있음
 
 ![docker2](images/docekr2.png)
 

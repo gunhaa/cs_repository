@@ -134,7 +134,7 @@
 - [http프로토콜 버전 별 차이](CS/Network/Httpversion.md)
 - [Socket이란?](CS/Network/Socket.md)
 - [브라우저](CS/Network/Browser.md)
-- [DNS](CS/CommonSense/DNS.md)
+- [DNS](CS/Network/DNS.md)
 
 ---
 
