@@ -112,6 +112,7 @@
 - [Nano](CS/OS/Linux/Nano.md)
 - [삭제,복사,이동](CS/OS/Linux/Rm.md)
 - [파일 다루기](CS/OS/Linux/UseFile.md)
+- [리다이렉션](CS/OS/Linux/Redirection.md)
 
 ---
 
