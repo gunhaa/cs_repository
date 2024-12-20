@@ -25,3 +25,8 @@
 
 > sed가 더 복잡하긴 하지만 수정하기 더 편한 명령어이다.
 
+## tee
+
+> `command1 | tee filename | command2`
+
+- command1의 출력을 filename에 저장하고 command2를 실행시키는 기능

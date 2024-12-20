@@ -114,6 +114,7 @@
 - [파일 다루기](CS/OS/Linux/UseFile.md)
 - [리다이렉션](CS/OS/Linux/Redirection.md)
 - [파이프](CS/OS/Linux/Pipe.md)
+- [확장](CS/OS/Linux/Expansion.md)
 
 ---
 
