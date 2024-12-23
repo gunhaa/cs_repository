@@ -115,7 +115,7 @@
 - [리다이렉션](CS/OS/Linux/Redirection.md)
 - [파이프](CS/OS/Linux/Pipe.md)
 - [확장](CS/OS/Linux/Expansion.md)
-
+- [찾기](CS/OS/Linux/Find.md)
 ---
 
 ### 네트워크
