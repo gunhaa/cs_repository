@@ -8,5 +8,9 @@
         "ThinkDataStructures-master/code/src/com/allendowney/thinkdast"
     ],
     "java.project.referencedLibraries": [],
-    "java.jdt.ls.java.home": "C:\\tools\\framework\\jdk-11.0.2"
+    "java.jdt.ls.java.home": "C:\\tools\\framework\\jdk-11.0.2",
+    "java.project.excludedPaths": [
+        "springbootNote/**" ,
+        "ThinkDataStructures-master/**"
+    ]
 }

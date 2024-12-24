@@ -31,12 +31,15 @@
 - `find ~ -name "chick"` 해당 명령어는 정확히 chick만을 검색한다.
 - `find ~ -name "*chick*"` 이렇게 작성해야 chick이 들어간 모든 것을 찾는다.
 - `find ~ -name "*[0-9]*"` 숫자를 포함한 모든 것을 찾는다.
+- `*` 는 와일드카드로, 어떤 문자든 0개 이상을 의미한다.
+- `[13579]` 는 문자 클래스로, 1, 3, 5, 7, 9 중 하나의 문자가 파일 이름에 포함된 경우를 찾는다.
+따라서, `*[13579]*` 는 파일 이름에 1, 3, 5, 7, 9 중 하나 이상의 숫자가 포함된 파일을 검색한다.
 
 ### finding by size
 
 - `find -size +1G` 로 1G 이상인 것을 찾을 수 있다.
 - `find -size -50M` 으로 50M 이하인 것을 찾을 수 있다.
-- `find -size 20K` 로 정확히 20kb인 것을 찾을 수 있다.
+- `find -size 20k` 로 정확히 20kb인 것을 찾을 수 있다.
 
 ### finding by user
 
@@ -56,3 +59,47 @@
     - 마지막으로 파일에 접근한 시간을 출력한다.
 
 ## 시간을 기반으로 한 find
+
+- `find --mmin +30` 30분 전에 수정한 파일들을 찾는다.
+- `find --cmin -30` 30분 애내로 파일 변경한 것을 찾는다(리네임, mv, 권한 등)
+- `find --amin 30` 30분에 접근한 파일을 찾는다.
+
+## 논리연산자와 find
+
+> `-and` , `-or` , `-not` 과 함께 사용할 수 있다.
+
+-  `find -ctime -3 -not -name "*.txt"` 처럼 사용할 수 있다. 묵시적으로 `-and` 를 사용도 하였다.
+
+## 유저 정의 find
+
+
+- `find -exec command {} ;` 로 사용할 수 있다.
+- {} 안에 command에 대한 경로를 넣으면 된다
+- find로 찾은 모든 것들에 대해 명령을 수행한다.
+- `-exec` 옵션 말고 `-ok` 를 넣는다면 각 파일에 대한 실행을 물어본다
+- 많은 파일 삭제 등 다양한 일을 할 수 있지만, 조심스럽게 사용해야 한다.
+- `find -empty | ls -l` 는 동작하지 않는다.(ls는 표준 입력을 허용하지 않는다.)
+- `find -empty -exec ls -l '{}' ';'` 로 사용할 수 있다.
+
+## xargs
+
+- find와 같이 가장 많이 사용된다.
+- `find -empty | xargs ls -l` 를 하게되면, ls에 표준입력으로 넣을 수 있다. 
+- `echo hello world | mkdir ` 를 하게 되면 명령이 실행되지 않는다. mkdir은 표준입력을 받지 않기 때문이다.
+- `echo hello world | xargs mkdir` 를 하게되면 생각했던대로 생성된다.
+
+## 예제 
+
+```plaintext
+No one has touched these case files in years, or at least no one should have touched these files, but sadly some corrupt detective recently tampered with one of the files.
+
+Sometime today he changed a single case from "closed" to "open" to spite an enemy of his.   
+
+Find the one case that has been modified more recently than the yesterday.txt file.
+
+Watch the exercise intro video if you're confused!
+
+You may need to read the man pages to find the correct command.
+```
+
+- `find -newer yesterday.txt` 로 찾을 수 있다.
