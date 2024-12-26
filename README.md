@@ -2,10 +2,9 @@
 
 - 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
   - 코드를 보지 않고 pseudo-code와 개념만 보고 구현하기
-- 자료구조 다른 언어로 구현
 - 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 해당 레포지토리에 기록
 - 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push
-- 용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다.
+- 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다.
 
 ---
 
@@ -18,44 +17,33 @@
 
 - 공부 중 모르는 키워드가 나올 때마다 비슷한 내용을 반복 검색하며 시간을 낭비하는 것을 줄이고, 한눈에 볼 수 있는 자료를 만들기 위해 작성
 
-- 블로그에 작성하는 것이 번거로워 GitHub 레포지토리의 Markdown 파일로 정보를 정리해 두기로 함
+- 블로그에 작성하는 것이 번거로워 GitHub 레포지토리의 Markdown 파일로 정보를 정리시작
 
-- 공식문서가 아닌 블로그는 틀린 내용도 많아 올바른 자료를 찾아 정리하기 위해 생성
-
-- 한번 본 것은 한 번에 외우는 것은 무리가 있으니 다시 기억이 안날 때 해당 페이지만 보면 알 수 있도록 모르는 용어, 개념들을 정리
+- 공식문서가 아닌 블로그는 틀린 내용이 많아 올바른 자료를 찾아 정리하기 위해 작성
 
 
 ---
 
-### 공부한 참고 자료
+### 참고 자료
 
-> velog 정리 / https://velog.io/@gunhaa/posts
-
-> notion 정리 / https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62
-
-> 인프런 널널한 개발자 / https://www.youtube.com/@nullnull_not_eq_null/playlists
-
-> 포프티비 / https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos
-
-> 자바스크립트 패턴과 테스트 / https://www.yes24.com/Product/Goods/33211518
-
-> 이펙티브 자바 / https://www.yes24.com/Product/Goods/65551284
-
-> 쉽게 배우는 자료구조 with JAVA / https://www.yes24.com/Product/Goods/106400387
-
-> 자바로 배우는 핵심 자료구조와 알고리즘 / https://product.kyobobook.co.kr/detail/S000001810058
-
-> JVM 밑바닥까지 파헤치기 / https://www.yes24.com/Product/Goods/126114513
-
-> 이것이 컴퓨터 과학이다 / https://www.yes24.com/Product/Goods/130179291 
-
-> 자바를 위한 자료구조  / https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk
-
-> 모두를 위한 컴퓨터 과학 / https://www.boostcourse.org/cs112
-
-> 김영한 스프링 로드맵 / https://www.inflearn.com/roadmaps/373
-
-
+- [gunhaa velog 정리자료](https://velog.io/@gunhaa/posts)
+- [gunhaa notion 정리자료](https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62)
+- [김영한 로드맵](https://www.inflearn.com/roadmaps/373)
+- [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
+- [Computer Networking:A-Top-Down Approach](https://product.kyobobook.co.kr/detail/S000061694627)
+- [Git 교과서](https://product.kyobobook.co.kr/detail/S000001834368)
+- [Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지](https://www.udemy.com/course/linux-command-line-colt/)
+- [널널한 개발자](https://www.youtube.com/@nullnull_not_eq_null/playlists)
+- [포프티비](https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos)
+- [자바스크립트 패턴과 테스트](https://www.yes24.com/Product/Goods/33211518)
+- [이펙티브 자바](https://www.yes24.com/Product/Goods/65551284)
+- [쉽게 배우는 자료구조 with JAVA](https://www.yes24.com/Product/Goods/106400387)
+- [자바로 배우는 핵심 자료구조와 알고리즘](https://product.kyobobook.co.kr/detail/S000001810058)
+- [JVM 밑바닥까지 파헤치기](https://www.yes24.com/Product/Goods/126114513)
+- [이것이 컴퓨터 과학이다](https://www.yes24.com/Product/Goods/130179291)
+- [자바를 위한 자료구조](https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk)
+- [모두를 위한 컴퓨터 과학](https://www.boostcourse.org/cs112)
+- [컴파일러 만들기](https://product.kyobobook.co.kr/detail/S000001805053)
 
 ---
 
@@ -98,9 +86,6 @@
 
 ### GITHUB
 
-> 책 `Git 교과서` 를 보고 정리
-
-> https://product.kyobobook.co.kr/detail/S000001834368
 
 - [git이란?](CS/GIT/GIT.md)
 - [git의 구조](CS/GIT/Structure.md)
@@ -123,10 +108,6 @@
 
 ### 리눅스 
 
-> udemy의 `Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지` 강의를 보고 정리
-
-> https://www.udemy.com/course/linux-command-line-colt/
-
 - [리눅스란?](CS/OS/Linux/Linux.md)
 - [WSL](CS/OS/Linux/WSL.md)
 - [명령어 구조](CS/OS/Linux/Command.md)
@@ -140,6 +121,7 @@
 - [확장](CS/OS/Linux/Expansion.md)
 - [찾기](CS/OS/Linux/Find.md)
 - [grep](CS/OS/Linux/grep.md)
+- [권한](CS/OS/Linux/Permission.md)
 ---
 
 ### 네트워크
