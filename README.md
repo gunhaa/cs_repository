@@ -172,8 +172,7 @@
 - [JAVA의 배열에는 왜 toString()을 오버라이딩 시키지 않았나?](CS/JAVA/Array1.md)
 - [synchronized](CS/JAVA/synchronized.md)
 - [Reflection](CS/JAVA/Reflection.md)
-- [Serializable]
-- [!!버전별 특징](CS/JAVA/Version.md)
+- [버전별 특징](CS/JAVA/Version.md)
 
 
 ---
@@ -231,19 +230,12 @@
 
 ### 자료구조
 
-- [시간복잡도/빅오표기법](CS/DataStructure/TimeComplexity.md)
-
-
 ### 알고리즘
+- [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
+- [코딩테스트 팁](CS/Algorithm/Tips.md)
 
-- [투포인터]
-- [유클리드 호제법(최대공약수/최소공배수)]
 
 ### CI/CD - Docker - AWS
 
 - [자료](CS/ETC/Etc.md)
 - [Docker](CS/ETC/Docker.md)
-
-### The Elements of Computing Systems
-
-- 
