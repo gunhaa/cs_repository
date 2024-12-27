@@ -98,6 +98,7 @@
 ### 운영체제
 
 - [컴퓨터의 기본 구조](CS/OS/Computer.md)
+- [메모리의 구조](CS/OS/Memory.md)
 - [운영체제란?](CS/OS/OperationSystem.md)
 - [가상메모리/페이지교체](CS/OS/Paging.md)
 - [파일시스템](CS/OS/File.md)
