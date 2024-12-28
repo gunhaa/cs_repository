@@ -1,26 +1,23 @@
-# CS/자료구조/코딩테스트
+# 자료구조/코딩테스트
 
 - 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
-  - 코드를 보지 않고 pseudo-code와 개념만 보고 구현하기
+  - pseudo-code와 개념만 보고 구현하기
 - 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 해당 레포지토리에 기록
 - 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push
-- 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다.
 
 ---
 
-<br>
-
-
 # CS
+
+> 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다. 
 
 ## 생성 이유
 
-- 공부 중 모르는 키워드가 나올 때마다 비슷한 내용을 반복 검색하며 시간을 낭비하는 것을 줄이고, 한눈에 볼 수 있는 자료를 만들기 위해 작성
-
-- 블로그에 작성하는 것이 번거로워 GitHub 레포지토리의 Markdown 파일로 정보를 정리시작
-
 - 공식문서가 아닌 블로그는 틀린 내용이 많아 올바른 자료를 찾아 정리하기 위해 작성
 
+- 공부 중 모르는 키워드가 나올 때마다 비슷한 내용을 반복 검색하며 시간을 낭비하는 것을 줄이고, 한눈에 볼 수 있는 자료를 만들기 위해 작성
+
+- 블로그에 작성하는 것이 번거로워 GitHub 레포지토리의 Markdown 파일로 정보를 정리
 
 ---
 
@@ -44,6 +41,7 @@
 - [자바를 위한 자료구조](https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk)
 - [모두를 위한 컴퓨터 과학](https://www.boostcourse.org/cs112)
 - [컴파일러 만들기](https://product.kyobobook.co.kr/detail/S000001805053)
+- [실습과 그림으로 배우는 리눅스 구조](https://product.kyobobook.co.kr/detail/S000208795616)
 
 ---
 
@@ -52,7 +50,8 @@
    - [개발 상식](#개발-상식)
       - [GITHUB](#GITHUB)
    - [운영체제](#운영체제)
-     - [리눅스](#리눅스)
+     - [리눅스-명령어](#리눅스-명령어)
+     - [리눅스-운영체제](#리눅스-운영체제)
    - [네트워크](#네트워크)
    - [데이터 베이스](#데이터베이스)
    - [디자인 패턴](#디자인-패턴)
@@ -107,7 +106,8 @@
 - [동시성제어](CS/OS/Concurrency.md)
 - [부동 소수점](CS/OS/FloatingPoint.md)
 
-### 리눅스 
+
+### 리눅스-명령어
 
 - [리눅스란?](CS/OS/Linux/Linux.md)
 - [WSL](CS/OS/Linux/WSL.md)
@@ -123,6 +123,14 @@
 - [찾기](CS/OS/Linux/Find.md)
 - [grep](CS/OS/Linux/grep.md)
 - [권한](CS/OS/Linux/Permission.md)
+- [환경](CS/OS/Linux/Environment.md)
+
+---
+
+### 리눅스-운영체제
+
+- [Linux와 SystemCall](CS/OS/Linux/LinuxSystemCall.md)
+
 ---
 
 ### 네트워크
