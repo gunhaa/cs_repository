@@ -11,7 +11,7 @@ sudo yum update -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo && sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 
 # Java, Git, Docker 설치
-sudo yum install -y java-1.8.0-amazon-corretto jenkins git docker 
+sudo yum install -y java-11-amazon-corretto jenkins git docker 
 
 
 # 기존 EC2에 설치된 Jenkins 중단 (필요 시)
@@ -27,7 +27,55 @@ echo "Jenkins is now running in a Docker container."
 echo "To get the initial admin password, run: docker logs jenkins | grep 'Please use the following password'"
 
 ```
+<<<수정전
 
+---
+
+수정후>>>
+
+```bash
+
+# 자바17 설치 (자바 설치가 되어있지 않으면 젠킨스가 설치가 되지 않는다)
+sudo yum install java-17-amazon-corretto
+
+# wget을 통해 설치 파일을 다운로드 한다
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+# 젠킨스 설치 key import
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+# 젠킨스 패키지 설치
+sudo yum install jenkins -y
+
+# 젠킨스 설치확인
+rpm -qa | grep jenkins
+
+# /etc/sysconfig/jenkins 파일에 포트를 추가
+sudo nano /etc/sysconfig/jenkins
+# 추가 내용
+HTTP_PORT=8080
+
+#재시작
+sudo systemctl restart jenkins
+
+# 젠킨스 시작
+sudo service jenkins start
+
+# 젠킨스 프로세스 확인
+ps -ef | grep jenkins
+
+# 실행 확인
+sudo systemctl status jenkins
+
+# 관리자 비밀번호 확인
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+# Jenkins 웹 인터페이스 접속
+http://<EC2 퍼블릭 IP>:8080
+
+```
+
+## Docker로 실행 방법
 
 ```bash
 # 시스템 업데이트
@@ -35,7 +83,6 @@ sudo yum update -y
 
 # Java, Git, Docker 설치 (Jenkins 실행을 위한 기본 패키지 설치)
 sudo yum install -y java-1.8.0-amazon-corretto git docker
-
 
 # Jenkins Docker 이미지 Pull
 sudo docker pull jenkins/jenkins:lts
@@ -67,7 +114,7 @@ http://<EC2 퍼블릭 IP>:8080
 ## 제일 먼저 할일 : git과 연결하기
 
 - 좌측의 Jenkins credential > System > Global credential > Add credential 로 이동
-- 해당 카테고리에서 Git을 등록 해야한다.
+- 해당 카테고리에서 Git을 등록 해야한다.(Username with password)
 - Jenkins에 github 권한 부여하기 
     - github 프로필 클릭 후 Settings
     - Developer settings 들어가기
@@ -84,7 +131,11 @@ http://<EC2 퍼블릭 IP>:8080
 - Jenkinsfile 작성
 
 
-```jenkinsfile
+- docker 사용을 위해서 plugin을 jenkins에 설치해야한다.
+- jenkins plugin manager-> available plugins -> Docker , Docker Pipeline 설치
+- jenkins에서 도커를 사용하기위해 AWS EC2 인스턴스에서 `groupadd docker` , `sudo usermod -aG docker jenkins` 를 입력해야한다
+
+```Jenkinsfile
 // 파이프 라인의 시작
 pipeline {
     // 스테이지 별로 다른 거
@@ -296,30 +347,11 @@ pipeline {
     }
 }
 
-// docker plugin을 jenkins에 설치해야한다.
-// jenkins plugin manager-> available plugins -> Docker , Docker Pipeline 설치
-// jenkins에서 도커를 사용하기위해 AWS EC2 인스턴스에서 `groupadd docker` , `usermod -aG docker jenkins` 를 입력해야한다 (docker에 떠 있는 상태이므로 `docker exec -it jenkins_container_name bash` 입력 후 쉘에서 입력해야한다.)
 ```
 
+## 이후
 
-
-- s3에 private 접근 권한 부여
-```
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::863518425558:user/jenkins"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::gunhatest",
-        "arn:aws:s3:::gunhatest/*"
-      ]
-    }
-  ]
-}
-
-```
+- jenkins 콘솔에서 `새로운 아이템` 으로 이동
+- Configure에서 다음 항목을 체크한다
+    - Github project : url에 git 주소(.git 삭제)
+    - Poll SCM 
