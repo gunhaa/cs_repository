@@ -173,7 +173,6 @@
 ---
 
 ### 언어별 특징(JAVA)
-- [JAVA란?](CS/JAVA/JAVA.md)
 - [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
@@ -181,6 +180,7 @@
 - [JAVA의 접근 제어자](CS/JAVA/Encapsulation.md)
 - [System.out.println를 실무에서 절대 사용안하는 이유](CS/JAVA/sysout.md)
 - [JAVA의 배열에는 왜 toString()을 오버라이딩 시키지 않았나?](CS/JAVA/Array1.md)
+- [Excpetion](CS/JAVA/Exception.md)
 - [synchronized](CS/JAVA/synchronized.md)
 - [Reflection](CS/JAVA/Reflection.md)
 - [버전별 특징](CS/JAVA/Version.md)
