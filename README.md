@@ -125,6 +125,7 @@
 - [권한](CS/OS/Linux/Permission.md)
 - [환경](CS/OS/Linux/Environment.md)
 - [Scripting](CS/OS/Linux/Scripting.md)
+- [Cron](CS/OS/Linux/Cron.md)
 
 ---
 
