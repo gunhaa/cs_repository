@@ -91,6 +91,7 @@
 - [HEAD/Snapshot](CS/GIT/Head.md)
 - [Stash](CS/GIT/Stash.md)
 - [Merge](CS/GIT/Merge.md)
+- [linux-ssh인증](CS/GIT/Linux-SSH.md)
 
 ---
 
