@@ -56,6 +56,7 @@
    - [데이터 베이스](#데이터베이스)
    - [디자인 패턴](#디자인-패턴)
    - [언어별 특징](#언어별-특징)
+   - [bitlibrary 개발일지](#bitlibrary-개발일지)
 
 ---
 
@@ -251,3 +252,7 @@
 
 - [자료](CS/ETC/Etc.md)
 - [Docker](CS/ETC/Docker.md)
+
+### bitlibrary-개발일지
+
+- [프로젝트 시작](CS/Bitlibrary/Bitlibrary1.md)
