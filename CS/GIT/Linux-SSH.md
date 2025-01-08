@@ -67,7 +67,7 @@ ssh-ed25519 AAAAC3...rrI wh8299@gmail.com
 
 - SSH 연결이 제대로 설정되었는지 확인한다
 ```bash
-root@oracle:~/linuxSystem# ssh -T git@github.com
+root@oracle:~/linuxSystem# ssh -T gunhaa@github.com
 Hi gunhaa! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 - ssh -T 명령으로 SSH 키를 사용해 GitHub 서버와 연결이 정상적으로 이루어지는지 확인한다. 성공 메시지가 나오면 설정이 완료된 것이다.
