@@ -243,16 +243,20 @@
 
 ### 자료구조
 
+--
 ### 알고리즘
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
 
-
+--
 ### CI/CD - Docker - AWS
 
 - [자료](CS/ETC/Etc.md)
 - [Docker](CS/ETC/Docker.md)
 
+-- 
 ### bitlibrary-개발일지
 
 - [프로젝트 시작](CS/Bitlibrary/Bitlibrary1.md)
+- [트러블 슈팅1](CS/Bitlibrary/TroubleShooting1.md)
+- [트러블 슈팅2](CS/Bitlibrary/TroubleShooting2.md)
