@@ -24,7 +24,92 @@ Thymeleaf로 리팩토링을 진행하던 중, JSP 기반의 레거시 코드에
 
 3개의 Depth로 구성된 카테고리를 관리하기 위해 Factory와 Strategy 패턴을 적용하였다. Factory 패턴을 사용해 부모 카테고리(Level2)에 따라 적절한 전략을 선택하도록 설계하였다. Strategy 패턴을 통해 자식 카테고리(Level3)의 처리 로직을 각 전략 클래스에 위임함으로써 조건문을 대폭 줄이고, 확장 가능성과 유지보수성을 높였다.
 
-### 리팩토링 전 코드
+
+### 리팩토링 이전 레거시 코드
+```java
+
+    //..Controller
+
+	@GetMapping("/{catLevel1:1}")
+	public String gotoPage(@PathVariable("catLevel1") int catLevel1,
+			Model model
+			) {
+		model.addAttribute("catLevel2", 7);
+		model.addAttribute("catLevel3", 24);
+		
+		return "intro/lib_greeting";
+	}
+	
+	@GetMapping("/{catLevel1:1}/{catLevel2}")
+	public String intro(@PathVariable("catLevel1") int catLevel1, 
+			@PathVariable("catLevel2") int catLevel2,
+			Model model) {
+		
+		if(catLevel2 == 9) {
+			return "intro/lib_map";
+		}
+		
+		model.addAttribute("catLevel3", 24);
+		
+		if(catLevel2 == 8) {
+			model.addAttribute("catLevel3", 29);
+			return "intro/lib_hours";
+		}
+		
+		return "intro/lib_greeting";
+	}
+	
+	@GetMapping("/{catLevel1:1}/{catLevel2}/{catLevel3}")
+	public String pageIntro(@PathVariable("catLevel1") int catLevel1, 
+			@PathVariable("catLevel2") int catLevel2,
+			@PathVariable("catLevel3") int catLevel3,
+			Model model) {
+		
+		if(catLevel3 == 30) {
+			return "intro/lib_calender";
+		}
+		
+		if(catLevel3 == 29) {
+			return "intro/lib_hours";
+		}
+		
+		if(catLevel3 == 28) {
+			
+			Map<String, Object> another = service.selectAnotherLib(catLevel3);
+			List<Map<String, Object>> libTitle = new ArrayList<Map<String,Object>>();
+			if(another != null) {
+				libTitle = (List<Map<String, Object>>) another.get("libTitle");
+			}
+			
+			if(!libTitle.isEmpty()) {
+				Map<String,Object> another2 = service.selectLibAn( catLevel3, Integer.parseInt( String.valueOf((libTitle.get(0).get("BOARD_NO")))) );
+				model.addAttribute("another", another2);
+				
+			}else {
+				model.addAttribute("another", another);
+			}
+			
+			return "intro/lib_intro_another";
+		}
+		
+		if(catLevel3 == 27) {
+			return "intro/lib_intro";
+		}
+		
+		if(catLevel3 == 26) {
+			return "intro/lib_organization";
+		}
+		
+		if(catLevel3 == 25) {
+			return "intro/lib_history";
+		}
+		
+		return "intro/lib_greeting";
+	}
+```
+
+
+### 리팩토링(1차)
 ```java
 ...
         if(categoryLevel2.getCategoryName().equals("도서관 소개")){
@@ -53,7 +138,7 @@ Thymeleaf로 리팩토링을 진행하던 중, JSP 기반의 레거시 코드에
 ```
 리팩토링하기 전, 읽을 순 있지만 가독성이 떨어지는 방식이고 유지보수성이 떨어지는 방식이라고 생각해서 좀 더 객체지향적으로 만들고 싶어서 여러가지 생각을 한 후 코드를 리팩토링 하였다.
 
-### 리팩토링 후 코드
+### 리팩토링(2차)
 
 ```java
 // category depth2를 판단 후 필요 객체를 만드는 팩토리
