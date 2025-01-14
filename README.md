@@ -258,5 +258,6 @@
 ### bitlibrary-개발일지
 
 - [프로젝트 시작](CS/Bitlibrary/Bitlibrary1.md)
-- [트러블 슈팅1](CS/Bitlibrary/TroubleShooting1.md)
-- [트러블 슈팅2](CS/Bitlibrary/TroubleShooting2.md)
+- [트러블 슈팅1- Category](CS/Bitlibrary/TroubleShooting1.md)
+- [트러블 슈팅2- @PathVariable](CS/Bitlibrary/TroubleShooting2.md)
+- [트러블 슈팅3- BookLike](CS/Bitlibrary/TroubleShooting3.md)

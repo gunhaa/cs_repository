@@ -28,7 +28,6 @@ Thymeleaf로 리팩토링을 진행하던 중, JSP 기반의 레거시 코드에
 ```java
 ...
         if(categoryLevel2.getCategoryName().equals("도서관 소개")){
-            System.out.println("use 도서관소개");
             CategoryDTO categoryLevel3 = getCategoryByCategoryId(categoryDTOList, catLevel3);
             model.addAttribute("catLevel3", Integer.parseInt(catLevel3));
             switch (categoryLevel3.getCategoryName()) {
