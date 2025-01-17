@@ -81,6 +81,7 @@
 - [API](CS/CommonSense/API.md)
 - [REST](CS/CommonSense/Restapi.md)
 - [Refactoring](CS/CommonSense/Refactoring.md)
+- [Trailing slash](CS/CommonSense/TrailingSlash.md)
 
 ---
 
@@ -214,7 +215,12 @@
 
 - [JPA 최적화 순서](CS/JPA/JPA_Optimization.md)
 
+---
 
+### SpringSecurity
+
+- [SpringSecurity](CS/SpringSecurity/springSecurity.md)
+- [SpringSecurity의 로그인 요청 판단방법](CS/SpringSecurity/HowToReqIsLogin.md)
 ---
 
 ### 디자인 패턴
@@ -261,3 +267,4 @@
 - [트러블 슈팅1- Category](CS/Bitlibrary/TroubleShooting1.md)
 - [트러블 슈팅2- @PathVariable](CS/Bitlibrary/TroubleShooting2.md)
 - [트러블 슈팅3- BookLike](CS/Bitlibrary/TroubleShooting3.md)
+- [설계의 tradeoff](CS/Bitlibrary/TradeOff.md)
