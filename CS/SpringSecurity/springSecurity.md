@@ -1,9 +1,5 @@
 # 개발자 유미의 Spring security를 통해 학습
 
-spring security의 구조
-
-![security](images/springSecurity1.jpg)
-
 > 개발자 유미 : https://www.devyummi.com/
 
 > springSecurity : https://www.youtube.com/playlist?list=PLJkjrxxiBSFCKD9TRKDYn7IE96K2u3C3U
@@ -14,6 +10,6 @@ spring security의 구조
 
 > springOAuth2(JWT) : https://www.youtube.com/watch?v=xsmKOo-sJ3c&list=PLJkjrxxiBSFALedMwcqDw_BPaJ3qqbWeB
 
-## 정리된 springSecurity 코드 + 설명
+## 정리된 springSecurity 예제 + 설명
 
 > https://github.com/gunhaa/springSecurity
