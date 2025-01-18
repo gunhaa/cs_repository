@@ -1,4 +1,7 @@
 # 세션 고정 공격방법
+
+![fixation](images/sessionFixation.jpg)
+
 해커가 세션 고정(Session Fixation) 공격을 수행할 때, 유저를 특정 세션 ID로 유도하는 것이 핵심이다. 이를 위해 해커는 다음과 같은 방법을 사용한다
 
 ## 1. 세션 ID 생성 및 확보
