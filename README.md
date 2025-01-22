@@ -175,7 +175,7 @@
 
 ---
 
-### 언어별 특징(JAVA)
+### JAVA
 - [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
@@ -190,8 +190,20 @@
 
 
 ---
+### JPA
 
-### 언여별 특징(Javascript)
+- [JPA 최적화 순서](CS/JPA/JPA_Optimization.md)
+
+---
+
+### SpringSecurity
+
+- [SpringSecurity](CS/SpringSecurity/springSecurity.md)
+- [SpringSecurity의 로그인 요청 판단방법](CS/SpringSecurity/HowToReqIsLogin.md)
+
+---
+
+### Javascript
 
 - [EventLoop](CS/Javascript/Eventloop.md)
 - [Prototype](CS/Javascript/Prototype.md)
@@ -211,16 +223,11 @@
 - [Compiler vs Interpreter](CS/JAVAvsJS/Compiler_Interpreter.md)
 
 ---
-### JPA
 
-- [JPA 최적화 순서](CS/JPA/JPA_Optimization.md)
+### Rust
 
----
+- [수동 메모리 관리](CS/Rust/Memory.md)
 
-### SpringSecurity
-
-- [SpringSecurity](CS/SpringSecurity/springSecurity.md)
-- [SpringSecurity의 로그인 요청 판단방법](CS/SpringSecurity/HowToReqIsLogin.md)
 ---
 
 ### 디자인 패턴
