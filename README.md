@@ -232,6 +232,7 @@
 ### Rust
 
 - [수동 메모리 관리](CS/Rust/Memory.md)
+- [기본 문법과 예제](CS/Rust/Syntax.md)
 
 ---
 
