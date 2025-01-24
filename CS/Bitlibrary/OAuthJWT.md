@@ -21,7 +21,7 @@
 
 8. DefaultOAuth2UserService를 상속한 클래스는 OAuth2User구현체를 반환해 이를 이용해서 Authentication이 Security Context에 저장되어 일시적 Session을 만든다. 
 
-    - 해당 Service에서 로그인한 username(ex. naver YxUVriKN_IuaBzIWFfCBzzfnVc6SHEkDJtxV9fY8pxQ)을 확인하고, username이 등록되지 않았다면 가입시킨다.
+    - 해당 Service에서 로그인한 username(ex. naver YxUVriKN_IuaBzIWFfY8pxQ 황건하)을 확인하고, username이 등록되지 않았다면 가입시킨다.
 
     - 로그인 성공 핸들러에서 access,refresh 토큰을 부여한다. 토큰은 username, email, role, expiredMs를 갖는다.
 
