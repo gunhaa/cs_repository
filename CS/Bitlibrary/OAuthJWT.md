@@ -1,0 +1,47 @@
+
+# 세션 기반 회원 가입, OAuth2 JWT로 리팩토링
+
+## 전체적인 진행
+
+1. OAuth2를 이용한 JWT로 구글, 네이버 로그인을 연동시킨다.
+
+2. 로그인이 필요한 페이지가 있다면, 그 대신 로그인을 할 수 있는 메인 페이지로 이동 시킨다.
+
+3. 메인 페이지에선 네이버/구글 로그인 버튼을 이용해 두 가지 OAuth2를 이용한 로그인을 진행할 수 있다.
+
+## 서비스 로직
+
+4. /oauth2/authorization/{naver | google} 으로 로그인 페이지를 연결시킨다.
+
+5. 로그인 성공시 /login/oauth2/code/{naver | google}로 리다이렉트 시킨다.
+
+6. 여기서 발급 받은 code를 이용해 Access토큰을 발급 받는다.
+
+7. OAuth2LoginAuthenticationProvider를 스프링이 실행시키는데 이 객체는 DefaultOAuth2UserService 를 상속시킨 클래스를 실행시킨다.
+
+8. DefaultOAuth2UserService를 상속한 클래스는 OAuth2User구현체를 반환해 이를 이용해서 Authentication이 Security Context에 저장되어 일시적 Session을 만든다. 
+
+    - 해당 Service에서 로그인한 username(ex. naver YxUVriKN_IuaBzIWFfCBzzfnVc6SHEkDJtxV9fY8pxQ)을 확인하고, username이 등록되지 않았다면 가입시킨다.
+
+    - 로그인 성공 핸들러에서 access,refresh 토큰을 부여한다. 토큰은 username, email, role, expiredMs를 갖는다.
+
+    - refresh토큰은 부여하고, db에 넣는다.
+
+    - 여러 사용자의 다중 로그인을 허용한다
+
+9. 로그인 이후 접근 권한이 필요한 경우 jwtfilter를 이용해 일시적인 세션을 만든다.
+
+
+## 토큰 관리
+
+- access토큰이 만료되면, 클라이언트는 refresh토큰을 제시해서 재발급 받을 수 있다.
+- 재발급 될때는 /reissue 엔드포인트에서 refresh토큰과 함께 재발급하는 rotate방식을 사용하고, 기존의 
+refresh토큰은 db에서 삭제하고 token블랙리스트에 올린다.
+- cron syntax를 통해 00시에 createdDate가 하루가 넘은것은 자동으로 삭제시킨다. (Refresh토큰, token블랙리스트 테이블)
+- 관리자는 admin페이지에서 token 블랙리스트 테이블에 블랙리스트를 추가할 수 있다.(런타임에 보안을 유지할 수 있는 기능 추가)
+- 해당 테이블은 주기적인 삭제가 되므로 로그를 남긴다.
+
+
+## 로그아웃
+
+- refresh token을 유효성 검사 후 유효하다면 이를 db에서 삭제시키고, refresh token의 유효기간 0인 쿠키를 반환한다.
