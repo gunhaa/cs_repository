@@ -1,7 +1,16 @@
 
 # 세션 기반 회원 가입, OAuth2 JWT로 리팩토링
 
-## 전체적인 진행
+## 시나리오(jwtfilter)
+
+1. access 토큰 확인
+2. 있고 유효하다면 loginMember 변수에 jwt의 값을 넣는다.
+3. 있는데 유효하지 않다면 refresh토큰을 통해 reissue를 시도한다
+4. reissue가 실패하면 loginMember에는 아무 값이 들어가지 않는다.
+5. 유효하지 않은 jwt를 사용할 경우 유효하지 않은 토큰을 사용불가 시키고 넘긴다(로그인 정보X)
+6. 유효한 경우 loginMember를 부여한다.
+        
+## 진행
 
 1. OAuth2를 이용한 JWT로 구글, 네이버 로그인을 연동시킨다.
 
@@ -21,7 +30,7 @@
 
 8. DefaultOAuth2UserService를 상속한 클래스는 OAuth2User구현체를 반환해 이를 이용해서 Authentication이 Security Context에 저장되어 일시적 Session을 만든다. 
 
-    - 해당 Service에서 로그인한 username(ex. naver YxUVriKN_IuaBzIWFfY8pxQ 황건하)을 확인하고, username이 등록되지 않았다면 가입시킨다.
+    - 해당 Service에서 로그인한 username(ex. naver YiKN_IuaBzIWFfY8pxQ 황건하)을 확인하고, username이 등록되지 않았다면 가입시킨다.
 
     - 로그인 성공 핸들러에서 access,refresh 토큰을 부여한다. 토큰은 username, email, role, expiredMs를 갖는다.
 
