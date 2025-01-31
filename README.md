@@ -237,6 +237,8 @@
 ---
 
 ### 디자인 패턴
+> https://github.com/gunhaa/GofDesignPattern
+> <br> GoF design pattern 예제, 설명 github repo
 
 - [디자인 패턴이란?](CS/DesignPattern/DesignPattern.md)
 
@@ -262,18 +264,18 @@
 
 ### 자료구조
 
---
+---
 ### 알고리즘
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
 
---
+---
 ### CI/CD - Docker - AWS
 
 - [자료](CS/ETC/Etc.md)
 - [Docker](CS/ETC/Docker.md)
 
--- 
+---
 ### bitlibrary-개발일지
 
 - [프로젝트 시작](CS/Bitlibrary/Bitlibrary1.md)
