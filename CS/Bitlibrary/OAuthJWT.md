@@ -6,9 +6,9 @@
 1. access 토큰 확인
 2. 있고 유효하다면 loginMember 변수에 jwt의 값을 넣는다.
 3. 있는데 유효하지 않다면 refresh토큰을 통해 reissue를 시도한다
-4. reissue가 실패하면 loginMember에는 아무 값이 들어가지 않는다.
-5. 유효하지 않은 jwt를 사용할 경우 유효하지 않은 토큰을 사용불가 시키고 넘긴다(로그인 정보X)
-6. 유효한 경우 loginMember를 부여한다.
+4. reissue가 실패하면 loginMember에는 아무 값이 들어가지 않고 "/"로 리다이렉트 시킨다
+5. 유효하지 않은 jwt를 사용할 경우 토큰을 사용불가 시키고 넘긴다
+6. 유효한 경우 filter request에 loginMember속성을 추가한다.
         
 ## 진행
 
