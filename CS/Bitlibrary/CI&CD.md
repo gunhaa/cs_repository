@@ -10,8 +10,9 @@
 ## 한계 & 생각해야 하는것
 
 - AWS EC2 프리티어의 경우 램1GB, hdd 30GB 라서 자원이 제한된다
-- Jenkins - Docker(SpringBoot, MySQL) 을 띄우기위해서는 램이 4~8gb가 권장된다
+- Jenkins - Docker(SpringBoot, MySQL) 을 띄우기위해서는 램이 4~8gb이 필요할 것 같다
     - 우선은 JVM의 성능을 제한하고 , MYSQL로 띄운다
     - 너무 성능이 안나올 경우 AWS에는 H2로 띄운다
-    - Nginx, Redis도 사용하고 싶지만 자원이 제한되어 로컬환경에서만 사용한다
-- Jenkins는 추가 Ec2인스턴스로 따로 띄운다고 하더라도 자원이 부족하다
+    - 혹은 aws rds로 분리시킨다
+    - Nginx, Redis는 자원이 제한되어 로컬환경에서만 사용한다
+- 자원이 부족할 경우 github action도 고려
