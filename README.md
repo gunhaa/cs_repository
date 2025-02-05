@@ -284,3 +284,4 @@
 - [트러블 슈팅3- BookLike](CS/Bitlibrary/TroubleShooting3.md)
 - [설계의 tradeoff](CS/Bitlibrary/TradeOff.md)
 - [OAuthJWT](CS/Bitlibrary/OAuthJWT.md)
+- [CI&CD 계획](CS/Bitlibrary/CI&CD.md)
