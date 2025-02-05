@@ -17,3 +17,12 @@
     - Nginx, Redis는 자원이 제한되어 로컬환경에서만 사용한다
 - 자원이 부족할 경우 github action도 고려
 - 우선은 부족한 자원을 최대한 활용해 aws프리티어를 사용해 띄우고, 차후 개인 라즈베리파이 서버로 변경 예정
+
+## Docker Volume 문제
+
+```shell
+docker-compose down -v // 모든 docker container의 volume을 삭제함
+docker-compose up --build // docker contanier가 새로 생성 및 초기화
+```
+
+docker volumn을 삭제하지 않으면 비밀번호도 유지되어 다시 올릴때 문제가 생길수 있으니 주의해야한다.
