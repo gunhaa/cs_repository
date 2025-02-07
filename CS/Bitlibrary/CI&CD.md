@@ -43,6 +43,15 @@ $ sudo vi /etc/fstab
 ```
 - 차후 라즈베리파이5를 구매해서 사설 웹 서버를 만드는 것으로 해결 예정
 
+## Docker Volume 문제
+
+```shell
+docker-compose down -v // 모든 docker container의 volume을 삭제함
+docker-compose up --build // docker contanier가 새로 생성 및 초기화
+```
+
+docker volumn을 삭제하지 않으면 비밀번호도 유지되어 비밀번호 변경 후 다시 올릴때 문제가 생길수 있으니 주의해야한다.
+
 
 ## Jenkins 스크립트
 
@@ -80,7 +89,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 1234
+    password: 
     url: jdbc:mysql://mysql-container:3306/bitlibrary
   jpa:
     hibernate:

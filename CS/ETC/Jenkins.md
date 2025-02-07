@@ -383,7 +383,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 1234
+    password: 
     url: jdbc:mysql://mysql-container:3306/bitlibrary
   jpa:
     hibernate:
