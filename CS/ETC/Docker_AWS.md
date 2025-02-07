@@ -68,3 +68,33 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
         - `aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin <ECR_URL>`
     - 서버에서 pull 및 실행
         - `docker run -d -p 3000:3000 --name namhoon-dev 864899837208.dkr.ecr.ap-northeast-2.amazonaws.com/namhoon-dev:latest` 
+
+- AWS ec2 인스턴스에 docker-compose 설치하기
+```shell
+// 최신 docker compose를 해당 링크에서 받을 수 있음
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+
+// 권한 부여
+sudo chmod +x /usr/local/bin/docker-compose
+
+
+// 설치 확인
+docker-compose version
+```
+
+- 80번 포트 linux에서 라우팅
+```shell
+# 80번 포트로 들어오는 트래픽을 7777번 포트로 라우팅
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 7777
+# 확인
+[ec2-user@ip-172-31-10-107 ~]$ sudo iptables -t nat -L -n -v
+# 결과
+Chain PREROUTING (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+61283 3338K DOCKER     all  --  *      *       0.0.0.0/0            0.0.0.0/0            ADDRTYPE match dst-type LOCAL
+    0     0 REDIRECT   tcp  --  eth0   *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80 redir ports 8080
+    0     0 REDIRECT   tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80 redir ports 7777
+# 80->8080 규칙 삭제
+[ec2-user@ip-172-31-10-107 ~]$ sudo iptables -t nat -D PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080 -i eth0
+```

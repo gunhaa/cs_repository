@@ -348,6 +348,113 @@ pipeline {
 }
 
 ```
+## Jenkins bitlibrary 스크립트
+
+```jenkins
+pipeline {
+    agent any
+
+    environment {
+        REPO_URL = 'https://github.com/gunhaa/bitlibrary.git'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // GitHub에서 코드 가져오기 (prod 브랜치)
+                git url: REPO_URL, branch: 'prod'
+            }
+        }
+        
+        stage('Create application.yml') {
+            steps {
+                script {
+                    // application.yml 파일 생성
+                    writeFile file: 'src/main/resources/application.yml', text:
+"""
+server:
+  port: 7777
+spring:
+  profiles:
+    active: local
+  thymeleaf:
+    cache: false
+#  mysql 사용시
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+    url: jdbc:mysql://mysql-container:3306/bitlibrary
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        # Querydsl query
+        use_sql_comments: true
+  security:
+    oauth2:
+      client:
+        registration:
+          naver:
+            client-name: naver
+            client-id: 
+            client-secret: 
+            redirect-uri: http://localhost:8080/login/oauth2/code/naver
+            authorization-grant-type: authorization_code
+            scope: name,email
+          google:
+            client-name: google
+            client-id: 
+            client-secret: 
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            authorization-grant-type: authorization_code
+            scope: profile,email
+        provider:
+          naver:
+            authorization-uri: https://nid.naver.com/oauth2.0/authorize
+            token-uri: https://nid.naver.com/oauth2.0/token
+            user-info-uri: https://openapi.naver.com/v1/nid/me
+            user-name-attribute: response
+  jwt:
+    secret: 
+"""
+                }
+            }
+        }
+
+        stage('Stop Existing Containers') {
+            steps {
+                script {
+                    // 실행 중인 모든 컨테이너 종료
+                    sh 'docker-compose down'
+                }
+            }
+        }
+
+        stage('Build and Start Containers') {
+            steps {
+                script {
+                    // Docker Compose로 컨테이너 빌드 및 실행
+                    sh 'docker-compose up --build -d'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment succeeded.'
+        }
+        failure {
+            echo 'Deployment failed.'
+        }
+    }
+}
+
+```
+
 
 ## 이후
 
