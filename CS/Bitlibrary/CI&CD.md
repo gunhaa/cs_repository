@@ -3,7 +3,7 @@
 - Jenkins를 통해 CI/CD를 진행
     - github webhook을 이용한 prod branch만 build한다.
 - `내도메인.한국` 에서 도메인 이름 발급
-    - `http://bitlibrary.kro.kr/`
+    - http://bitlibrary.kro.kr/
 - AWS EC2 free tier에서 서버 상시 유지
 - 배포에 사용하는 스택 `Spring boot` , `MySQL` , `Jenkins` , `AWS` , `DNS` , `DOCKER` 
 
@@ -21,7 +21,7 @@
 ## 생긴 문제
 
 - 예상대로 1GB램을 가지고는, 젠킨스가 build하는 순간에 노드가 멈춤(램 부족)
-- Swap을 이용한 가상메모리 방식으로 해결(RAM을 하드디스크로 대체)
+- Swap을 이용한 가상메모리 방식으로 해결
 ```shell
 # 1. 스왑 파일 생성
 # 스왑 파일은 2GB(128MB x 16 = 2,048MB)이다.
@@ -43,14 +43,14 @@ $ sudo vi /etc/fstab
 ```
 - 차후 라즈베리파이5를 구매해서 사설 웹 서버를 만드는 것으로 해결 예정
 
-## Docker Volume 문제
+### Docker Volume 문제
 
 ```shell
 docker-compose down -v // 모든 docker container의 volume을 삭제함
 docker-compose up --build // docker contanier가 새로 생성 및 초기화
 ```
 
-docker volumn을 삭제하지 않으면 비밀번호도 유지되어 비밀번호 변경 후 다시 올릴때 문제가 생길수 있으니 주의해야한다.
+docker volumn을 삭제하지 않으면 db비밀번호를 바꿔도 비밀번호가 유지되어 비밀번호 변경 후 다시 올릴때 문제가 생길수 있으니 주의해야한다.(db비밀번호 바꿀 생각이라면 jenkins script에 추가 고려해야함)
 
 
 ## Jenkins 스크립트
