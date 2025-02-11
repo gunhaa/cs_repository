@@ -1,12 +1,12 @@
 # BitLibrary Project - 1
 
-부트캠프를 마치고 한 달 정도 CS와 코딩 테스트를 독학하던 중, 스터디의 필요성을 느껴 이전에 부트캠프에서 만났던 분들과 함께 `Bitcopark` 스터디 모임을 만들게 되었다. 이 스터디는 부트캠프 당시 빠르게 지나친 CS 지식과 Spring Boot, JPA, Docker, Jenkins, AWS 등을 심도 있게 학습하기 위해 시작되었다.
+부트캠프를 마치고 한 달 정도 CS와 코딩 테스트를 독학하던 중, 스터디의 필요성을 느껴 이전에 지인 분들과 함께 `Bitcopark` 스터디 모임을 만들게 되었다. 이 스터디는 부트캠프 당시 빠르게 지나친 CS 지식과 Spring Boot, JPA, Docker, Jenkins, AWS 등을 심도 있게 학습하기 위해 시작되었다.
 
 스터디는 약 2개월 동안 매주 각자 공부해 온 내용을 발표하는 방식으로 진행되었다.(https://github.com/gunhaa/bitcopark) 이를 통해 긴장감 있게 학습을 이어가며 실력을 키울 수 있었다. 2개월간의 스터디를 통해 이론과 간단한 예제 작성에 익숙해졌고, 웹 개발에 대한 기본적인 이해를 갖췄다고 판단하여 실제 서비스를 만들어보기로 했다.
 
 처음부터 새로운 프로젝트를 개발하는 것도 좋았겠지만, 앞으로 개발자로 일하게 됬을 때 더 도움이 될 수 있는 레거시 코드 마이그레이션을 목표로 삼았다. 이를 통해 실제로 기존 시스템을 분석하고 개선하는 경험을 쌓고자 했다.
 
-기존 프로젝트는 Spring, MyBatis, JSP, Oracle, JavaScript로 작성된 상태였다. 이를 Spring Boot, JSP, MySQL, Thymeleaf, JavaScript와 TypeScript로 마이그레이션하였다. 또한, CI/CD 파이프라인을 구축하고, AWS EC2 인스턴스를 활용하여 도메인을 구매한 뒤 실제 웹 서비스로 배포하는 것을 목표로 진행하였다.
+기존 프로젝트는 Spring, MyBatis, JSP, Oracle, JavaScript로 작성된 상태였다. 이를 Spring Boot, MySQL, Thymeleaf, JavaScript와 TypeScript로 마이그레이션하고, CI/CD 파이프라인을 구축하고, AWS EC2 인스턴스를 활용하여 도메인을 구매한 뒤 실제 웹 서비스로 배포하는 것을 목표로 진행하였다.
 
 ## BitLibrary
 
