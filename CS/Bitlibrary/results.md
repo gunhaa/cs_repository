@@ -18,6 +18,6 @@
     - 자원이 부족해 nginx를 대신해 iptables를 이용한 포트라우팅
     - CloudFlare를 활용한 https 라우팅
     - 차후 라즈베리파이를 구매해 홈 서버 구축 예정
-- 트래픽을 견디는 캐싱(redis)은 로컬에서 진행
+- 캐싱(redis)은 로컬에서 진행
 - JUnit5를 활용한 테스트코드 작성
 - Restful한 api 작성
