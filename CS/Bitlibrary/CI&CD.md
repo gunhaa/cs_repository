@@ -30,16 +30,16 @@
 # 그렇지 않으면 memory exhausted 오류가 발생한다.
 $ sudo dd if=/dev/zero of=/swapfile bs=128M count=16
 $ sudo chmod 600 /swapfile
-# 2. 스왑 파일에 대한 읽기 및 쓰기 권한을 업데이트
+# 스왑 파일에 대한 읽기 및 쓰기 권한을 업데이트
 $ sudo mkswap /swapfile
-# 3. Linux 스왑 영역을 설정
+# Linux 스왑 영역을 설정
 $ sudo swapon /swapfile
-# 4.스왑 공간에 스왑 파일을 추가하여 스왑 파일을 즉시 사용할 수 있도록 만든다
+# 스왑 공간에 스왑 파일을 추가하여 스왑 파일을 즉시 사용할 수 있도록 만든다
 $ sudo swapon -s
-# 5. 절차가 성공했는지 확인
+# 절차가 성공했는지 확인
 $ sudo vi /etc/fstab
-# 6. /etc/fstab 파일을 편집하여 부팅 시 스왑 파일을 활성화
-/swapfile swap swap defaults 0 0
+# /etc/fstab 파일을 편집하여 부팅 시 스왑 파일을 활성화
+$ /swapfile swap swap defaults 0 0
 ```
 - 차후 라즈베리파이5를 구매해서 사설 웹 서버를 만드는 것으로 해결 예정
 
@@ -55,7 +55,6 @@ docker volumn을 삭제하지 않으면 db비밀번호를 바꿔도 비밀번호
 
 ## Jenkins 스크립트
 
-```Jenkins
 ```jenkins
 pipeline {
     agent any
