@@ -1,11 +1,3 @@
-# 자료구조/코딩테스트
-
-- 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
-  - pseudo-code와 개념만 보고 구현하기
-- 프로그래머스를 통해서 풀고, 기록이 필요한 문제는 해당 레포지토리에 기록
-- 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push
-
----
 
 # CS
 
@@ -292,3 +284,13 @@
 - [OAuthJWT](CS/Bitlibrary/OAuthJWT.md)
 - [CI&CD 계획](CS/Bitlibrary/CI&CD.md)
 - [결과](CS/Bitlibrary/results.md)
+
+
+---
+
+# 자료구조/코딩테스트
+
+- 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
+- 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push(https://github.com/gunhaa/Programmers-Baekjoon)
+
+---
