@@ -18,13 +18,13 @@
 - tmp 폴더 용량 분배(실패)
     - `sudo mount -o size=4G -t tmpfs tmpfs /tmp`
 - EC2 인스턴스 재부팅(성공)
-    - `free` 명령어로 남은 메모리 용량을 찾아보니, jenkins가 한번 빌드될때 메모리에 무언가를 cache시키는데, 한번 빌드 되면 이후 빌드부터는 cache로 인해 용량이 부족해서 해당 증상이 발생하는 것 같다.(추측)
+    - `free` 명령어로 남은 메모리 용량을 찾아보니, jenkins가 한번 빌드될때 메모리에 무언가를 cache시키는데, 한번 빌드 되면 이후 빌드부터는 cache로 인해 용량이 부족해서 해당 증상이 발생하는 것으로 추측된다
 
 ## application.yml 설정 문제
 
-- yaml파일의 들여쓰기는 \t , \n을 구분한다.
-- \t 로 \n과 같은 칸을 이동하더라도, 이는 파싱할때 문제를 일으켜 정상적으로 인식되지 않는다.
-- 주의해야 한다..
+- yaml파일의 들여쓰기는 \t , \n을 구분한다
+- \t 로 \n과 같은 칸을 이동하더라도, 이는 파싱할때 문제를 일으켜 정상적으로 인식되지 않는다
+- 주의해야 한다
 
 
 ## OAuth2 로그인을 하더라도 Cookie 미지급 오류
@@ -38,11 +38,13 @@
 
 ### X-Forwarded-Proto 헤더 설정/쿠키 설정 변경/iptables 설정 변경(실패)
 - iptables 규칙으로 443port를 7777port로 라우팅 시키는데, OAuth2의 요청은 443port로 들어오지만, protocol을 spring boot가 인식하지 못한다는 생각이 들어서 설정을 바꿔봤다
+- X-Forwarded-Proto를 설정해서 Spring Boot가 이를 신뢰하도록 ForwardedHeaderFilter를 활성화해서 실행시키는 방법이다.
 - X-Forwarded-Proto 헤더 설정
     - 클라이언트가 원래 요청을 보낼 때 사용한 프로토콜(HTTP 또는 HTTPS)을 나타내는 HTTP 헤더
 - Spring Security에서 ForwardedHeaderFilter를 활성화해 Spring이 HTTPS 요청으로 인식하도록 설정했다
 
-```java
+```java![](https://velog.velcdn.com/images/gunhaa/post/e43690fd-19cb-4eb5-a885-ef21973000d7/image.png)
+
 @Bean
 public FilterRegistrationBean<ForwardedHeaderFilter> forwardedHeaderFilter() {
     FilterRegistrationBean<ForwardedHeaderFilter> bean = new FilterRegistrationBean<>();
@@ -58,7 +60,6 @@ server:
 ```
 
 - Spring Boot가 HTTPS를 신뢰하도록 SameSite=None과 Secure 옵션을 추가한다.
-- spring security 설정 반영
 
 ```java
 // Spring Boot가 HTTPS 요청으로 인식하도록 설정
@@ -81,24 +82,24 @@ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 12
 sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 127.0.0.1:7777
 sudo iptables -t nat -A POSTROUTING -p tcp --dport 7777 -j MASQUERADE
 ```
-- 설정을 해도 cookie를 못 받아와서 실패
-- 해당 방법이 맞는 방법같지만, 더 좋은 방법이 생각나서 시도해보니 성공하여 해당 방식으로 작업은 중단했다
+- 설정 후에도 쿠키를 못 받아와 실패
+- 설정이 미흡한 부분이 있어 추가 조정이 필요할 것으로 판단된다
+- 진행 중 다른 방식으로 선회하여 최종적으로 작동 여부를 확인하지 못했다
 
 ## spring boot를 443 port에서 실행(성공)
-- 의외로 정답은 정말 간단한 방법이였다
-- 굳이 443 port를 spring boot를 다른포트에 켜서 라우팅할 필요 없이, 443 port에 spring boot를 키니 문제가 발생하지 않았다.
-- 원인을 생각해보면 
+- 의외로 해결 방법은 간단했다
+- 443 포트에서 Spring Boot를 직접 실행하니 문제가 해결되었다
 
-### 443port를 7777port로 라우팅
-- 기존 구조는 클라이언트 → 443(HTTPS) → iptables(7777로 포트 포워딩) → Spring Boot
-- 하지만 Spring Boot는 7777 포트에서 HTTP로 실행 중이므로, OAuth2 로그인 과정에서 SameSite=None; Secure 쿠키가 제대로 지급되지 않고 있다
-- 브라우저는 HTTPS에서 Secure 쿠키를 요구하는데, Spring Boot는 요청을 HTTP로 인식해서 Secure 옵션이 빠진 쿠키를 내려보내는 문제가 생긴 것 같다.
+### 기존 구조 (443 → 7777 포트 포워딩)
 
-### X-Forwarded-Proto 설정
-- X-Forwarded-Proto를 설정해도 Spring Boot가 이를 신뢰하도록 ForwardedHeaderFilter를 활성화해서 실행시킴
-- 해당 방식은 되어야하지만, 해당 방식을 하던 중 다른 방식으로 선회해서 작동 여부를 확인 못했다.. 아마 이론상 될 것 같다
+- 클라이언트 → 443(HTTPS) → iptables(7777 포트로 포워딩) → Spring Boot
+- Spring Boot는 7777 포트에서 HTTP로 실행 중이므로, OAuth2 로그인 과정에서 SameSite=None; Secure 쿠키가 정상적으로 지급되지 않음
+- 브라우저는 HTTPS에서 Secure 쿠키를 요구하지만, Spring Boot는 요청을 HTTP로 인식하여 Secure 옵션이 빠진 쿠키를 반환
 
-### 원인&결론
-- iptables의 포트포워딩이 protocol까지 그대로 보내 모든 정보를 전달해주는 것인줄 알았는데 그 것이 아니고 단순히 포트를 변경하는 역할을 하며, 원본 요청의 프로토콜 정보(HTTP/HTTPS)는 전달되지 않는 것 같다. 따라서 Spring Boot는 클라이언트의 원래 요청이 HTTPS였는지를 인식하지 못하고, HTTP로 요청이 들어왔다고 판단해 Secure 옵션이 빠진 쿠키를 내려보낸 것인것 같다.
-- HTTP요청에는 요청이 HTTP인지, HTTPS인지 포함하지 않아 spring boot 입장에서는 어떤 요청인지 알 수 없어 cookie secure옵션에 문제가 생긴 것으로 추측된다
-- 서버는 요청에 응답을 할 뿐이므로 다음부터는 프로토콜을 다룰 때 주의해야할 것 같다
+
+### 원인 및 결론
+
+- iptables의 포트 포워딩이 프로토콜까지 전달하는 것이 아니라 단순히 포트만 변경하는 역할을 하는 것으로 보인다.
+- 따라서 Spring Boot는 클라이언트 요청이 원래 HTTPS였는지를 인식하지 못하고, HTTP 요청으로 판단하여 Secure 옵션이 빠진 쿠키를 내려보낸 것으로 추측된다
+- HTTP 요청에는 프로토콜 정보가 포함되지 않으므로, Spring Boot 입장에서 HTTPS 여부를 알 수 없었다
+- 서버는 단순히 요청에 응답할 뿐이므로, 앞으로 프로토콜을 다룰 때 더욱 신중해야 한다
