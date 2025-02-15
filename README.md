@@ -34,6 +34,7 @@
 - [모두를 위한 컴퓨터 과학](https://www.boostcourse.org/cs112)
 - [컴파일러 만들기](https://product.kyobobook.co.kr/detail/S000001805053)
 - [실습과 그림으로 배우는 리눅스 구조](https://product.kyobobook.co.kr/detail/S000208795616)
+- [쉽게 배우는 Gof의 23가지 디자인 패턴](https://product.kyobobook.co.kr/detail/S000200311846)
 
 ---
 
@@ -150,6 +151,8 @@
 - [Socket이란?](CS/Network/Socket.md)
 - [브라우저](CS/Network/Browser.md)
 - [DNS](CS/Network/DNS.md)
+- [Wireshark 패킷 분석](CS/Network/Wireshark.md)
+  - [ipv4 단편화](CS/Network/ipv4.md)
 
 ---
 
