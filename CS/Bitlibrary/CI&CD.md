@@ -46,7 +46,7 @@ $ /swapfile swap swap defaults 0 0
 ### Docker Volume 문제
 
 ```shell
-docker-compose down -v // 모든 docker container의 volume을 삭제함
+docker-compose down -v // 모든 docker container의 volume을 삭제함 -> 컨테이너와 docker 내부에있는 캐시를 삭제함
 docker-compose up --build // docker contanier가 새로 생성 및 초기화
 ```
 
