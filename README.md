@@ -273,6 +273,15 @@
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
 
+#### MIT 6.006 Introduction to Algorithms
+
+> https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/
+
+- [극댓값 찾기/계산 모델](CS/Algorithm/MITOCW/Peek/Peek.md)
+
+
+
+
 ---
 ### CI/CD - Docker - AWS
 
