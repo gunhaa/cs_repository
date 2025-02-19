@@ -102,7 +102,13 @@
 - [동시성제어](CS/OS/Concurrency.md)
 - [부동 소수점](CS/OS/FloatingPoint.md)
 
+---
 
+### 운영체제 - 최린
+> http://www.kocw.net/home/cview.do?cid=5e94ceee75415112
+- [운영체제 개요&프로세스](CS/OS/ChoiLyn/Operation&Process.md)
+
+---
 ### 리눅스-명령어
 
 - [리눅스란?](CS/OS/Linux/Linux.md)
