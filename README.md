@@ -77,6 +77,11 @@
 - [Trailing slash](CS/CommonSense/TrailingSlash.md)
 
 ---
+### WebRTC
+
+- [WebRTC](CS/WebRTC/WebRTC.md)
+
+---
 
 ### GITHUB
 
@@ -101,6 +106,16 @@
 - [프로세스와 스레드](CS/OS/Process&Thread.md)
 - [동시성제어](CS/OS/Concurrency.md)
 - [부동 소수점](CS/OS/FloatingPoint.md)
+
+---
+
+### 넓고 얕게 배우는 컴퓨터 구조, 자료구조와 알고리즘 프로그래밍, 운영체제(널널한 개발자)
+> https://www.youtube.com/playlist?list=PLXvgR_grOs1BQCziQ_MpM877BdBxwbMzA
+- [컴퓨터의 기본 구조](CS/OS/NullNull/Structure.md)
+- [1비트와 진법](CS/OS/NullNull/bitsAndBase.md)
+- [CPU의 작동원리](CS/OS/NullNull/CPU.md)
+- [운영체제](CS/OS/NullNull/OS.md)
+
 
 ---
 
@@ -169,6 +184,16 @@
   - [TCP:retransmission](CS/Network/retransmission.md)
   - [HTTP](CS/Network/WiresharkHttp.md)
   - [Server To Req](CS/Network/ServerToReq.md)
+- [웹 서비스의 구조](CS/Network/WebServiceStructure.md)
+
+---
+
+### 네트워크 기초 강의 | 새내기 개발자들을 위한 필수 가이드(크래프트맨 멘탈리티)
+> https://www.youtube.com/watch?v=dsoAkoxZ13o
+
+- [Network란?](CS/Network/CraftMan/Network.md)
+- [Internet Protocol](CS/Network/CraftMan/InternetProtocol.md)
+- [데이터 단위](CS/Network/CraftMan/Data.md)
 
 ---
 
@@ -275,8 +300,26 @@
 
 ### 자료구조
 
+> 데이터 구조 TypeScript로 직접 구현(쉽게 배우는 자료구조 with JAVA 참고) <br>
+> javascript 폴더 안 <br>
+> 원본은 velog(https://velog.io/@gunhaa/series/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0) 에 정리되어 있음
+
+- [Linked-List](CS/DataStructure/LinkedList.md)
+- [Stack](CS/DataStructure/Stack.md)
+- [Queue](CS/DataStructure/Queue.md)
+- [Priority Queue&Heap](CS/DataStructure/Heap.md)
+- [sort](CS/DataStructure/Sort.md)
+  - [Selection Sort](CS/DataStructure/SelectionSort.md)
+  - [Bubble Sort](CS/DataStructure/BubbleSort.md)
+  - [Insertion Sort](CS/DataStructure/InsertionSort.md)
+  - [Quick Sort](CS/DataStructure/QuickSort.md)
+
 ---
 ### 알고리즘
+
+> 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push <br>
+> https://github.com/gunhaa/Programmers-Baekjoon
+
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
 
@@ -285,8 +328,6 @@
 > https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/
 
 - [극댓값 찾기/계산 모델](CS/Algorithm/MITOCW/Peek/Peek.md)
-
-
 
 
 ---
@@ -314,12 +355,5 @@
 - [CI&CD 계획](CS/Bitlibrary/CI&CD.md)
 - [결과](CS/Bitlibrary/results.md)
 
-
----
-
-# 자료구조/코딩테스트
-
-- 모든 데이터 구조 JS/TS로 직접 구현(쉽게 배우는 자료구조 with JAVA / 문병로 참고)
-- 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push(https://github.com/gunhaa/Programmers-Baekjoon)
 
 ---
