@@ -35,6 +35,12 @@
 - [컴파일러 만들기](https://product.kyobobook.co.kr/detail/S000001805053)
 - [실습과 그림으로 배우는 리눅스 구조](https://product.kyobobook.co.kr/detail/S000208795616)
 - [쉽게 배우는 Gof의 23가지 디자인 패턴](https://product.kyobobook.co.kr/detail/S000200311846)
+- [혼자 공부하는 네트워크](https://product.kyobobook.co.kr/detail/S000212911507?utm_source=google&utm_medium=cpc&utm_campaign=googleSearch&gad_source=1)
+- [LLM을 활용한 실전 AI 애플리케이션 개발](https://product.kyobobook.co.kr/detail/S000213834592)
+- [한 줄 한 줄 짜면서 익히는 러스트 프로그래밍](https://product.kyobobook.co.kr/detail/S000061351231)
+- [(컨테이너 인프라 환경 구축을 위한) 쿠버네티스/도커](https://product.kyobobook.co.kr/detail/S000001834629)
+- [리팩터링](https://product.kyobobook.co.kr/detail/S000001810241)
+- [(자바 ORM 표준) JPA 프로그래밍](https://product.kyobobook.co.kr/detail/S000000935744)
 
 ---
 
