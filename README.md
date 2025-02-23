@@ -47,14 +47,26 @@
 
 - 목차
    - [개발 상식](#개발-상식)
+      - [WebRTC](#WebRTC)
       - [GITHUB](#GITHUB)
    - [운영체제](#운영체제)
+     - [운영체제-널널한 개발자](#운영체제-널널한개발자)
+     - [운영체제-최린](#운영체제-최린)
      - [리눅스-명령어](#리눅스-명령어)
      - [리눅스-운영체제](#리눅스-운영체제)
    - [네트워크](#네트워크)
+     - [네트워크 기초 강의](#네트워크기초-크래프트맨)
    - [데이터 베이스](#데이터베이스)
    - [디자인 패턴](#디자인-패턴)
-   - [언어별 특징](#언어별-특징)
+   - [JAVA](#JAVA)
+   - [JPA](#JPA)
+   - [SpringSecurity](#SpringSecurity)
+   - [Javascript](#Javascript)
+   - [Rust](#Rust)
+   - [디자인패턴](#디자인패턴)
+   - [자료구조](#자료구조)
+   - [알고리즘](#알고리즘)
+   - [Jenkins-Docker-AWS](#Jenkins-Docker-AWS)
    - [bitlibrary 개발일지](#bitlibrary-개발일지)
 
 ---
@@ -115,7 +127,7 @@
 
 ---
 
-### 넓고 얕게 배우는 컴퓨터 구조, 자료구조와 알고리즘 프로그래밍, 운영체제(널널한 개발자)
+### 운영체제-널널한개발자
 > https://www.youtube.com/playlist?list=PLXvgR_grOs1BQCziQ_MpM877BdBxwbMzA
 - [컴퓨터의 기본 구조](CS/OS/NullNull/Structure.md)
 - [1비트와 진법](CS/OS/NullNull/bitsAndBase.md)
@@ -125,7 +137,7 @@
 
 ---
 
-### 운영체제 - 최린
+### 운영체제-최린
 > http://www.kocw.net/home/cview.do?cid=5e94ceee75415112
 - [운영체제 개요&프로세스](CS/OS/ChoiLyn/Operation&Process.md)
   - [프로세스](CS/OS/ChoiLyn/Process.md)
@@ -195,7 +207,7 @@
 
 ---
 
-### 네트워크 기초 강의 | 새내기 개발자들을 위한 필수 가이드(크래프트맨 멘탈리티)
+### 네트워크기초-크래프트맨
 > https://www.youtube.com/watch?v=dsoAkoxZ13o
 
 - [Network란?](CS/Network/CraftMan/Network.md)
@@ -279,7 +291,7 @@
 
 ---
 
-### 디자인 패턴
+### 디자인패턴
 > https://github.com/gunhaa/GofDesignPattern
 > <br> GoF design pattern java코드, 설명 github repo
 
@@ -338,7 +350,8 @@
 
 
 ---
-### CI/CD - Docker - AWS
+
+### Jenkins-Docker-AWS
 
 - [Overview](CS/ETC/Overview.md)
 - [CI/CD step](CS/ETC/CI_CD_Step.md)
