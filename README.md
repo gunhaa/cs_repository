@@ -15,8 +15,6 @@
 
 ### 참고 자료
 
-- [gunhaa velog 정리자료](https://velog.io/@gunhaa/posts)
-- [gunhaa notion 정리자료](https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62)
 - [김영한 로드맵](https://www.inflearn.com/roadmaps/373)
 - [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
 - [Computer Networking:A-Top-Down Approach](https://product.kyobobook.co.kr/detail/S000061694627)
