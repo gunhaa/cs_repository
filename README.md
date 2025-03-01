@@ -27,6 +27,7 @@
    - [네트워크](#네트워크)
      - [네트워크 기초 강의](#네트워크기초-크래프트맨)
    - [데이터 베이스](#데이터베이스)
+     - [MySQL](#mysql)
    - [디자인 패턴](#디자인-패턴)
    - [JAVA](#JAVA)
    - [JPA](#JPA)
@@ -203,6 +204,14 @@
 - [SQL vs NoSQL](CS/Database/SqlnoSql.md)
 - [Index](CS/Database/Index.md)
 - [데이터 정규화](CS/Database/normalization.md)
+
+---
+
+### MYSQL
+> RealMySQL 8.0
+- [MySQL](CS/MySQL/MySQL.md)
+- [Archetecture](CS/MySQL/Architecture.md)
+- [Optimizer](CS/MySQL/Optimizer.md)
 
 
 ---
