@@ -13,40 +13,12 @@
 
 ---
 
-### 참고 자료
-
-- [김영한 로드맵](https://www.inflearn.com/roadmaps/373)
-- [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
-- [Computer Networking:A-Top-Down Approach](https://product.kyobobook.co.kr/detail/S000061694627)
-- [Git 교과서](https://product.kyobobook.co.kr/detail/S000001834368)
-- [Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지](https://www.udemy.com/course/linux-command-line-colt/)
-- [널널한 개발자](https://www.youtube.com/@nullnull_not_eq_null/playlists)
-- [포프티비](https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos)
-- [자바스크립트 패턴과 테스트](https://www.yes24.com/Product/Goods/33211518)
-- [이펙티브 자바](https://www.yes24.com/Product/Goods/65551284)
-- [쉽게 배우는 자료구조 with JAVA](https://www.yes24.com/Product/Goods/106400387)
-- [자바로 배우는 핵심 자료구조와 알고리즘](https://product.kyobobook.co.kr/detail/S000001810058)
-- [JVM 밑바닥까지 파헤치기](https://www.yes24.com/Product/Goods/126114513)
-- [이것이 컴퓨터 과학이다](https://www.yes24.com/Product/Goods/130179291)
-- [자바를 위한 자료구조](https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk)
-- [모두를 위한 컴퓨터 과학](https://www.boostcourse.org/cs112)
-- [컴파일러 만들기](https://product.kyobobook.co.kr/detail/S000001805053)
-- [실습과 그림으로 배우는 리눅스 구조](https://product.kyobobook.co.kr/detail/S000208795616)
-- [쉽게 배우는 Gof의 23가지 디자인 패턴](https://product.kyobobook.co.kr/detail/S000200311846)
-- [혼자 공부하는 네트워크](https://product.kyobobook.co.kr/detail/S000212911507?utm_source=google&utm_medium=cpc&utm_campaign=googleSearch&gad_source=1)
-- [LLM을 활용한 실전 AI 애플리케이션 개발](https://product.kyobobook.co.kr/detail/S000213834592)
-- [한 줄 한 줄 짜면서 익히는 러스트 프로그래밍](https://product.kyobobook.co.kr/detail/S000061351231)
-- [(컨테이너 인프라 환경 구축을 위한) 쿠버네티스/도커](https://product.kyobobook.co.kr/detail/S000001834629)
-- [리팩터링](https://product.kyobobook.co.kr/detail/S000001810241)
-- [(자바 ORM 표준) JPA 프로그래밍](https://product.kyobobook.co.kr/detail/S000000935744)
-
----
-
 
 - 목차
    - [개발 상식](#개발-상식)
       - [WebRTC](#WebRTC)
       - [GITHUB](#GITHUB)
+      - [아키텍쳐](#아키텍쳐)
    - [운영체제](#운영체제)
      - [운영체제-널널한 개발자](#운영체제-널널한개발자)
      - [운영체제-최린](#운영체제-최린)
@@ -66,6 +38,7 @@
    - [알고리즘](#알고리즘)
    - [Jenkins-Docker-AWS](#Jenkins-Docker-AWS)
    - [bitlibrary 개발일지](#bitlibrary-개발일지)
+   - [참고자료](#참고자료)
 
 ---
 
@@ -108,6 +81,11 @@
 - [Stash](CS/GIT/Stash.md)
 - [Merge](CS/GIT/Merge.md)
 - [linux-ssh인증](CS/GIT/Linux-SSH.md)
+
+---
+
+### 아키텍쳐
+- [클린 아키텍쳐](CS/Architecture/Clean.md)
 
 ---
 
@@ -375,3 +353,33 @@
 
 
 ---
+
+### 참고자료
+
+- [김영한 로드맵](https://www.inflearn.com/roadmaps/373)
+- [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
+- [Computer Networking:A-Top-Down Approach](https://product.kyobobook.co.kr/detail/S000061694627)
+- [Git 교과서](https://product.kyobobook.co.kr/detail/S000001834368)
+- [Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지](https://www.udemy.com/course/linux-command-line-colt/)
+- [널널한 개발자](https://www.youtube.com/@nullnull_not_eq_null/playlists)
+- [포프티비](https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos)
+- [자바스크립트 패턴과 테스트](https://www.yes24.com/Product/Goods/33211518)
+- [이펙티브 자바](https://www.yes24.com/Product/Goods/65551284)
+- [쉽게 배우는 자료구조 with JAVA](https://www.yes24.com/Product/Goods/106400387)
+- [자바로 배우는 핵심 자료구조와 알고리즘](https://product.kyobobook.co.kr/detail/S000001810058)
+- [JVM 밑바닥까지 파헤치기](https://www.yes24.com/Product/Goods/126114513)
+- [이것이 컴퓨터 과학이다](https://www.yes24.com/Product/Goods/130179291)
+- [자바를 위한 자료구조](https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk)
+- [모두를 위한 컴퓨터 과학](https://www.boostcourse.org/cs112)
+- [컴파일러 만들기](https://product.kyobobook.co.kr/detail/S000001805053)
+- [실습과 그림으로 배우는 리눅스 구조](https://product.kyobobook.co.kr/detail/S000208795616)
+- [쉽게 배우는 Gof의 23가지 디자인 패턴](https://product.kyobobook.co.kr/detail/S000200311846)
+- [혼자 공부하는 네트워크](https://product.kyobobook.co.kr/detail/S000212911507?utm_source=google&utm_medium=cpc&utm_campaign=googleSearch&gad_source=1)
+- [LLM을 활용한 실전 AI 애플리케이션 개발](https://product.kyobobook.co.kr/detail/S000213834592)
+- [한 줄 한 줄 짜면서 익히는 러스트 프로그래밍](https://product.kyobobook.co.kr/detail/S000061351231)
+- [(컨테이너 인프라 환경 구축을 위한) 쿠버네티스/도커](https://product.kyobobook.co.kr/detail/S000001834629)
+- [리팩터링](https://product.kyobobook.co.kr/detail/S000001810241)
+- [(자바 ORM 표준) JPA 프로그래밍](https://product.kyobobook.co.kr/detail/S000000935744)
+- [gunhaa velog 정리자료](https://velog.io/@gunhaa/posts)
+- [gunhaa notion 정리자료](https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62)
+- [클린 아키텍쳐](https://www.yes24.com/Product/Goods/77283734)
