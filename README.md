@@ -64,6 +64,7 @@
 - [REST](CS/CommonSense/Restapi.md)
 - [Refactoring](CS/CommonSense/Refactoring.md)
 - [Trailing slash](CS/CommonSense/TrailingSlash.md)
+- [Compile](CS/CommonSense/Compile.md)
 
 ---
 ### WebRTC
