@@ -121,6 +121,7 @@
 - [운영체제 역사](CS/OS/ChoiLyn/OperationHistory.md)
 - [프로세스](CS/OS/ChoiLyn/OperationProcess.md)
   - [프로세스](CS/OS/ChoiLyn/Process.md)
+- [Exception, Thread](CS/OS/ChoiLyn/ExceptionAndThread.md)
 
 ---
 ### 리눅스-명령어
