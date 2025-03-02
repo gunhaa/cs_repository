@@ -117,7 +117,9 @@
 
 ### 운영체제-최린
 > http://www.kocw.net/home/cview.do?cid=5e94ceee75415112
-- [운영체제 개요&프로세스](CS/OS/ChoiLyn/Operation&Process.md)
+- [운영체제 개요](CS/OS/ChoiLyn/OperationIntro.md)
+- [운영체제 역사](CS/OS/ChoiLyn/OperationHistory.md)
+- [프로세스](CS/OS/ChoiLyn/OperationProcess.md)
   - [프로세스](CS/OS/ChoiLyn/Process.md)
 
 ---
