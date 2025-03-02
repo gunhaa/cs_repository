@@ -211,7 +211,7 @@
 ---
 
 ### MYSQL
-> RealMySQL 8.0
+> [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
 - [MySQL](CS/MySQL/MySQL.md)
 - [Archetecture](CS/MySQL/Architecture.md)
 - [Optimizer](CS/MySQL/Optimizer.md)
@@ -310,7 +310,7 @@
 
 > 데이터 구조 TypeScript로 직접 구현(쉽게 배우는 자료구조 with JAVA 참고) <br>
 > javascript 폴더 안 <br>
-> 원본은 velog(https://velog.io/@gunhaa/series/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0) 에 정리되어 있음
+> 원본 velog(https://velog.io/@gunhaa/series/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)
 
 - [Linked-List](CS/DataStructure/LinkedList.md)
 - [Stack](CS/DataStructure/Stack.md)
@@ -396,3 +396,4 @@
 - [gunhaa velog 정리자료](https://velog.io/@gunhaa/posts)
 - [gunhaa notion 정리자료](https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62)
 - [클린 아키텍쳐](https://www.yes24.com/Product/Goods/77283734)
+- [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
