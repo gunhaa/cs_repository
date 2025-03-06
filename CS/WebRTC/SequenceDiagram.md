@@ -9,6 +9,8 @@
     - icecandidate : 네트워크 경로 후보
     - icecandidate는 WebRTC에서 피어 간의 연결을 설정하기 위해 사용되는 네트워크 경로 후보(ICE Candidate)가 생성될 때 발생하는 이벤트이다.
 
+- 시퀀스 다이어그램에서 offer/answer, ice event 순서로 되어있지만, 사실 순서는 상관이 없고 두 개가 모두 이루어지면 연결이 시작된다
+
 ```javascript
   // ...
   // ICE 후보 목록 (네트워크 연결을 위한 후보 주소)
@@ -148,7 +150,9 @@
         - `setLocalDescription` 설정
         - `createOffer` 로 이용해 단일 타겟(`memberNo`)에게 전송
         - `createOffer` 에서 STUN Server("stun:stun.l.google.com:19302")를 세팅해 Ice candidate 후보를 수집하고 이를 전송해 peer들과 네트워크 경로를 설정하고 연결한다
-            - STUN 서버를 통해 내 공인 IP와 포트가 확인되면, 해당 정보가 ICE 후보(ice candidate)로 생성되어 WebRTC에 전달
+          - STUN 서버를 통해 내 공인 IP와 포트가 확인되면, 해당 정보가 ICE 후보(ice candidate)로 생성되어 WebRTC에 전달
+  - `createConnection` 을 통한 icecandidate 이벤트, icecandidate에서 세팅된 offer(sdp 미디어 스트림 id 교환) 이 이루어지면 이후 과정인 연결이 시작된다(P2P)
+
 ```javascript
 // stun:stun.l.google.com:19302 반환값
 "iceCandidates": [
