@@ -328,8 +328,12 @@
 > 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push <br>
 > https://github.com/gunhaa/Programmers-Baekjoon
 
+- [알고리즘이란?](CS/Algorithm/Algorithm.md)
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
+- [Swap](CS/Algorithm/Swap.md)
+- [Recursion](CS/Algorithm/Recursion.md)
+
 
 #### MIT 6.006 Introduction to Algorithms
 
@@ -354,7 +358,7 @@
 ---
 ### bitlibrary-개발일지
 
-- [프로젝트 시작](CS/Bitlibrary/Bitlibrary1.md)
+- [프로젝트 시작](CS/Bitlibrary/Overview.md)
 - [트러블 슈팅1- Category](CS/Bitlibrary/TroubleShooting1.md)
 - [트러블 슈팅2- @PathVariable](CS/Bitlibrary/TroubleShooting2.md)
 - [트러블 슈팅3- BookLike](CS/Bitlibrary/TroubleShooting3.md)
