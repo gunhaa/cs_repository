@@ -66,6 +66,7 @@
 - [Refactoring](CS/CommonSense/Refactoring.md)
 - [Trailing slash](CS/CommonSense/TrailingSlash.md)
 - [Compile](CS/CommonSense/Compile.md)
+- [functional programming](CS/CommonSense/FunctionalProgramming.md)
 
 ---
 ### WebRTC
