@@ -1,11 +1,19 @@
 
 # Docker 주요 명령어
 
+- `docker build .`
+    - `-t` 옵션을 사용해 이름과 태그를 정할 수 있다 eg `docker build -t goals:latest .`
+
 - `docker run ${Image id | Image tag}`
     - 이미지를 이용해 새로운 컨테이너를 만든다
     - 기본적으로 attached 모드가 디폴트이다
     - `-d` 옵션을 통해 detached 모드로 실행 가능하다
     - attached 모드에서는 server에서 출력되는 값을 콘솔에서 수신한다.
+    - `--rm` 옵션을 추가해 컨테이너가 중지 될 때 제거되도록 만들 수 있다
+    - `-it` 옵션을 추가해 컨테이너 시작 후 터미널을 입력 할 수 있다(interactive shell)
+    - `--name` 옵션을 추가해 컨테이너의 이름을 정할 수 있다
+        - `--name`을 통해 이미지의 그룹을 만들 수 있다
+        - tag를 이용해 버전을 정할 수 있다(name : tag로 표시됨 eg node:12, node:14 , node:latest)
 - `docker start ${Container id | Container name}`
     - 컨테이너를 시작 한다
     - 기본적으로 detached가 디폴트이다
@@ -18,3 +26,21 @@
     - 컨테이너의 로그를 확인 할 수 있다
     - attached mode일때 콘솔에 출력됬던 로그
     - `-f` follow 옵션을 사용해 컨테이너와 연결 시킬 수 있다
+- `docker start -a -i ${ContainerId}`
+    - 컨테이너 재시작 후 터미널 연결
+- `docker rm ${containerId}`
+    - 컨테이너를 제거한다
+    - stop 후 실행시켜야 한다
+    - 실행하고 있는 것을 `docker rm -f` 로 제거 할 수 있다
+- `docker rmi ${ImageId}`
+    - 이미지를 제거 한다
+- `docker image`
+    - `prune`을 추가해 컨테이너로 사용되고 있지 않은 모든 이미지를 제거 한다(가지치기)
+    - `inspect` 를 추가해 image에 대한 정보를 얻을 수 있다
+- `docker images`
+    - docker image들을 확인 할 수 있다
+- `docker cp`
+    - `docker cp ${원본 파일 위치} ${컨테이너이름:폴더}` 로 파일을 복사할 수 있다
+        - eg docker cp dummy/. boring_vaughan:/test
+        - 없는 폴더는 자동 생성된다
+        - 좋은 방법은 아니다
