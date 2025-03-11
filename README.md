@@ -66,7 +66,7 @@
 - [Refactoring](CS/CommonSense/Refactoring.md)
 - [Trailing slash](CS/CommonSense/TrailingSlash.md)
 - [Compile](CS/CommonSense/Compile.md)
-- [functional programming](CS/CommonSense/FunctionalProgramming.md)
+- [Functional Programming](CS/CommonSense/FunctionalProgramming.md)
 
 ---
 ### WebRTC
@@ -360,6 +360,7 @@
 > https://www.udemy.com/course/docker-kubernetes-the-practical-guide
 
 - [Container&Image](CS/ETC/Docker/Container&Image.md)
+- [Docker 주요 명령어 정리](CS/ETC/Docker/Command.md)
 
 
 ---
