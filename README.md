@@ -67,6 +67,7 @@
 - [Trailing slash](CS/CommonSense/TrailingSlash.md)
 - [Compile](CS/CommonSense/Compile.md)
 - [Functional Programming](CS/CommonSense/FunctionalProgramming.md)
+- [그래픽카드](CS/CommonSense/GraphicsCard.md)
 
 ---
 ### WebRTC
