@@ -54,10 +54,16 @@ VOLUME ["/app/feedback"]
 - 이를 이용해 소스코드를 넣을 수 있다.
 - 소스 코드를 실제 복사하는 것이아니고, binding mount 에서 복사한다.
 - 터미널에서 설정 할 수 있다.
-- `docker run -d -p 3000:80 --rm --name feedback-app -v "feedback:/app/feedback" -v "C:\workspace\git\Kubernetes\data-volumes-01-starting-setup:/app" feedback-node:volumes`
+- `docker run -d -p 3000:80 --name feedback-app -v "feedback:/app/feedback" -v "/app/node_modules" -v "/c/workspace/git/Kubernetes/data-volumes-01-starting-setup:/app" feedback-node:volumes`
 - 절대경로와 매핑시켜야한다
 - docker - preference 에서 공유가 되고있는지 확인해야한다(최상위 폴더)
 - 해당 옵션은 WSL2 기반일때는 사용이 불가능하다
     - WSL 2는 완전한 Linux 커널을 실행하며, Linux 환경에서 파일 시스템을 사용하는 방식으로 동작한다. 즉, WSL 2는 자체적으로 독립적인 가상 머신처럼 동작하며, Windows 파일 시스템과 Linux 파일 시스템 간의 직접적인 공유가 이루어지지 않는다.
     - WSL 2에서 Docker를 사용할 때 파일 공유가 필요하다면, /mnt/c 같은 디렉토리를 사용하여 Windows의 파일 시스템에 접근할 수 있다. 예를 들어, /mnt/c/Users/yourname/yourfolder 경로로 Windows의 파일을 접근할 수 있다.
     - Docker 컨테이너에서 Windows 파일 시스템에 접근하고자 할 때는 -v 또는 --mount 옵션을 사용하여 /mnt/c 이하의 경로를 마운트할 수 있다.
+    - window wsl2 환경에서는 반드시 다음에서 지시하는 것을 해야 해당 방식으로 마운트 시킬 수 있다
+    - https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#ensure-volume-mounts-work
+    - metadata를 이용해 권한문제를 해결하는 방식으로 해결하는 것 같음(추측)
+- docker container에 넣을 때 원래 폴더의 node_modules를 유지시키는 방법은 -v 익명 볼륨 이용하는 것이다
+- nodemon 사용
+    - 윈도우에서 WSL2를 사용하는 경우, 리눅스 파일시스템에 파일이 따로 저장되는 것이기 때문에 nodemon을 사용할 수 없다.
