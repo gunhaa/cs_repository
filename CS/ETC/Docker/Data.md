@@ -65,6 +65,7 @@ VOLUME ["/app/feedback"]
     - https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#ensure-volume-mounts-work
     - metadata를 이용해 권한문제를 해결하는 방식으로 해결하는 것 같음(추측)
 - docker container에 넣을 때 원래 폴더의 node_modules를 유지시키는 방법은 -v 익명 볼륨 이용하는 것이다
+    - 이 명령어는 익명볼륨 node_modules를 미리 app폴더에 넣어 npm에서 만든 node_modules를 넣도록하고, 바인드 마운트에서 파일을 공유할때 해당 폴더를 추가시키려는 목적이다.
 - nodemon 사용
     - 윈도우에서 WSL2를 사용하는 경우, 리눅스 파일시스템에 파일이 따로 저장되는 것이기 때문에 nodemon을 사용할 수 없다.
     - nodemon은 파일 시스템의 변경을 파일 시스템의 이벤트를 통해 감지한다. 리눅스에서는 inotify와 같은 시스템을 사용해 파일 변경을 감지하고, 윈도우에서는 파일 시스템의 다른 방식으로 감지한다.
