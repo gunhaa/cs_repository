@@ -3,6 +3,15 @@
 
 - `docker build` 진행시 --build-arg 를 통해 넣을 수 있다.
 - CMD, 어플리케이션 코드로 접근이 불가능하다
+- Dockerfile에서 사용할 수 있음
+
+```Dockerfile
+ ARG DEFAULT_PORT=80
+```
+- `docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000 .`
+    - 으로 같은 Dockerfile을 사용해 ARG 값만 다르게 사용 가능하다
+- ARG도 layer를 추가하기 때문에 위치가 중요하니 신경써야한다
+
 
 # Env(Environment)
 
