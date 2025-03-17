@@ -358,7 +358,8 @@
 - [HTTPS](CS/ETC/Https.md)
 
 ### Docker & Kubernetes: The Practical Guide [2025 Edition]
-> https://www.udemy.com/course/docker-kubernetes-the-practical-guide
+
+> https://github.com/gunhaa/Kubernetes
 
 - [Container&Image](CS/ETC/Docker/Container&Image.md)
 - [Docker 주요 명령어 정리](CS/ETC/Docker/Command.md)
@@ -366,6 +367,7 @@
 - [ENV, ARG](CS/ETC/Docker/Env&ARG.md)
 - [Container Network](CS/ETC/Docker/ContainerNetwork.md)
 - [Multi Container Application](CS/ETC/Docker/MultiContainerApplication.md)
+- [docker-compose](CS/ETC/Docker/Docker-compose.md)
 
 
 ---
