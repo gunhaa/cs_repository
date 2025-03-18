@@ -162,8 +162,13 @@
 ---
 
 ### OS구조와 원리
+
 > https://github.com/gunhaa/LoopyOS
-- [Day1](CS/OS/dailyOS/day1.md)
+
+> https://www.yes24.com/Product/Goods/2508562
+
+- [day1](CS/OS/dailyOS/day1.md)
+- [day2](CS/OS/dailyOS/day2.md)
 
 ---
 
