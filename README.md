@@ -24,6 +24,7 @@
      - [운영체제-최린](#운영체제-최린)
      - [리눅스-명령어](#리눅스-명령어)
      - [리눅스-운영체제](#리눅스-운영체제)
+     - [OS 구조와 원리](#OS구조와-원리)
    - [네트워크](#네트워크)
      - [네트워크 기초 강의](#네트워크기초-크래프트맨)
    - [데이터 베이스](#데이터베이스)
@@ -157,6 +158,12 @@
 
 ### PintOS
 - [PintOS](CS/pintOS/StartPintOS.md) 
+
+---
+
+### OS구조와 원리
+> https://github.com/gunhaa/LoopyOS
+- [Day1](CS/OS/dailyOS/day1.md)
 
 ---
 
@@ -418,3 +425,4 @@
 - [클린 아키텍쳐](https://www.yes24.com/Product/Goods/77283734)
 - [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
 - [Street Coder](https://www.yes24.com/Product/Goods/122109104)
+- [OS구조와 원리](https://www.yes24.com/Product/Goods/2508562)
