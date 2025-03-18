@@ -68,6 +68,7 @@
 - [Compile](CS/CommonSense/Compile.md)
 - [Functional Programming](CS/CommonSense/FunctionalProgramming.md)
 - [LLM](CS/CommonSense/LLM.md)
+- [Street Coder](CS/CommonSense/StreetCoder.md)
 
 ---
 ### WebRTC
@@ -416,3 +417,4 @@
 - [gunhaa notion 정리자료](https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62)
 - [클린 아키텍쳐](https://www.yes24.com/Product/Goods/77283734)
 - [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
+- [Street Coder](https://www.yes24.com/Product/Goods/122109104)
