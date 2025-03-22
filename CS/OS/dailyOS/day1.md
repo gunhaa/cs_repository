@@ -6,6 +6,8 @@
 
 > https://www.yes24.com/Product/Goods/2508562
 
+> pc 구조부터 어셈블리 입문까지
+
 - nas를 이용한 부트섹터 생성, 어셈블러를 이용해 바이너리(img)로 컴파일 한다
 ```assembly
 ; loopy-os

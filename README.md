@@ -169,6 +169,7 @@
 
 - [day1](CS/OS/dailyOS/day1.md)
 - [day2](CS/OS/dailyOS/day2.md)
+- [day3](CS/OS/dailyOS/day3.md)
 
 ---
 
