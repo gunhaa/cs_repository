@@ -70,6 +70,7 @@
 - [Functional Programming](CS/CommonSense/FunctionalProgramming.md)
 - [LLM](CS/CommonSense/LLM.md)
 - [Street Coder](CS/CommonSense/StreetCoder.md)
+- [gRPC](CS/CommonSense/gRPC.md)
 
 ---
 ### WebRTC
