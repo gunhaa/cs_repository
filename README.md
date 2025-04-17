@@ -283,7 +283,7 @@
 - [Object vs object](CS/Javascript/Ob_ob.md)
 - [Truthy / Falsy](CS/Javascript/Truthy.md)
 - [Nullish coalescing operator](CS/Javascript/NullOperator.md)
-
+- [Typescript, Express 프로젝트 세팅](CS/Javascript/Setting.md)
 ---
 
 ### JAVA 와 JS의 차이
