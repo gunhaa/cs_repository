@@ -4,7 +4,7 @@
 2. `npm install -g npm@latest` 최신버전 npm 설치
   <br> `npm -v` / `node -v` 로 설치 확인
 3. npm init -y
-4 .npm install express
+4. npm install express
 5. `npm i -D typescript @types/express @types/node`
   <br>   typescript와 typescript 정의 파일을 설치
 
