@@ -29,6 +29,7 @@
      - [네트워크 기초 강의](#네트워크기초-크래프트맨)
    - [데이터 베이스](#데이터베이스)
      - [MySQL](#mysql)
+     - [Redis](#Redis)
    - [디자인 패턴](#디자인-패턴)
    - [JAVA](#JAVA)
    - [JPA](#JPA)
@@ -234,7 +235,10 @@
 - [MySQL](CS/MySQL/MySQL.md)
 - [Archetecture](CS/MySQL/Architecture.md)
 - [Optimizer](CS/MySQL/Optimizer.md)
+---
 
+### Redis
+- [Redis 개요](CS/Redis/Redis.md)
 
 ---
 
