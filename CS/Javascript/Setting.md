@@ -50,3 +50,34 @@ app.listen(port, () => {
 
 11. 동시에 수행
   <br>`npm run dev`
+
+12. dotenv 의존성 추가
+  <br>`npm install dotenv`
+
+13. Jest 추가
+  <br>`npm install --save-dev jest @types/jest ts-jest`
+  <br>`npm install --save-dev ts-node`
+
+14. jest.config.ts추가
+```javascript
+// jest.config.ts
+import type { Config } from 'jest';
+
+const config: Config = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testMatch: ['**/__tests__/**/*.test.ts'],
+};
+
+export default config;
+```
+
+15. package.json 스크립트 추가
+```shell
+"scripts": {
+  "test": "jest"
+}
+```
+
+16. redis 설치
+  <br>`npm install --save-dev @types/redis`
