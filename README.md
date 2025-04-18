@@ -239,7 +239,8 @@
 
 ### Redis
 - [Redis 개요](CS/Redis/Redis.md)
-
+- [빅데이터 저장 및 분석을 위한 NoSQL & Redis](CS/Redis/NoSQL&Redis.md)
+- [node.js redis 인터페이스 사용방법](CS/Redis/Nodejs.md)
 ---
 
 ### JAVA
@@ -441,3 +442,4 @@
 - [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
 - [Street Coder](https://www.yes24.com/Product/Goods/122109104)
 - [OS구조와 원리](https://www.yes24.com/Product/Goods/2508562)
+- [빅데이터 저장 및 분석을 위한 NoSQL & Redis](https://www.yes24.com/Product/Goods/71131862)

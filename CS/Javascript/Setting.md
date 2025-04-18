@@ -80,4 +80,7 @@ export default config;
 ```
 
 16. redis 설치
-  <br>`npm install --save-dev @types/redis`
+<br>`npm install --save-dev @types/redis`
+<br> 4.0 이상부터는 해당 타입이 불필요, 삭제 해도 괜찮다
+<br>`npm uninstall @types/redis`
+<br> `npm install redis`
