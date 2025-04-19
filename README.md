@@ -241,6 +241,7 @@
 - [Redis 개요](CS/Redis/Redis.md)
 - [빅데이터 저장 및 분석을 위한 NoSQL & Redis](CS/Redis/NoSQL&Redis.md)
 - [node.js redis 인터페이스 사용방법](CS/Redis/Nodejs.md)
+- [Redis의 메모리 관리](CS/Redis/Memory.md)
 ---
 
 ### JAVA
