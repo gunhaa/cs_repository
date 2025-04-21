@@ -108,7 +108,7 @@
 - [System Call](CS/OS/SystemCall.md)
 - [프로세스와 스레드](CS/OS/Process&Thread.md)
 - [동시성제어](CS/OS/Concurrency.md)
-- [부동 소수점](CS/OS/FloatingPoint.md)
+- [부동 소수점/고정 소수점](CS/OS/FloatingPoint.md)
 
 ---
 
