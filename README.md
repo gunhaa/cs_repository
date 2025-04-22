@@ -306,6 +306,7 @@
 - [기본 문법과 예제](CS/Rust/Syntax.md)
 - [Race condition 제어](CS/Rust/RaceCondtion.md)
 - [포인터](CS/Rust/Pointer.md)
+- [스마트포인터](CS/Rust/SmartPointer.md)
 
 ---
 

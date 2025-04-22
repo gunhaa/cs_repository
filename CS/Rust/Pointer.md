@@ -122,7 +122,7 @@ C (an array of 11 bytes):
 - java의 참조도 rust와 같이 힙의 시작 위치를 8바이트로 가리킨다
 
 - 해당 코드의 메모리 상태
-[images](images/memory1.png)
+![images](images/memory1.png)
 
 ## 원시 포인터 raw pointer
 
