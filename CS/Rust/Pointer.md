@@ -32,6 +32,8 @@
 
 ## 포인터 예제
 
+> https://github.com/gunhaa/memory/blob/main/examples/smart_pointer.rs
+
 ```rust
 use std::mem::size_of;
 
