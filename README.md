@@ -307,7 +307,7 @@
 - [Race condition 제어](CS/Rust/RaceCondtion.md)
 - [포인터](CS/Rust/Pointer.md)
 - [스마트포인터](CS/Rust/SmartPointer.md)
-
+- [스택, 힙](CS/Rust/Stack_Heap.md)
 ---
 
 ### 디자인패턴
