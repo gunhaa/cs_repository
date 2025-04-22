@@ -300,9 +300,12 @@
 
 ### Rust
 
+> [Rust in action](https://www.yes24.com/Product/Goods/110368348)
+
 - [수동 메모리 관리](CS/Rust/Memory.md)
 - [기본 문법과 예제](CS/Rust/Syntax.md)
 - [Race condition 제어](CS/Rust/RaceCondtion.md)
+- [포인터](CS/Rust/Pointer.md)
 
 ---
 
@@ -444,3 +447,4 @@
 - [Street Coder](https://www.yes24.com/Product/Goods/122109104)
 - [OS구조와 원리](https://www.yes24.com/Product/Goods/2508562)
 - [빅데이터 저장 및 분석을 위한 NoSQL & Redis](https://www.yes24.com/Product/Goods/71131862)
+- [Rust in action](https://www.yes24.com/Product/Goods/110368348)
