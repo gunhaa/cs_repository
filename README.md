@@ -364,6 +364,7 @@
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
 - [Swap](CS/Algorithm/Swap.md)
 - [Recursion](CS/Algorithm/Recursion.md)
+- [Greedy](CS/Algorithm/Greedy.md)
 
 
 #### MIT 6.006 Introduction to Algorithms
@@ -450,3 +451,4 @@
 - [OS구조와 원리](https://www.yes24.com/Product/Goods/2508562)
 - [빅데이터 저장 및 분석을 위한 NoSQL & Redis](https://www.yes24.com/Product/Goods/71131862)
 - [Rust in action](https://www.yes24.com/Product/Goods/110368348)
+- [266가지 문제로 정복하는 코딩 인터뷰](https://www.yes24.com/Product/Goods/103768603)
