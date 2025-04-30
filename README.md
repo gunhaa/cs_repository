@@ -352,7 +352,7 @@
   - [Bubble Sort](CS/DataStructure/BubbleSort.md)
   - [Insertion Sort](CS/DataStructure/InsertionSort.md)
   - [Quick Sort](CS/DataStructure/QuickSort.md)
-
+- [Tree](CS/DataStructure/Tree.md)
 ---
 ### 알고리즘
 
