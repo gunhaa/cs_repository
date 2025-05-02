@@ -130,6 +130,7 @@
   - [프로세스](CS/OS/ChoiLyn/Process.md)
 - [Exception, Thread](CS/OS/ChoiLyn/ExceptionAndThread.md)
 - [쓰레드](CS/OS/ChoiLyn/Thread.md)
+- [상호 배제와 동기](CS/OS/ChoiLyn/MutexSync.md)
 
 ---
 ### 리눅스-명령어
