@@ -297,8 +297,12 @@
 ### GraphQL/Apollo
 
 > 얄팍한 코딩사전/ GraphQL & Apollo 강좌 (https://www.youtube.com/watch?v=9BIXcXHsj0A)
+
+> 웹/앱 개발을 위한 GraphQL (https://product.kyobobook.co.kr/detail/S000001033086)
+
 - [GraphQL](CS/GraphQL/GraphQL.md)
 - [Apollo](CS/GraphQL/Apollo.md)
+- [자료형](CS/GraphQL/DataType.md)
 
 ---
 ### JAVA 와 JS의 차이
