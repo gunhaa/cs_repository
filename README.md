@@ -303,6 +303,7 @@
 - [GraphQL](CS/GraphQL/GraphQL.md)
 - [Apollo](CS/GraphQL/Apollo.md)
 - [자료형](CS/GraphQL/DataType.md)
+  - [Union, interface](CS/GraphQL/UnionInterface.md)
 
 ---
 ### JAVA 와 JS의 차이
