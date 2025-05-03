@@ -304,6 +304,7 @@
 - [Apollo](CS/GraphQL/Apollo.md)
 - [자료형](CS/GraphQL/DataType.md)
   - [Union, interface](CS/GraphQL/UnionInterface.md)
+  - [인자와 인풋 타입](CS/GraphQL/ArgsInput.md)
 
 ---
 ### JAVA 와 JS의 차이
