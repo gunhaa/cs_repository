@@ -104,6 +104,7 @@
 > https://www.udemy.com/course/software-architecture-design-large-scale-systems
 
 - [좋은 API 설계](CS/ArchitectureDesign/API.md)
+- [REST API](CS/ArchitectureDesign/RestAPI.md)
 
 ---
 
