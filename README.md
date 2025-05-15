@@ -19,6 +19,7 @@
       - [WebRTC](#WebRTC)
       - [GITHUB](#GITHUB)
       - [아키텍쳐](#아키텍쳐)
+      - [대규모 아키텍쳐 설계](#대규모-아키텍쳐-설계)
    - [운영체제](#운영체제)
      - [운영체제-널널한 개발자](#운영체제-널널한개발자)
      - [운영체제-최린](#운영체제-최린)
@@ -95,6 +96,14 @@
 
 ### 아키텍쳐
 - [클린 아키텍쳐](CS/Architecture/Clean.md)
+
+--- 
+
+### 대규모 아키텍쳐 설계
+
+> https://www.udemy.com/course/software-architecture-design-large-scale-systems
+
+- [좋은 API 설계](CS/ArchitectureDesign/API.md)
 
 ---
 
