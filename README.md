@@ -321,7 +321,10 @@
 
 ### Nodejs
 
+> nodejs 디자인 패턴 바이블(https://www.yes24.com/Product/Goods/101686866)
+
 - [Nodejs란?](CS/Nodejs/Nodejs.md)
+- [Reactor pattern](CS/Nodejs/Reactor.md)
 
 ---
 
