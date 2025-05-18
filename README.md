@@ -1,7 +1,6 @@
-
 # CS
 
-> 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다. 
+> 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다.
 
 ## 생성 이유
 
@@ -13,40 +12,42 @@
 
 ---
 
-
 - 목차
-   - [개발 상식](#개발-상식)
-      - [WebRTC](#WebRTC)
-      - [GITHUB](#GITHUB)
-      - [아키텍쳐](#아키텍쳐)
-      - [대규모 아키텍쳐 설계](#대규모-아키텍쳐-설계)
-   - [운영체제](#운영체제)
-     - [운영체제-널널한 개발자](#운영체제-널널한개발자)
-     - [운영체제-최린](#운영체제-최린)
-     - [리눅스-명령어](#리눅스-명령어)
-     - [리눅스-운영체제](#리눅스-운영체제)
-     - [OS 구조와 원리](#OS구조와-원리)
-   - [네트워크](#네트워크)
-     - [네트워크 기초 강의](#네트워크기초-크래프트맨)
-   - [데이터 베이스](#데이터베이스)
-     - [MySQL](#mysql)
-     - [Redis](#Redis)
-   - [디자인 패턴](#디자인-패턴)
-   - [JAVA](#JAVA)
-   - [JPA](#JPA)
-   - [SpringSecurity](#SpringSecurity)
-   - [Javascript](#Javascript)
-   - [Rust](#Rust)
-   - [디자인패턴](#디자인패턴)
-   - [자료구조](#자료구조)
-   - [알고리즘](#알고리즘)
-   - [Jenkins-Docker-AWS](#Jenkins-Docker-AWS)
-   - [bitlibrary 개발일지](#bitlibrary-개발일지)
-   - [참고자료](#참고자료)
+  - [개발 상식](#개발-상식)
+    - [WebRTC](#WebRTC)
+    - [GITHUB](#GITHUB)
+    - [아키텍쳐](#아키텍쳐)
+    - [대규모 아키텍쳐 설계](#대규모-아키텍쳐-설계)
+  - [운영체제](#운영체제)
+    - [운영체제-널널한 개발자](#운영체제-널널한개발자)
+    - [운영체제-최린](#운영체제-최린)
+    - [리눅스-명령어](#리눅스-명령어)
+    - [리눅스-운영체제](#리눅스-운영체제)
+    - [OS 구조와 원리](#OS구조와-원리)
+  - [네트워크](#네트워크)
+    - [네트워크 기초 강의](#네트워크기초-크래프트맨)
+  - [데이터 베이스](#데이터베이스)
+    - [MySQL](#mysql)
+    - [Redis](#Redis)
+  - [디자인 패턴](#디자인-패턴)
+  - [JAVA](#JAVA)
+  - [JPA](#JPA)
+  - [SpringSecurity](#SpringSecurity)
+  - [Javascript](#Javascript)
+  - [Nodejs](#Nodejs)
+  - [GraphQL/Prisma](#GraphQLPrisma)
+  - [Rust](#Rust)
+  - [디자인패턴](#디자인패턴)
+  - [자료구조](#자료구조)
+  - [알고리즘](#알고리즘)
+  - [Jenkins-Docker-AWS](#Jenkins-Docker-AWS)
+  - [bitlibrary 개발일지](#bitlibrary-개발일지)
+  - [참고자료](#참고자료)
 
 ---
 
 ### 개발 상식
+
 - [프로그래밍이란?](CS/CommonSense/Programing.md)
 - [서버란 무엇인가?](CS/CommonSense/Server.md)
 - [클린코드/주석](CS/CommonSense/CleanCode.md)
@@ -55,7 +56,7 @@
 - [SOLID](CS/CommonSense/SOLID.md)
 - [DRY](CS/CommonSense/DRY.md)
 - [WATERFALL](CS/CommonSense/WaterFall.md)
-- [AGILE](CS/CommonSense/Agile.md) 
+- [AGILE](CS/CommonSense/Agile.md)
 - [프로토콜/인터페이스](CS/CommonSense/Protocol.md)
 - [Base64](CS/CommonSense/Base64.md)
 - [CRDT(Conflict-free Replicated Data Type)/LWW-Register](CS/CommonSense/CRDT.md)
@@ -76,14 +77,15 @@
 - [sync,async,blocking,non-blocking](CS/CommonSense/SyncAsyncBlockingNonBlocking.md)
 
 ---
+
 ### WebRTC
 
 - [WebRTC](CS/WebRTC/WebRTC.md)
 - [SequenceDiagram](CS/WebRTC/SequenceDiagram.md)
+
 ---
 
 ### GITHUB
-
 
 - [git이란?](CS/GIT/GIT.md)
 - [git의 구조](CS/GIT/Structure.md)
@@ -95,9 +97,10 @@
 ---
 
 ### 아키텍쳐
+
 - [클린 아키텍쳐](CS/Architecture/Clean.md)
 
---- 
+---
 
 ### 대규모 아키텍쳐 설계
 
@@ -123,17 +126,20 @@
 ---
 
 ### 운영체제-널널한개발자
+
 > https://www.youtube.com/playlist?list=PLXvgR_grOs1BQCziQ_MpM877BdBxwbMzA
+
 - [컴퓨터의 기본 구조](CS/OS/NullNull/Structure.md)
 - [1비트와 진법](CS/OS/NullNull/bitsAndBase.md)
 - [CPU의 작동원리](CS/OS/NullNull/CPU.md)
 - [운영체제](CS/OS/NullNull/OS.md)
 
-
 ---
 
 ### 운영체제-최린
+
 > http://www.kocw.net/home/cview.do?cid=5e94ceee75415112
+
 - [운영체제 개요](CS/OS/ChoiLyn/OperationIntro.md)
 - [운영체제 역사](CS/OS/ChoiLyn/OperationHistory.md)
 - [프로세스](CS/OS/ChoiLyn/OperationProcess.md)
@@ -143,6 +149,7 @@
 - [상호 배제와 동기](CS/OS/ChoiLyn/MutexSync.md)
 
 ---
+
 ### 리눅스-명령어
 
 - [리눅스란?](CS/OS/Linux/Linux.md)
@@ -172,7 +179,8 @@
 ---
 
 ### PintOS
-- [PintOS](CS/pintOS/StartPintOS.md) 
+
+- [PintOS](CS/pintOS/StartPintOS.md)
 
 ---
 
@@ -192,10 +200,10 @@
 ### 네트워크
 
 - [모든 개발자를 위한 HTTP 웹 기본 지식 정리 - 김영한](CS/Network/Basic.md)
-    - [PORT](CS/Network/Port.md)
-    - [URI](CS/Network/URI.md)
-    - [쿠키](CS/Network/Cookie.md)
-    - [캐시](CS/Network/Cache.md)
+  - [PORT](CS/Network/Port.md)
+  - [URI](CS/Network/URI.md)
+  - [쿠키](CS/Network/Cookie.md)
+  - [캐시](CS/Network/Cache.md)
 - [브라우저에서의 요청처리(클라이언트<->서버)](CS/Network/ClientToServer.md)
 - [네트워크의 목표](CS/Network/object.md)
 - [OSI 7 계층](CS/Network/OSI7.md)
@@ -221,6 +229,7 @@
 ---
 
 ### 네트워크기초-크래프트맨
+
 > https://www.youtube.com/watch?v=dsoAkoxZ13o
 
 - [Network란?](CS/Network/CraftMan/Network.md)
@@ -243,20 +252,26 @@
 ---
 
 ### MYSQL
+
 > [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
+
 - [MySQL](CS/MySQL/MySQL.md)
 - [Archetecture](CS/MySQL/Architecture.md)
 - [Optimizer](CS/MySQL/Optimizer.md)
+
 ---
 
 ### Redis
+
 - [Redis 개요](CS/Redis/Redis.md)
 - [빅데이터 저장 및 분석을 위한 NoSQL & Redis](CS/Redis/NoSQL&Redis.md)
 - [node.js redis 인터페이스 사용방법](CS/Redis/Nodejs.md)
 - [Redis의 메모리 관리](CS/Redis/Memory.md)
+
 ---
 
 ### JAVA
+
 - [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
@@ -269,7 +284,6 @@
 - [Reflection](CS/JAVA/Reflection.md)
 - [버전별 특징](CS/JAVA/Version.md)
 - [바이트코드](CS/JAVA/ByteCode.md)
-
 
 ---
 
@@ -287,7 +301,6 @@
 - [Session Fixation](CS/SpringSecurity/SessionFixation.md)
 - [JWT](CS/SpringSecurity/JWT.md)
 
-
 ---
 
 ### Javascript
@@ -303,7 +316,15 @@
 - [Truthy / Falsy](CS/Javascript/Truthy.md)
 - [Nullish coalescing operator](CS/Javascript/NullOperator.md)
 - [Typescript, Express 프로젝트 세팅](CS/Javascript/Setting.md)
+
 ---
+
+### Nodejs
+
+- [Nodejs란?](CS/Nodejs/Nodejs.md)
+
+---
+
 ### GraphQL/Prisma
 
 > 얄팍한 코딩사전/ GraphQL & Apollo 강좌 (https://www.youtube.com/watch?v=9BIXcXHsj0A)
@@ -316,7 +337,9 @@
   - [Union, interface](CS/GraphQL/UnionInterface.md)
   - [인자와 인풋 타입](CS/GraphQL/ArgsInput.md)
 - [GraphQL/Prisma 설정](CS/GraphQL/Prisma.md)
+
 ---
+
 ### JAVA 와 JS의 차이
 
 - [Compiler vs Interpreter](CS/JAVAvsJS/Compiler_Interpreter.md)
@@ -333,11 +356,12 @@
 - [포인터](CS/Rust/Pointer.md)
 - [스마트포인터](CS/Rust/SmartPointer.md)
 - [스택, 힙](CS/Rust/Stack_Heap.md)
+
 ---
 
 ### 디자인패턴
-> https://github.com/gunhaa/GofDesignPattern
-> <br> GoF design pattern java코드, 설명 github repo
+
+> https://github.com/gunhaa/GofDesignPattern > <br> GoF design pattern java코드, 설명 github repo
 
 - [디자인 패턴이란?](CS/DesignPattern/DesignPattern.md)
 
@@ -359,7 +383,7 @@
   - [전략 패턴](CS/DesignPattern/Strategy.md)
   - [커맨드 패턴](CS/DesignPattern/Command.md)
 
---- 
+---
 
 ### 자료구조
 
@@ -377,11 +401,12 @@
   - [Insertion Sort](CS/DataStructure/InsertionSort.md)
   - [Quick Sort](CS/DataStructure/QuickSort.md)
 - [Tree](CS/DataStructure/Tree.md)
+
 ---
+
 ### 알고리즘
 
-> 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push <br>
-> https://github.com/gunhaa/Programmers-Baekjoon
+> 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push <br> > https://github.com/gunhaa/Programmers-Baekjoon
 
 - [알고리즘이란?](CS/Algorithm/Algorithm.md)
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
@@ -390,13 +415,11 @@
 - [Recursion](CS/Algorithm/Recursion.md)
 - [Greedy](CS/Algorithm/Greedy.md)
 
-
 #### MIT 6.006 Introduction to Algorithms
 
 > https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/
 
 - [극댓값 찾기/계산 모델](CS/Algorithm/MITOCW/Peek/Peek.md)
-
 
 ---
 
@@ -424,8 +447,8 @@
 - [docker-compose](CS/ETC/Docker/Docker-compose.md)
 - [Utlity Container](CS/ETC/Docker/UtilityContainer.md)
 
-
 ---
+
 ### bitlibrary-개발일지
 
 - [프로젝트 시작](CS/Bitlibrary/Overview.md)
@@ -437,7 +460,6 @@
 - [OAuthJWT](CS/Bitlibrary/OAuthJWT.md)
 - [CI&CD 계획](CS/Bitlibrary/CI&CD.md)
 - [결과](CS/Bitlibrary/results.md)
-
 
 ---
 
