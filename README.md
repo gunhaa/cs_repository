@@ -30,6 +30,7 @@
     - [MySQL](#mysql)
     - [Redis](#Redis)
   - [디자인 패턴](#디자인-패턴)
+  - [멀티스레드와 동시성](#멀티스레드와-동시성)
   - [JAVA](#JAVA)
   - [JPA](#JPA)
   - [SpringSecurity](#SpringSecurity)
@@ -267,6 +268,16 @@
 - [빅데이터 저장 및 분석을 위한 NoSQL & Redis](CS/Redis/NoSQL&Redis.md)
 - [node.js redis 인터페이스 사용방법](CS/Redis/Nodejs.md)
 - [Redis의 메모리 관리](CS/Redis/Memory.md)
+
+---
+
+### 멀티스레드와 동시성
+
+> 인프런 김영한 - 멀티스레드와 동시성(https://www.inflearn.com/course/%EA%B9%80%EC%98%81%ED%95%9C%EC%9D%98-%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94-%EA%B3%A0%EA%B8%89-1)
+
+> https://github.com/gunhaa/multi_thread_and_concurrency
+
+- [멀티태스킹과 멀티프로세싱](CS/MultiThreadAndConcurrency/Multitasking.md)
 
 ---
 
