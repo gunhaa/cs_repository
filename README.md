@@ -335,6 +335,10 @@
 
 ### Typescript
 
+> 코드로 정리
+
+> https://github.com/gunhaa/Typescript
+
 - [Typescript Compiler](CS/Typescript/Compiler.md)
 - [Typescript, Express 프로젝트 세팅](CS/Typescript/Setting.md)
 
