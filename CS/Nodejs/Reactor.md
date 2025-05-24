@@ -61,3 +61,16 @@ while(events = demultiplexer.watch(watchedList)){
 - busy-waiting 패턴과의 주된 차이점은, 모든 이벤트가 처리되고 나면 다시 이벤트 디멀티 플렉서가 처리 가능한 이벤트를 반환하기 전까지 루프가 실행되지 않으며 이벤트 루프에 새로운 이벤트가 넣어지면 실행되게 된다
 - 즉, 비동기 작업의 완료 결과는 이벤트 루프를 통해 처리되며, event demultiplexing 패턴은 이벤트들을 감지하고 루프에 전달하는 핵심 메커니즘이다
 - 즉, 비동기 요청이 발생하면 nodejs 런타임은 해당 요청에 대한 콜백 핸들러를 등록하고, 요청 자체는 libuv를 통해 커널에 위임된다. 이후 커널에서 작업이 완료되면 libuv는 이를 감지하고, 이벤트 루프를 통해 등록된 콜백 핸들러를 실행한다
+
+### event demultiplexing은 커널 수준의 전략이다
+
+`int n = epoll_wait(epfd, events, MAX_EVENTS, timeout);`
+
+- epoll_wait는 이벤트가 발생할 때까지 커널 수준에서 블로킹된다.
+  - epoll_wait은 nodejs엔진이 async이 들어올때 사용하는 시스템콜이다(libuv가 사용)
+    - Linux: epoll
+    - macOS: kqueue
+    - Windows: IOCP
+- CPU를 차단시켜 대기 상태로 만들고, 이벤트 발생 시에만 깨운다 (인터럽트 기반).
+- 이 구조는 수많은 소켓(예: 1만 개)도 단일 스레드로 감시할 수 있게 해준다.
+- Node.js가 직접 while 루프를 돌면서 I/O 상태를 확인하는 게 아니라, OS 커널에게 “이 파일 디스크립터에 이벤트가 생기면 알려줘”라고 등록해두고, 그 결과만 이벤트 루프로 받아 처리하는 구조이다.
