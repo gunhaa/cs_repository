@@ -261,8 +261,10 @@
 > [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
 
 - [MySQL](CS/MySQL/MySQL.md)
-- [Archetecture](CS/MySQL/Architecture.md)
+- [Architecture](CS/MySQL/Architecture.md)
 - [Optimizer](CS/MySQL/Optimizer.md)
+- [Transaction & Lock](CS/MySQL/TransactionAndLock.md)
+- [Index](CS/MySQL/Index.md)
 
 ---
 
