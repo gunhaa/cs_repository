@@ -250,6 +250,10 @@
 - [Index](CS/Database/Index.md)
 - [데이터 정규화](CS/Database/normalization.md)
 
+> [원리와응용 2025] Lecture 9,10. Database Design - Joonseok Lee
+
+- [Lecture 9,10. Database Design](CS/Database/DatabaseDesign.md)
+
 ---
 
 ### MYSQL
