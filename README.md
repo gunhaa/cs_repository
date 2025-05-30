@@ -250,6 +250,7 @@
 - [SQL vs NoSQL](CS/Database/SqlnoSql.md)
 - [Index](CS/Database/Index.md)
 - [데이터 정규화](CS/Database/normalization.md)
+- [카디널리티](CS/Database/Cardinality.md)
 
 > [원리와응용 2025] Lecture 9,10. Database Design - Joonseok Lee
 
