@@ -2,6 +2,7 @@
 
 - 공부할 책/강의 선정
   - [코드라떼/데이터베이스](https://www.codelatte.io/courses/database_basic)
+  - [한양대학교/데이터베이스/조상욱](http://www.kocw.net/home/cview.do?cid=4da6e418064cf931)
   - [친절한 SQL 튜닝](https://www.yes24.com/Product/Goods/61254539)
   - [SQL 전문가 가이드](https://product.kyobobook.co.kr/detail/S000001399869)
   - [오라클 성능 고도화 원리와 해법 1,2](https://product.kyobobook.co.kr/detail/S000061696047)
