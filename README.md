@@ -298,6 +298,7 @@
 - [프로세스와 스레드](CS/MultiThreadAndConcurrency/ProcessThread.md)
 - [스레드와 스케쥴링](CS/MultiThreadAndConcurrency/Scheduling.md)
 - [컨텍스트 스위칭](CS/MultiThreadAndConcurrency/ContextSwitching.md)
+- [스레드의 생명주기](CS/MultiThreadAndConcurrency/LifeCycle.md)
 
 ---
 
