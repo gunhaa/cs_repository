@@ -301,6 +301,7 @@
 - [스레드의 생명주기](CS/MultiThreadAndConcurrency/LifeCycle.md)
 - [메모리 가시성](CS/MultiThreadAndConcurrency/Volatile.md)
 - [자바 메모리 모델](CS/MultiThreadAndConcurrency/JavaMemoryModel.md)
+- [synchronized](CS/MultiThreadAndConcurrency/Synchronized.md)
 
 ---
 
