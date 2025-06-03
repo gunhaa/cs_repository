@@ -20,6 +20,55 @@
 - 성능 문제가 발생하기 때문에, 동시에 실행할 수 없는 코드 구간은 반드시 필요한 곳으로 한정하여 설정해야 한다
   - 병목현상을 최대한 줄이기 위해, 최대한 짧게 만들어야 한다
 
+## 지역 변수 공유 자원이 아니다(Heap 영역만이 공유 자원이다)
+
+```java
+public class SyncTest2Main {
+
+    public static void main(String[] args) {
+        MyCounter myCounter = new MyCounter();
+        Runnable task = new Runnable() {
+            @Override
+            public void run() {
+                myCounter.count();
+            }
+        };
+
+        Thread t1 = new Thread(task, "Thread-1");
+        Thread t2 = new Thread(task, "Thread-2");
+        t1.start();
+        t2.start();
+    }
+
+    // 스레드의 스택영역에 localValue가 들어간다
+    // 지역 변수는 스레드의 개별 저장 공간인 스택영역에 생성된다
+    // 지역 변수는 동기화에 대한 걱정을 하지 않아도 된다
+    // t1의 localValue와 t2의 localValue는 다른 값이다
+    // 이 스택영역은 누구와도 공유하지 않는다
+    // 그래서 동시성 문제가 생기지 않는다
+    static class MyCounter {
+        public void count() {
+            int localValue = 0;
+            for (int i=0; i < 1000; i++){
+                localValue = localValue +1;
+            }
+            log("result: " + localValue);
+        }
+    }
+}
+```
+
+## synchronized의 한계
+
+- java는 멀티스레드언어로 설계되어 synchronized가 처음나왔을땐 혁신적이었지만, 시간이 지날 수록 복잡한 멀티스레드 환경을 구현하기에는 많은 한계가 존재했다
+- 무한 대기 문제
+  - blocked 상태의 스레드는 락이 풀릴 때 까지 무한 대기한다
+    - 중간에 인터럽트 불가능
+    - 특정 시간까지 대기하는 타임아웃 불가능
+- 공정성 문제
+  - 락이 돌아왔을 때 BLOCKED 상태의 여러 스레드들 중 어떤 스레드가 락을 획득할 수 있을지 알 수 없다. 최악의 경우 특정 스레드가 너무 오랜기간동안 락을 획득하지 못할 수 있다
+- 이를 해결하기 위해 java ,.vm1.5 부터 java.util.concurrent라는 동시성 문제 해결을 위한 패키지가 추가되었다
+
 ## Recap
 
 - synchronized(동기화)를 사용하면 다음 문제를 해결 할수있다
