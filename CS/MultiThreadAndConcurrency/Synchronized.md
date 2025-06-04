@@ -22,6 +22,8 @@
 
 ## 지역 변수 공유 자원이 아니다(Heap 영역만이 공유 자원이다)
 
+- 지역 변수는 스레드 스택에 독립적으로 존재한다
+
 ```java
 public class SyncTest2Main {
 
