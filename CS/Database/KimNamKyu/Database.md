@@ -62,9 +62,10 @@
     - 이 모델을 다이어 그램으로 그린 것이 ERD(Entity Relationship Diagram)
 - ERD를 이용해 컴퓨터 안에 집어 넣는 것이 논리적 설계(LOGICAL DESIGN)이다
   - Data model mapping이라고도 불리며, 관계형 모델(Relation Model)이라고 불린다
-  - 테이블을 만드는 것이다
+  - 테이블을 정의하는 것이다(만들어 보는것, DB DDL X)
 - 물리적 디자인(PHYSICAL DESIGN)
-  - 실제 DB에 넣는 방법 설계
+  - 실제 DB 저장 방법 설계
+  - index, transaction, 보안 등의 설계
 
 ## Relationship vs Relational
 
