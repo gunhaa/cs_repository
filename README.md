@@ -261,6 +261,15 @@
 
 ---
 
+### 국민대학교 김남규 교수/데이터 베이스 실무
+
+> https://www.youtube.com/playlist?list=PLg_wJlcMiuKtGdlIaAZ0rOPPQuTDENnEQ
+
+- [Database](CS/Database/KimNamKyu/Database.md)
+- [Conceptual Data Modeling](CS/Database/KimNamKyu/Conceptual.md)
+
+---
+
 ### MYSQL
 
 > [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)

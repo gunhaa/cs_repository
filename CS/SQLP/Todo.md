@@ -1,8 +1,7 @@
 # SQLP Todo
 
 - 공부할 책/강의 선정
-  - [코드라떼/데이터베이스](https://www.codelatte.io/courses/database_basic)
-  - [한양대학교/데이터베이스/조상욱](http://www.kocw.net/home/cview.do?cid=4da6e418064cf931)
+  - [국민대학교 김남규 교수/데이터 베이스 실무](https://www.youtube.com/playlist?list=PLg_wJlcMiuKtGdlIaAZ0rOPPQuTDENnEQ)
   - [불친절한 SQL 프로그래밍](https://www.yes24.com/Product/Goods/64391533)
   - [친절한 SQL 튜닝](https://www.yes24.com/Product/Goods/61254539)
   - [SQL 전문가 가이드](https://product.kyobobook.co.kr/detail/S000001399869)
