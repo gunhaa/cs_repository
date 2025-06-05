@@ -83,3 +83,100 @@
 
 - 같은 업무 기술서로부터 다른 개념적 모델링이 나올 수 있다
 - Entity -> Relation -> Attribute의 순서로 Conceptual Modeling을 진행해야한다(손으로 작업 추천)
+
+### Initial Schema for Company Database
+
+> 초안, 관계도 틀린 부분이 분명히 존재한다
+
+![conceptual2](images/conceptual2.png)
+
+- Entity 부서: 부서명, 부서번호, 관리자, 관리시작일, 직원수, 지역
+  - 관리자: 직원의 다른 이름이다
+- Entity 프로젝트: 프로젝트명, 프로젝트번호, 지역, 부서
+- Entity 직원: 이름, 주민번호, 성별, 주소, 급여, 생년월일, 부서, 감독자, (프로젝트, 주당근무시간)
+  - 감독자(멘토, 멘티): 직원의 다른 이름이다
+- Entity 부양가족: 직원, 이름, 성별, 생년월일, 관계
+
+### Relationships
+
+- 관계 설정(Relationship)
+  - 한 개체의 속성이 다른 개체를 참조할 때 관계가 형성됨
+  - `직원`의 `프로젝트` 속성이 `프로젝트` 개체를 참조함
+  - `부서`의 `관리자` 속성은 `직원` 개체를 참조함
+- 관계의 차수(Degree)
+  - 관계에 참여하는 개체의 수
+  - Binary, Ternary, Unary ...
+    - 하나의 관계가 A,B의 연결(2차, Binary)
+    - 하나의 관계가 A,B,C의 연결(3차, Ternary)
+    - 하나의 관계가 A연결(1차, Unary, 자기참조 테이블[category]) 등등..
+  - 실무에서는 차수(Degree or Cardinality 두 가지 모두라고 불린다)
+- 관계의 대응수(Cardinality)
+  - 해당 개체가 해당 관계에서 참여할 수 있는 관계 인스턴스의 최대 수
+  - 1:1, 1:N(or N:1), M:N
+    - 학생(N)-전공-학과(1)
+    - 학생(1)-과대표-학과(1)
+    - 학생(M)-수강-학과(N)
+
+#### 대응수(Cardinality/Degree)에 따른 관계의 분류
+
+![conceptual3](images/conceptual3.png)
+
+- 위 그림의 일대다 관계의 경우
+  - 실무에서 관계가 속성(근무시작일)을 갖는 것은 허용하지 않는다
+  - 어디에 올바른 속성인지, Query로 생각해보면 알기 쉽다
+    - 근무시작일은 직원이 가져야 정상적으로 데이터를 사용할 수 있다
+    - 기억하는 방법은 1의 반대쪽으로 보내면 된다
+
+![conceptual4](images/conceptual4.png)
+
+- 위 그림의 일대일의 경우
+  - 직원, 부서 어느 곳으로 가도 문제가 없다
+  - 학계에서는 관계의 속성이지만, 실무에서는 직원/부서 어디에 가도 큰 문제가 없다
+
+![conceptual5](images/conceptual5.png)
+
+- 위 그림의 다대다의 경우
+  - 주당 근무시간은 직원/프로젝트 양쪽 모두의 속성이 될 수 없다
+  - 참여라는 관계의 속성이 되어야한다(매핑 테이블을 필요로 한다)
+
+![conceptual6](images/conceptual6.png)
+
+- 초안을 어느정도 완성한 ERD
+- 부양가족의 경우, unique 속성이 존재하지 않는다
+  - 이런 entity를 weak entity라고 부른다
+  - 이런 경우 다른 개체의 도움을 받아야한다
+    - 직원 테이블- 주민등록번호의 도움을 받을 수 있다(부양 가족 - 이름과 묶어서 사용할 수 있다)
+
+#### Weak Entity(약성 개체)
+
+- 키 속성을 갖고 있지 않은 개체
+  - 부분 키(Partial key, 다른 개체의 도움을 받아 key로 사용할 수 있는 속성)를 가진다
+  - 약성 개체는 개체를 식별할 수 있는 다른 개체와 식별관계로 맺어져야함
+- 약성 개체의 식별자는 다음 속성의 조합으로 구성됨
+  - 약성 개체의 부분키 속성 + 식별 개체의 키 속성
+  - ex) Building(1, Strong entity, Idenfying Entity) - Contain(Identifying relationship) - Room(N, Weak entity) 
+    - 해당 관계의 경우 Building_name + Room_ID를 합쳐(경영관 413호) 부분 키로 사용할 수 있다
+- Weak Entity는 최대한 지양하는 것이 좋다
+
+#### N-ary relationships(n>2)
+
+![conceptual7](images/conceptual7.png)
+
+- Ternary Relationship
+  - 이론상 더 많을 수 있지만, 잘 없다
+  - Tenary(하나의 관계가 A,B,C)가 가끔 나온다
+- 부품(다양한 종류)/납품(다양한 곳에서 납픔)/프로젝트(다양한 회사)
+  - 시나리오에 따라 N, 1 모두가 될 수 있다
+- Binary로 변환하는 것도 방법이다
+
+#### 일반화
+
+![conceptual8](images/conceptual8.png)
+
+- ISA를 사용해 표현한다(IS - A Relationship)
+  - 표현 방법
+    - 사람은 엔지니어이다
+    - 사람은 조종사이다
+  - 공통점을 가진 개체를 위로, 특징적인 개체를 아래로
+  - 상속과 비슷한 구조
+  - 공통 구조가 위에 있기에, ISA구조를 가진 하위 개체는 약성개체가 아니다
