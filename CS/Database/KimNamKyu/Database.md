@@ -60,9 +60,9 @@
   - 도식화 방법에는 여러가지가 있다
     - 가장 많이 사용하는 것: Entity-Relationship Model(개체 관계 모델)
     - 이 모델을 다이어 그램으로 그린 것이 ERD(Entity Relationship Diagram)
-- ERD를 이용해 컴퓨터 안에 집어 넣는 것이 논리적 설계(LOGICAL DESIGN)이다
+- 개념적 모델링으로 작성한 ERD를 이용해 컴퓨터 안에 넣는 것이 논리적 설계(LOGICAL DESIGN)이다
   - Data model mapping이라고도 불리며, 관계형 모델(Relation Model)이라고 불린다
-  - 테이블을 정의하는 것이다(만들어 보는것, DB DDL X)
+  - 테이블을 정의하는 것이다(논리적으로 정의 하는 것, DB DDL X)
 - 물리적 디자인(PHYSICAL DESIGN)
   - 실제 DB 저장 방법 설계
   - index, transaction, 보안 등의 설계

@@ -267,6 +267,8 @@
 
 - [Database](CS/Database/KimNamKyu/Database.md)
 - [Conceptual Data Modeling](CS/Database/KimNamKyu/Conceptual.md)
+- [Logical Data Modeling](CS/Database/KimNamKyu/Logical.md)
+
 
 ---
 
