@@ -54,3 +54,36 @@
       - notify() → 조건 불만족 스레드 → 다시 wait()
       - 이런 과정이 반복되면, 진짜 일할 수 있는 스레드는 대기 중인데,
       - 다른 스레드만 깨어나고 돌아가기를 반복하게 되어 전체적으로 비효율적인 스케줄링이 된다
+
+### 해결방법2
+
+```java
+    private final Lock lock = new ReentrantLock();
+
+    // condition은 스레드가 대기하는 대기집합
+    private final Condition producerCond = lock.newCondition();
+    private final Condition consumerCond = lock.newCondition();
+```
+
+- 대기 집합(lock.newCondition())을 만들어, 대기 그룹을 분리한 후 원하는 그룹에 신호를 줘서 스레드를 호출한다
+- CPU낭비 없는 효율적인 프로그래밍이 가능하다
+- 해당 구현은 실무에서 사용할 수 있는 수준의 구현이다
+
+### 해결방법3
+
+- java에서 제공하는 BlockingQueue(인터페이스) 자료구조를 이용하여 해결한다
+  - 큐가 가득 차면 데이터 추가 작업(put())을 시도하는 스레드는 공간이 생길 때 까지 차단된다
+  - 큐가 비어 있으면 획득 작업(take())을 시도하는 스레드는 큐에 데이터가 들어올 때까지 차단된다
+  - 대표적인 구현체는 두가지가 있다
+    - ArrayBlockingQueue: 배열 기반으로 구현, 버퍼의 크기가 고정
+    - LinkedBlockingQueue: 링크 기반으로 구현, 버퍼의 크기를 고정/무한으로 모두 사용 가능
+
+#### BlockingQueue
+
+- 구현해 본 BoundedQueueV5와 내부 구현이 거의 똑같다
+
+| Operation (기능) | Throws Exception (예외 발생) | Special Value (즉시 반환) | Blocks (무한 대기) | Times Out (시간 대기) |
+|------------------|-------------------------------|-----------------------------|----------------------|------------------------|
+| **Insert (추가)**   | `add(e)`<br>큐가 가득 차면 `IllegalStateException` | `offer(e)`<br>가득 차면 `false` 반환 | `put(e)`<br>큐가 가득 차면 대기 | `offer(e, time, unit)`<br>시간 내에 실패하면 `false` 반환 |
+| **Remove (제거)**   | `remove()`<br>비어 있으면 `NoSuchElementException` | `poll()`<br>비어 있으면 `null` 반환 | `take()`<br>큐가 비어 있으면 대기 | `poll(time, unit)`<br>시간 내에 실패하면 `null` 반환 |
+| **Examine (관찰)**  | `element()`<br>비어 있으면 `NoSuchElementException` | `peek()`<br>비어 있으면 `null` 반환 | 해당 없음 | 해당 없음 |
