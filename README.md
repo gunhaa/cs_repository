@@ -369,6 +369,7 @@
 - [Truthy / Falsy](CS/Javascript/Truthy.md)
 - [Nullish coalescing operator](CS/Javascript/NullOperator.md)
 - [Modern Javascript](CS/Javascript/Modern.md)
+- [SharedArrayBuffer & Atomics](CS/Javascript/BufferAtomics.md)
 
 ---
 
