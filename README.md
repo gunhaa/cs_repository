@@ -297,6 +297,10 @@
 
 - [Todo](CS/SQLP/Todo.md)
 
+#### 친절한 SQL 튜닝
+
+- [SQL 처리 과정과 I/O](CS/SQLP/FriendlyTuning/SQLParsingAndIO.md)
+
 ---
 
 ### 멀티스레드와 동시성
