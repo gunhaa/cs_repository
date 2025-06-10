@@ -1,5 +1,7 @@
 # Stack
 
+> 예제코드 : https://github.com/gunhaa/SASM/blob/main/10_stack.asm
+
 ![stack1](images/stack1.png)
 
 ```plaintext
