@@ -268,8 +268,8 @@
 - [Database](CS/Database/KimNamKyu/Database.md)
 - [Conceptual Data Modeling](CS/Database/KimNamKyu/Conceptual.md)
 - [Logical Data Modeling](CS/Database/KimNamKyu/Logical.md)
-- [데이터 모델링의 이해](CS/Database/KimNamKyu/DataModeling.md)
-
+- [Part2. 데이터 모델링의 이해](CS/Database/KimNamKyu/DataModeling.md)
+- [Part3. 데이터 모델과 성능](CS/Database/KimNamKyu/Performance.md)
 ---
 
 ### MYSQL
