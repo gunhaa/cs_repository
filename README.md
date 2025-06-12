@@ -300,7 +300,8 @@
 
 #### 친절한 SQL 튜닝
 
-- [SQL 처리 과정과 I/O](CS/SQLP/FriendlyTuning/SQLParsingAndIO.md)
+- [1. SQL 처리 과정과 I/O](CS/SQLP/FriendlyTuning/SQLParsingAndIO.md)
+- [2. 인덱스 기본](CS/SQLP//FriendlyTuning/Index.md)
 
 ---
 
