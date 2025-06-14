@@ -24,12 +24,14 @@
     - [리눅스-명령어](#리눅스-명령어)
     - [리눅스-운영체제](#리눅스-운영체제)
     - [OS 구조와 원리](#OS구조와-원리)
+  - [PintOS](#PintOS)
   - [네트워크](#네트워크)
     - [네트워크 기초 강의](#네트워크기초-크래프트맨)
   - [데이터 베이스](#데이터베이스)
     - [MySQL](#mysql)
     - [Redis](#Redis)
     - [SQLP](#SQLP)
+      - [친절한 SQL 튜닝](#친절한-SQL-튜닝)
   - [디자인 패턴](#디자인-패턴)
   - [멀티스레드와 동시성](#멀티스레드와-동시성)
   - [JAVA](#JAVA)
@@ -39,7 +41,6 @@
   - [Nodejs](#Nodejs)
   - [GraphQL/Prisma](#GraphQLPrisma)
   - [Rust](#Rust)
-  - [디자인패턴](#디자인패턴)
   - [자료구조](#자료구조)
   - [알고리즘](#알고리즘)
   - [Jenkins-Docker-AWS](#Jenkins-Docker-AWS)
@@ -272,6 +273,7 @@
 - [Logical Data Modeling](CS/Database/KimNamKyu/Logical.md)
 - [Part2. 데이터 모델링의 이해](CS/Database/KimNamKyu/DataModeling.md)
 - [Part3. 데이터 모델과 성능](CS/Database/KimNamKyu/Performance.md)
+
 ---
 
 ### MYSQL
@@ -327,6 +329,7 @@
 - [CAS 연산](CS/MultiThreadAndConcurrency/CAS.md)
 - [Spin lock](CS/MultiThreadAndConcurrency/Spinlock.md)
 - [실무 관점의 Lock](CS/MultiThreadAndConcurrency/Lock.md)
+- [동시성 컬렉션](CS/MultiThreadAndConcurrency/Collection.md)
 
 ---
 
@@ -591,3 +594,8 @@
 - [빅데이터 저장 및 분석을 위한 NoSQL & Redis](https://www.yes24.com/Product/Goods/71131862)
 - [Rust in action](https://www.yes24.com/Product/Goods/110368348)
 - [266가지 문제로 정복하는 코딩 인터뷰](https://www.yes24.com/Product/Goods/103768603)
+- [국민대학교 김남규 교수/데이터 베이스 실무](https://www.youtube.com/playlist?list=PLg_wJlcMiuKtGdlIaAZ0rOPPQuTDENnEQ)
+- [SQL 쿡북](https://www.yes24.com/Product/Goods/106207663)
+- [친절한 SQL 튜닝](https://www.yes24.com/Product/Goods/61254539)
+- [SQL 전문가 가이드](https://product.kyobobook.co.kr/detail/S000001399869)
+- [오라클 성능 고도화 원리와 해법 1,2](https://product.kyobobook.co.kr/detail/S000061696047)
