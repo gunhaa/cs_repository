@@ -31,6 +31,8 @@
 
 ## 예제 코드
 
+> https://github.com/gunhaa/SASM/blob/main/10_stack.asm
+
 ```assembly
 %include "io64.inc"
 
