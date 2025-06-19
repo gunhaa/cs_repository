@@ -562,6 +562,13 @@
 
 ---
 
+### 정보처리기사 실기
+
+- [실기 복원 문제1](CS/InformEngineer/q1.md)
+
+---
+
+
 ### 참고자료
 
 - [김영한 로드맵](https://www.inflearn.com/roadmaps/373)
