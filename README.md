@@ -1,6 +1,50 @@
-# CS
+# Computer Science
 
 > 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다.
+- [Computer Science](#computer-science)
+  - [생성 이유](#생성-이유)
+  - [개발 상식](#개발-상식)
+    - [WebRTC](#webrtc)
+    - [GITHUB](#github)
+  - [아키텍쳐](#아키텍쳐)
+    - [대규모 아키텍쳐 설계](#대규모-아키텍쳐-설계)
+  - [운영체제](#운영체제)
+    - [운영체제-널널한개발자](#운영체제-널널한개발자)
+    - [운영체제-최린](#운영체제-최린)
+    - [리눅스-명령어](#리눅스-명령어)
+    - [리눅스-운영체제](#리눅스-운영체제)
+    - [PintOS](#pintos)
+    - [OS구조와 원리](#os구조와-원리)
+  - [네트워크](#네트워크)
+    - [네트워크기초-크래프트맨](#네트워크기초-크래프트맨)
+  - [데이터베이스](#데이터베이스)
+    - [국민대학교 김남규 교수/데이터 베이스 실무](#국민대학교-김남규-교수데이터-베이스-실무)
+    - [MYSQL](#mysql)
+    - [Redis](#redis)
+    - [SQLP](#sqlp)
+      - [친절한 SQL 튜닝](#친절한-sql-튜닝)
+  - [멀티스레드와 동시성](#멀티스레드와-동시성)
+  - [JAVA](#java)
+    - [JPA](#jpa)
+    - [SpringSecurity](#springsecurity)
+  - [Javascript](#javascript)
+    - [Typescript](#typescript)
+    - [Nodejs](#nodejs)
+    - [GraphQL/Prisma](#graphqlprisma)
+  - [JAVA 와 JS의 차이](#java-와-js의-차이)
+  - [Rust](#rust)
+  - [SASM](#sasm)
+  - [디자인패턴](#디자인패턴)
+  - [자료구조](#자료구조)
+  - [알고리즘](#알고리즘)
+    - [MIT 6.006 Introduction to Algorithms](#mit-6006-introduction-to-algorithms)
+  - [Jenkins-Docker-AWS](#jenkins-docker-aws)
+  - [Docker \& Kubernetes: The Practical Guide - 2025 Edition](#docker--kubernetes-the-practical-guide---2025-edition)
+  - [면접](#면접)
+  - [bitlibrary-개발일지](#bitlibrary-개발일지)
+  - [정보처리기사 실기](#정보처리기사-실기)
+  - [참고자료](#참고자료)
+
 
 ## 생성 이유
 
@@ -12,45 +56,7 @@
 
 ---
 
-- 목차
-  - [개발 상식](#개발-상식)
-    - [WebRTC](#WebRTC)
-    - [GITHUB](#GITHUB)
-    - [아키텍쳐](#아키텍쳐)
-    - [대규모 아키텍쳐 설계](#대규모-아키텍쳐-설계)
-  - [운영체제](#운영체제)
-    - [운영체제-널널한 개발자](#운영체제-널널한개발자)
-    - [운영체제-최린](#운영체제-최린)
-    - [리눅스-명령어](#리눅스-명령어)
-    - [리눅스-운영체제](#리눅스-운영체제)
-    - [OS 구조와 원리](#OS구조와-원리)
-  - [PintOS](#PintOS)
-  - [네트워크](#네트워크)
-    - [네트워크 기초 강의](#네트워크기초-크래프트맨)
-  - [데이터 베이스](#데이터베이스)
-    - [MySQL](#mysql)
-    - [Redis](#Redis)
-    - [SQLP](#SQLP)
-      - [친절한 SQL 튜닝](#친절한-SQL-튜닝)
-  - [디자인 패턴](#디자인-패턴)
-  - [멀티스레드와 동시성](#멀티스레드와-동시성)
-  - [JAVA](#JAVA)
-  - [JPA](#JPA)
-  - [SpringSecurity](#SpringSecurity)
-  - [Javascript](#Javascript)
-  - [Nodejs](#Nodejs)
-  - [GraphQL/Prisma](#GraphQLPrisma)
-  - [Rust](#Rust)
-  - [자료구조](#자료구조)
-  - [알고리즘](#알고리즘)
-  - [Jenkins-Docker-AWS](#Jenkins-Docker-AWS)
-  - [면접](#면접)
-  - [bitlibrary 개발일지](#bitlibrary-개발일지)
-  - [참고자료](#참고자료)
-
----
-
-### 개발 상식
+## 개발 상식
 
 - [프로그래밍이란?](CS/CommonSense/Programing.md)
 - [서버란 무엇인가?](CS/CommonSense/Server.md)
@@ -101,7 +107,7 @@
 
 ---
 
-### 아키텍쳐
+## 아키텍쳐
 
 - [클린 아키텍쳐](CS/Architecture/Clean.md)
 
@@ -116,7 +122,7 @@
 
 ---
 
-### 운영체제
+## 운영체제
 
 - [컴퓨터의 기본 구조](CS/OS/Computer.md)
 - [메모리의 구조](CS/OS/Memory.md)
@@ -203,7 +209,7 @@
 
 ---
 
-### 네트워크
+## 네트워크
 
 - [모든 개발자를 위한 HTTP 웹 기본 지식 정리 - 김영한](CS/Network/Basic.md)
   - [PORT](CS/Network/Port.md)
@@ -244,7 +250,7 @@
 
 ---
 
-### 데이터베이스
+## 데이터베이스
 
 - [데이터베이스의 정의](CS/Database/Database.md)
 - [SQL](CS/Database/SQL.md)
@@ -309,7 +315,7 @@
 
 ---
 
-### 멀티스레드와 동시성
+## 멀티스레드와 동시성
 
 > 인프런 김영한 - 멀티스레드와 동시성(https://www.inflearn.com/course/%EA%B9%80%EC%98%81%ED%95%9C%EC%9D%98-%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94-%EA%B3%A0%EA%B8%89-1)
 
@@ -336,7 +342,7 @@
 
 ---
 
-### JAVA
+## JAVA
 
 - [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
@@ -369,7 +375,7 @@
 
 ---
 
-### Javascript
+## Javascript
 
 - [EventLoop](CS/Javascript/Eventloop.md)
 - [Prototype](CS/Javascript/Prototype.md)
@@ -424,13 +430,13 @@
 
 ---
 
-### JAVA 와 JS의 차이
+## JAVA 와 JS의 차이
 
 - [Compiler vs Interpreter](CS/JAVAvsJS/Compiler_Interpreter.md)
 
 ---
 
-### Rust
+## Rust
 
 > [Rust in action](https://www.yes24.com/Product/Goods/110368348)
 
@@ -443,13 +449,13 @@
 
 ---
 
-### SASM
+## SASM
 
 > https://github.com/gunhaa/SASM <br> NASM 코드, 설명 repo
 
 ---
 
-### 디자인패턴
+## 디자인패턴
 
 > https://github.com/gunhaa/GofDesignPattern <br> GoF design pattern java코드, 설명 github repo
 
@@ -475,7 +481,7 @@
 
 ---
 
-### 자료구조
+## 자료구조
 
 > 데이터 구조 TypeScript로 직접 구현(쉽게 배우는 자료구조 with JAVA 참고) <br>
 > javascript 폴더 안 <br>
@@ -494,7 +500,7 @@
 
 ---
 
-### 알고리즘
+## 알고리즘
 
 > 프로그래머스를 통해 푼 문제는 Programmer-Backjoon 레포지토리에 Auto Push <br> > https://github.com/gunhaa/Programmers-Baekjoon
 
@@ -505,7 +511,7 @@
 - [Recursion](CS/Algorithm/Recursion.md)
 - [Greedy](CS/Algorithm/Greedy.md)
 
-#### MIT 6.006 Introduction to Algorithms
+### MIT 6.006 Introduction to Algorithms
 
 > https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/
 
@@ -513,7 +519,7 @@
 
 ---
 
-### Jenkins-Docker-AWS
+## Jenkins-Docker-AWS
 
 - [20분만에 전공자처럼 Docker,가상화 이해하기](CS/ETC/NullNull.md)
 - [Docker없이 Container만들기](CS/ETC/RawContainer.md)
@@ -526,7 +532,7 @@
 - [Swap](CS/ETC/Swap.md)
 - [HTTPS](CS/ETC/Https.md)
 
-### Docker & Kubernetes: The Practical Guide [2025 Edition]
+## Docker & Kubernetes: The Practical Guide - 2025 Edition
 
 > https://github.com/gunhaa/Kubernetes
 
@@ -541,14 +547,14 @@
 
 ---
 
-### 면접
+## 면접
 
 - [마무리 질문](CS/Interview/Question.md)
 - [마음가짐](CS/Interview/Mindset.md)
 
 ---
 
-### bitlibrary-개발일지
+## bitlibrary-개발일지
 
 - [프로젝트 시작](CS/Bitlibrary/Overview.md)
 - [트러블 슈팅1- Category](CS/Bitlibrary/TroubleShooting1.md)
@@ -562,14 +568,14 @@
 
 ---
 
-### 정보처리기사 실기
+## 정보처리기사 실기
 
 - [실기 복원 문제1](CS/InformEngineer/q1.md)
 
 ---
 
 
-### 참고자료
+## 참고자료
 
 - [김영한 로드맵](https://www.inflearn.com/roadmaps/373)
 - [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
