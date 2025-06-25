@@ -312,6 +312,7 @@
 - [1. SQL 처리 과정과 I/O](CS/SQLP/FriendlyTuning/SQLParsingAndIO.md)
 - [2. 인덱스 기본](CS/SQLP/FriendlyTuning/Index.md)
 - [3. 인덱스 튜닝](CS/SQLP/FriendlyTuning/IndexTuning.md)
+- [4. 조인 튜닝](CS/SQLP/FriendlyTuning/JoinTuning.md)
 
 ---
 
