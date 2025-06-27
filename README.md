@@ -313,6 +313,8 @@
 - [2. 인덱스 기본](CS/SQLP/FriendlyTuning/Index.md)
 - [3. 인덱스 튜닝](CS/SQLP/FriendlyTuning/IndexTuning.md)
 - [4. 조인 튜닝](CS/SQLP/FriendlyTuning/JoinTuning.md)
+- [5. 소트 튜닝]
+- [6. DML 튜닝](CS/SQLP/FriendlyTuning/DMLTuning.md)
 
 ---
 
