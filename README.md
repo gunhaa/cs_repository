@@ -513,6 +513,7 @@
 - [Swap](CS/Algorithm/Swap.md)
 - [Recursion](CS/Algorithm/Recursion.md)
 - [Greedy](CS/Algorithm/Greedy.md)
+- [BackTracking](CS/Algorithm/BackTracking.md)
 
 ### MIT 6.006 Introduction to Algorithms
 
