@@ -514,6 +514,7 @@
 - [Recursion](CS/Algorithm/Recursion.md)
 - [Greedy](CS/Algorithm/Greedy.md)
 - [BackTracking](CS/Algorithm/BackTracking.md)
+- [Dynamic Programming](CS/Alg#orithm/DP.md)
 
 ### MIT 6.006 Introduction to Algorithms
 
@@ -574,7 +575,10 @@
 
 ## 정보처리기사 실기
 
-- [실기 복원 문제1](CS/InformEngineer/q1.md)
+- [이론](CS/InformEngineer/Theory.md)
+- [Java](CS/InformEngineer/Java.md)
+- [Python]
+- [C]
 
 ---
 
