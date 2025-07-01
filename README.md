@@ -514,7 +514,7 @@
 - [Recursion](CS/Algorithm/Recursion.md)
 - [Greedy](CS/Algorithm/Greedy.md)
 - [BackTracking](CS/Algorithm/BackTracking.md)
-- [Dynamic Programming](CS/Alg#orithm/DP.md)
+- [Dynamic Programming](CS/Algorithm/DP.md)
 
 ### MIT 6.006 Introduction to Algorithms
 

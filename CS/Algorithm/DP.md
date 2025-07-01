@@ -1,9 +1,20 @@
 # Dynamic Programming
 
+> https://www.youtube.com/watch?v=GtqHli8HIqk&t=488s
 > 세부 수행은 작은 문제를 Memory(cache)를 이용한 점화식 풀이에 가깝다
 > 이전의 값을 재활용 한다
 
 - dp를 memo라고 생각해도 된다
+- dp가 의심된다면, 직접 n=4 정도까지 그려보며 규칙을 찾아보는 것이 좋고, 대부분의 규칙은 피보나치 수열과 유사하게 나온다
+
+## Optimization problem
+
+- 문제를 해결하는 최적의 답(optimal solution)을 찾아야 하는 문제
+- optimal solution은 하나 이상일 수 있다
+- maximum 혹은 minimum value를 가지는 solution을 찾는 문제들이 주를 이룬다
+- DP는 optimization problem을 해결하는 전략 중 하나이다
+  - 특히, subproblem(s)의 optimal solution(s)를 활용해서 problem의 optimal solution을 찾는다
+  - 겹치는(overlapping) subproblems는 한번만 계산하고 그 결과를 저장한 뒤 재사용한다
 
 
 ## 수행방법
@@ -11,6 +22,7 @@
 - 탑다운 방식으로 만든다면 Recursive call을 통해 부분의 합을 계산하지않고 dp를 사용해서 문제 해결 가능
 - 모든 계산을하며, memo(cahce)값을 기록하며 진행한다
 - 최대,최소의 경우 memo와 값 판정을 하여 최대,최소 값 판정 연산이 더 이상 필요없다면 call 이 나오지 않도록 조절한다
+- 중복된 계산을 줄이는 것이 포인트이다
 
 ```java
 package baekjoon.silver._2579;
