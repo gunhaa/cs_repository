@@ -134,3 +134,85 @@ public class Main {
   answer: 4
 </details>
 <br>
+
+
+### 2024-3-11
+```java
+public class Main{
+  public static void main(String[] args){
+    Base a =  new Derivate();
+    Derivate b = new Derivate();
+    
+    System.out.print(a.getX() + a.x + b.getX() + b.x);
+  }
+}
+ 
+ 
+class Base{
+  int x = 3;
+ 
+  int getX(){
+     return x * 2; 
+  }
+}
+ 
+class Derivate extends Base{
+  int x = 7;
+  
+  int getX(){
+     return x * 3;
+  }
+}
+```
+<details>
+  <summary>정답</summary>
+메서드 오버라이딩:	Derivate에서 getX()를 재정의했으며, 실제 객체 타입 기준으로 호출됨 (동적 바인딩)<br>
+멤버 변수 숨김 (Variable Hiding): Derivate가 Base의 x를 같은 이름으로 가림(hide) 참조 변수 타입 기준으로 어떤 x가 보이는지가 결정됨<br>
+정적 바인딩 vs 동적 바인딩: 변수는 컴파일 시점의 타입 기준, 메서드는 실행 시점의 객체 기준으로 결정됨<br>
+업캐스팅: Base a = new Derivate();는 업캐스팅의 예 — 메서드는 오버라이딩에 따라 동작하지만, 변수는 Base 기준 사용<br>
+이 예시는 이미 컴파일타임에 Base의 타입과 Derivate의 타입이 결정되어 필드값이 결정됬다
+</details>
+<br>
+
+### 2024-3-19
+
+> 이 코드 직접 쳐보고 좀 더 알아보기
+
+```java
+class Main {
+ 
+  public static class Collection<T>{
+    T value;
+ 
+    public Collection(T t){
+        value = t;
+    }
+ 
+    public void print(){
+       new Printer().print(value);
+    }
+ 
+   class Printer{
+      void print(Integer a){
+        System.out.print("A" + a);
+      }
+      void print(Object a){
+        System.out.print("B" + a);
+      } 
+      void print(Number a){
+        System.out.print("C" + a);
+      }
+   }
+ }
+ 
+  public static void main(String[] args) {
+      new Collection<>(0).print();
+  }
+  
+}
+```
+<details>
+  <summary>정답</summary>
+  B0
+</details>
+<br>

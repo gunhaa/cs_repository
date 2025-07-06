@@ -27,3 +27,30 @@ root = tree(li)
  
 print(calc(root)) 
 ```
+
+### 2024-3-10
+
+```python
+def func(value):
+    if type(value) == type(100):
+        return 100
+    elif type(value) == type(""):
+        return len(value) 
+    else:
+        return 20
+ 
+ 
+a = '100.0'
+b = 100.0
+c = (100, 200)
+ 
+print(func(a) + func(b) + func(c))
+```
+
+<details>
+  <summary>정답</summary>
+  45<br>
+  python은 int float str을 알아보는 문제
+  a는 str, b는 float, c는 tuple
+  return 100은 int, return len(value)는 str, 이외는 return 20
+</details>
