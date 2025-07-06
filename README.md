@@ -578,7 +578,7 @@
 
 - [이론](CS/InformEngineer/Theory.md)
 - [Java](CS/InformEngineer/Java.md)
-- [Python]
+- [Python](CS/InformEngineer/Python.md)
 - [C](CS/InformEngineer/C.md)
 
 ---
