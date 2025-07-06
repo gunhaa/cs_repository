@@ -27,6 +27,7 @@ int main() {
     Student s[2] = {"Kim", {0xA0, 0xA5, 0xDB}, "Lee", {0xA0, 0xED, 0x81}};
     Student* p = s;
     int result = 0;
+    printf("%d\n", p);
 
     for (int i=0; i<2; i++) {
         // & 연산은 같은 비트만 가져온다
