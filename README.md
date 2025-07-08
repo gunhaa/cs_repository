@@ -576,6 +576,7 @@
 
 ## 정보처리기사 실기
 
+- [계획](CS/InformEngineer/Plan.md)
 - [이론](CS/InformEngineer/Theory.md)
 - [Java](CS/InformEngineer/Java.md)
 - [Python](CS/InformEngineer/Python.md)
