@@ -393,6 +393,7 @@
 - [Nullish coalescing operator](CS/Javascript/NullOperator.md)
 - [Modern Javascript](CS/Javascript/Modern.md)
 - [SharedArrayBuffer & Atomics](CS/Javascript/BufferAtomics.md)
+- [first-class object](CS/Javascript/FirstClassObject.md)
 
 ---
 
