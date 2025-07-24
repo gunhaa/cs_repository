@@ -558,6 +558,7 @@
 
 - [마무리 질문](CS/Interview/Question.md)
 - [마음가짐](CS/Interview/Mindset.md)
+- [기술면접](CS/Interview/TechInterview.md)
 
 ---
 
