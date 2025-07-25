@@ -293,6 +293,7 @@
 - [Transaction & Lock](CS/MySQL/TransactionAndLock.md)
 - [Index](CS/MySQL/Index.md)
 - [Full Text Search](CS/MySQL/FullTextSearch.md)
+  - [Inverted Index](CS/MySQL/InvertedIndex.md)
 
 ---
 
