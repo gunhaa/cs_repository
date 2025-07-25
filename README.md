@@ -292,6 +292,7 @@
 - [Optimizer](CS/MySQL/Optimizer.md)
 - [Transaction & Lock](CS/MySQL/TransactionAndLock.md)
 - [Index](CS/MySQL/Index.md)
+- [Full Text Search](CS/MySQL/FullTextSearch.md)
 
 ---
 
