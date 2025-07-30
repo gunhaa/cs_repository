@@ -264,6 +264,9 @@
 - [데이터 정규화](CS/Database/normalization.md)
 - [카디널리티](CS/Database/Cardinality.md)
 - [매핑 테이블](CS/Database/MappingTable.md)
+- [Lock](CS/Database/Lock.md)
+- [MVCC](CS/Database/MVCC.md)
+- [보상 트랜잭션]
 
 > [원리와응용 2025] Lecture 9,10. Database Design - Joonseok Lee
 
