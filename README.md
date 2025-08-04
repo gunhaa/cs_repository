@@ -588,6 +588,7 @@
 - [OAuthJWT](CS/Bitlibrary/OAuthJWT.md)
 - [CI&CD 계획](CS/Bitlibrary/CI&CD.md)
 - [결과](CS/Bitlibrary/results.md)
+- [Certbot을 이용한 인증서 재 갱신](CS/Bitlibrary/Certbot.md)
 
 ---
 
