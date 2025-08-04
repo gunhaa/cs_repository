@@ -525,6 +525,11 @@
 - [Greedy](CS/Algorithm/Greedy.md)
 - [BackTracking](CS/Algorithm/BackTracking.md)
 - [Dynamic Programming](CS/Algorithm/DP.md)
+- Path Finder
+  - DFS
+  - [BFS](CS/Algorithm/BFS.md)
+  - 다익스트라
+  - A*
 
 ### MIT 6.006 Introduction to Algorithms
 
