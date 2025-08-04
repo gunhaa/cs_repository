@@ -269,6 +269,7 @@
 - [UPDATE/DELETE의 실제동작](CS/Database/UpdateDelete.md)
 - [COMMIT의 실제 동작](CS/Database/Commit.md)
 - [보상 트랜잭션]
+- [윈도우 함수](CS/Database/WindowFunction.md)
 
 > [원리와응용 2025] Lecture 9,10. Database Design - Joonseok Lee
 
