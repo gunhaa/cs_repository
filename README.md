@@ -521,6 +521,7 @@
 - [알고리즘이란?](CS/Algorithm/Algorithm.md)
 - [시간복잡도/빅오표기법](CS/Algorithm/TimeComplexity.md)
 - [코딩테스트 팁](CS/Algorithm/Tips.md)
+  - [PS 기본 철학](CS/Algorithm/PS.md)
 - [Swap](CS/Algorithm/Swap.md)
 - [Recursion](CS/Algorithm/Recursion.md)
 - [Greedy](CS/Algorithm/Greedy.md)
@@ -570,10 +571,19 @@
 
 ## 면접
 
+> 기술 면접은 장황한 설명이 아닌
+> `(두괄식 진행 후) A는 B라는 원리 때문에 C라는 장점과 D라는 단점을 갖는다`를 틀로 삼아
+> 예상 질문/답변 리스트를 만든 후 기본 틀을 암기하고 이를 토대로 설명한다
+> 답변은 3,4문장으로 30초 이내로 끝나야한다
+> 절대로 장황하게 n분 설명 금지
+
 - [마무리 질문](CS/Interview/Question.md)
 - [마음가짐](CS/Interview/Mindset.md)
 - [기술면접](CS/Interview/TechInterview.md)
-- [타인을 읽는말](CS/Interview/Rapport.md)
+  - 분야별 질문&답변
+    - [CS]
+    - [Java/Javascript]
+    - [Database]
 
 ---
 
