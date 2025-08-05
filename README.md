@@ -527,7 +527,7 @@
 - [BackTracking](CS/Algorithm/BackTracking.md)
 - [Dynamic Programming](CS/Algorithm/DP.md)
 - Path Finder
-  - DFS
+  - [DFS](CS/Algorithm/DFS.md)
   - [BFS](CS/Algorithm/BFS.md)
   - 다익스트라
   - A*
