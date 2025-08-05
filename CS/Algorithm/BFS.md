@@ -5,6 +5,69 @@
 - 특징: 항상 최단 경로(가장 적은 수의 칸을 지나는 경로)를 찾는 것을 보장한다.
 - 주요 용도: 미로 찾기, 소셜 네트워크에서 두 사람 사이의 최단 인맥 찾기 등
 
+## 뼈대코드
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Bfs {
+
+    static class Point {
+        int row, col; // row: 행, col: 열
+
+        Point(int row, int col) {
+            this.row = row;
+            this.col = col;
+        }
+    }
+
+    static int n, m;
+    static boolean[][] visited;
+    static int[][] graph;
+
+    // 이동할 네 가지 방향 정의 (상, 하, 좌, 우)
+    static int[] dRow = {-1, 1, 0, 0}; // 행(세로) 변화량
+    static int[] dCol = {0, 0, -1, 1}; // 열(가로) 변화량
+
+    public static void bfs(int startRow, int startCol) {
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(new Point(startRow, startCol));
+        visited[startRow][startCol] = true;
+
+        while (!queue.isEmpty()) {
+            Point current = queue.poll();
+            int row = current.row;
+            int col = current.col;
+
+            for (int i = 0; i < 4; i++) {
+                int nRow = row + dRow[i]; // 새로운 행 위치
+                int nCol = col + dCol[i]; // 새로운 열 위치
+
+                // 경계 검사
+                if (nRow < 0 || nRow >= n || nCol < 0 || nCol >= m) {
+                    continue;
+                }
+                
+                if (!visited[nRow][nCol]) {
+                    visited[nRow][nCol] = true;
+                    queue.add(new Point(nRow, nCol));
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        n = 4; // 총 행의 수
+        m = 5; // 총 열의 수
+        graph = new int[n][m];
+        visited = new boolean[n][m];
+
+        bfs(0, 0); // 0행 0열에서 탐색 시작
+    }
+}
+```
+
 ## 예제문제 (백준 5014 - 스타트링크)
 
 ```java
