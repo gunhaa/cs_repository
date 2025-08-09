@@ -24,6 +24,7 @@
     - [SQLP](#sqlp)
       - [친절한 SQL 튜닝](#친절한-sql-튜닝)
   - [멀티스레드와 동시성](#멀티스레드와-동시성)
+  - [C](#c)
   - [JAVA](#java)
     - [JPA](#jpa)
     - [SpringSecurity](#springsecurity)
@@ -351,6 +352,17 @@
 - [동시성 컬렉션](CS/MultiThreadAndConcurrency/Collection.md)
 - [스레드 풀과 Executor 프레임워크](CS/MultiThreadAndConcurrency/Executor.md)
 - [Future](CS/MultiThreadAndConcurrency/Future.md)
+
+---
+
+## C
+
+> 독하게 시작하는 C프로그래밍
+> https://www.inflearn.com/course/%EB%8F%85%ED%95%98%EA%B2%8C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-c%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D
+
+- [C를 배우기 전에 알아야할 것들](CS/C/BeforeStartC.md)
+- [Memory](CS/C/Memory.md)
+- [실행과 참조](CS/C/ExecuteAndRef.md)
 
 ---
 
