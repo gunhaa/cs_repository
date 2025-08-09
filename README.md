@@ -366,6 +366,7 @@
 - [Reference](CS/C/Reference.md)
 - [CPU](CS/C/CPU.md)
 - [CPU수준 자료형](CS/C/CPUDataType.md)
+- [저급어와 고급어](CS/C/LowHigh.md)
 
 ---
 
