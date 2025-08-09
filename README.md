@@ -362,8 +362,9 @@
 
 - [C를 배우기 전에 알아야할 것들](CS/C/BeforeStartC.md)
 - [Memory](CS/C/Memory.md)
-- [실행](CS/C/Execute.md)
-- [참조](CS/C/Reference.md)
+- [Execute](CS/C/Execute.md)
+- [Reference](CS/C/Reference.md)
+- [CPU](CS/C/CPU.md)
 
 ---
 
