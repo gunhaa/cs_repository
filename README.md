@@ -365,6 +365,7 @@
 - [Execute](CS/C/Execute.md)
 - [Reference](CS/C/Reference.md)
 - [CPU](CS/C/CPU.md)
+- [CPU수준 자료형](CS/C/CPUDataType.md)
 
 ---
 
