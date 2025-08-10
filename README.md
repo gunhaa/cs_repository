@@ -39,6 +39,7 @@
   - [자료구조](#자료구조)
   - [알고리즘](#알고리즘)
     - [MIT 6.006 Introduction to Algorithms](#mit-6006-introduction-to-algorithms)
+  - [프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략(종만북)](#프로그래밍-대회에서-배우는-알고리즘-문제-해결-전략종만북)
   - [Jenkins-Docker-AWS](#jenkins-docker-aws)
   - [Docker \& Kubernetes: The Practical Guide - 2025 Edition](#docker--kubernetes-the-practical-guide---2025-edition)
   - [기술 면접](#기술-면접)
@@ -555,6 +556,14 @@
 > https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/
 
 - [극댓값 찾기/계산 모델](CS/Algorithm/MITOCW/Peek/Peek.md)
+
+---
+
+## 프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략(종만북)
+
+> https://product.kyobobook.co.kr/detail/S000001032946
+
+- [PS는 왜 필요한가?](CS/PS/Intro.md)
 
 ---
 
