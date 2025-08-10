@@ -564,6 +564,7 @@
 > https://product.kyobobook.co.kr/detail/S000001032946
 
 - [PS는 왜 필요한가?](CS/PS/Intro.md)
+- [좋은 코드를 짜기 위한 원칙](CS/PS/GoodCode.md)
 
 ---
 
