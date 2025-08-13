@@ -467,6 +467,7 @@
 - [Browser Rendering](CS/Vue/BrowserRendering.md)
 - [Vue의 작동원리](CS/Vue/Mechanism.md)
 - [Hook](CS/Vue/Hook.md)
+- [상태관리](CS/Vue/Status.md)
 
 ---
 
