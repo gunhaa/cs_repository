@@ -47,28 +47,6 @@ console.log(user.age); // 25
 
 ## Vue3의 반응형 구현 원리
 
-```javascript
-function reactive(target) {
-  return new Proxy(target, {
-    get(obj, prop) {
-      console.log(`GET ${String(prop)}`);
-      return obj[prop];
-    },
-    set(obj, prop, value) {
-      console.log(`SET ${String(prop)} = ${value}`);
-      obj[prop] = value;
-      // Vue는 여기서 "effect"를 실행해 UI를 다시 그림
-      return true;
-    },
-  });
-}
-
-const state = reactive({ count: 0 });
-
-console.log(state.count); // GET count -> 0
-state.count++; // SET count = 1
-```
-
 ### Vue component 에서 proxy 활용 방법
 
 - Vue의 reactive 자체가 Proxy 기반이므로, Proxy로 한 번 더 감싸서 로깅, 유효성 검사 등을 추가할 수 있다
@@ -100,3 +78,29 @@ state.count++; // SET count = 1
   </div>
 </template>
 ```
+
+#### Vue reactive 구현
+
+```javascript
+function reactive(obj) {
+  return new Proxy(obj, {
+    get(target, prop) {
+      // 값 읽을 때 의존성 추적
+      console.log(`GET: ${String(prop)}`);
+      return target[prop];
+    },
+    set(target, prop, value) {
+      // 값 변경 시 화면 갱신 트리거
+      console.log(`SET: ${String(prop)} = ${value}`);
+      target[prop] = value;
+      return true;
+    }
+  });
+}
+
+const state = reactive({ count: 0 });
+
+state.count;     // GET: count
+state.count = 1; // SET: count = 1
+```
+
