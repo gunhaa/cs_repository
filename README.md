@@ -1,6 +1,7 @@
 # Computer Science
 
 > 개발용어/운영체제/네트워크/데이터베이스/언어를 항목별로 정리한다.
+
 - [Computer Science](#computer-science)
   - [생성 이유](#생성-이유)
   - [개발 상식](#개발-상식)
@@ -32,6 +33,7 @@
     - [Typescript](#typescript)
     - [Nodejs](#nodejs)
     - [GraphQL/Prisma](#graphqlprisma)
+    - [Vue](#vue)
   - [JAVA 와 JS의 차이](#java-와-js의-차이)
   - [Rust](#rust)
   - [SASM](#sasm)
@@ -46,7 +48,6 @@
   - [bitlibrary-개발일지](#bitlibrary-개발일지)
   - [정보처리기사 실기](#정보처리기사-실기)
   - [참고자료](#참고자료)
-
 
 ## 생성 이유
 
@@ -469,6 +470,7 @@
 - [Hook](CS/Vue/Hook.md)
 - [상태관리](CS/Vue/Status.md)
 - [Route]
+- [Proxy](CS/Vue/Proxy.md)
 
 ---
 
@@ -559,7 +561,7 @@
   - [DFS](CS/Algorithm/DFS.md)
   - [BFS](CS/Algorithm/BFS.md)
   - 다익스트라
-  - A*
+  - A\*
 
 ### MIT 6.006 Introduction to Algorithms
 
@@ -608,8 +610,7 @@
 
 ## 기술 면접
 
-> 기술 면접은 긴 설명을 해서는 안된다<br>
-> `(두괄식으로 질문에 대한 답변 이후) A는 B라는 원리 때문에 C라는 장점과 D라는 단점을 갖는다`를 틀로 삼아<br>
+> 기술 면접은 긴 설명을 해서는 안된다<br> > `(두괄식으로 질문에 대한 답변 이후) A는 B라는 원리 때문에 C라는 장점과 D라는 단점을 갖는다`를 틀로 삼아<br>
 > 예상 질문/답변 리스트를 만든 후 기본 틀을 암기하고 이를 토대로 설명한다<br>
 > 답변은 3,4문장으로 30초 이내로 끝나야한다<br>
 > 절대로 장황하게 end to end식 n분 설명은 금지
@@ -648,7 +649,6 @@
 - [C](CS/InformEngineer/C.md)
 
 ---
-
 
 ## 참고자료
 
