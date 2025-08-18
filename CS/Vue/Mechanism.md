@@ -36,6 +36,35 @@
 - Vue 내부에서는 this.message를 사용할 수 있도록 this.\_data.message를 this.message에 프록시 처리한다
 - 각 파일 조각은 각자의 Vue인스턴스가 되어, 하나의 파일은 하나의 this.\_data만이 존재한다(유지보수가 복잡해지는 핵심 이유)
 
+### MVVM 패턴 예제
+
+```HTML
+  <body>
+    <!-- View -->
+    <div id="app">
+      <h2>{{message}}</h2>
+    </div>
+    
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      // Model
+      let model = {
+        message: "HELLO VUE3",
+      };
+
+      // ViewModel
+      let vm = Vue.createApp({
+        name: "App",
+        data() {
+          return model;
+        },
+      }).mount("#app");
+    </script>
+  </body>
+```
+
+- 개발자 콘솔 `vm.message = '변화함'`을 입력하면, 화면이 바뀌게 되는데 이 패턴이 바로 MVVM이다
+
 ## 2. Component 기반
 
 ![images](images/mechanism2.webp)
