@@ -28,7 +28,6 @@
 [클라이언트 애플리케이션]  (서버로부터 '응답 JSON' 수신 후 UI에 표시)
        ↓
 [사용자]
-
 ```
 
 #### 요청/응답 json 인터페이스
@@ -85,14 +84,19 @@
 - REST API는 정해진 규칙대로만 동작하는 서버이다(예측 가능한 행동을 한다)
 - 이에 반해 MCP서버는 LLM에게 요청을 보내어 복잡한 작업 수행을 하고 이에 따른 결과를 생성할 수 있다(예측 불가능한 행동을 한다)
 
-### Data type Tool
+## Trade off
 
-- Tool
-  - A tool definition includes
-    - name: Unique identifier for the tool
-    - title: Optional human-readable name of the tool for display purposes.
-    - description: Human-readable description of functionality
-    - inputSchema: JSON Schema defining expected parameters
-    - outputSchema: Optional JSON Schema defining expected output structure
-    - annotations: optional properties describing tool behavior
-- Tool의 프로퍼티중 LLM은 description, name, inputSchema 을 보고 어떤 도구를 쓸지 판단을 하기에, Tool에 대한 설정이 매우 중요하다
+### 얻는 것: 폭발적인 개발 속도와 유연성 (장점)
+
+1. 초기 개발 속도 향상: 클라이언트와 서버 개발자 모두 API 명세를 일일이 맞추는 시간을 절약하고 핵심 기능 개발에만 집중할 수 있어 프로토타입을 만들거나 새로운 기능을 추가하는 속도가 매우 빨라진다
+2. 요구사항 변경에 대한 유연성: 사용자의 요청이 조금 바뀌어도(예: "asd가 있어?" -> "asd라는 분 찾아줘"), 새로운 API를 만들 필요 없이 똑똑한 LLM이 알아서 처리해준다
+
+### 잃는것 할 것: 비용과 리스크 (단점)
+
+1. 유지비용이 비싸진다
+   - LLM API 호출 비용: 모든 요청이 내부 함수 호출로 끝나는 REST API와 달리, MCP는 대부분의 요청마다 LLM API를 호출한다. 요청 하나하나가 과금이된다. 사용자가 많아질수록 이 비용은 무시할 수 없는 수준이 된다.
+
+2. "Miss 낼 확률"이 늘어난다
+   - 비결정성(Non-determinism): REST API는 1+1=2처럼 항상 똑같은 결과를 보장하지만, LLM은 똑같은 질문에도 미묘하게 다른 답변을 할 수 있다. 가끔 이상한 도구를 선택하거나 파라미터를 잘못 추출하는 실수를 저지를 수 있다.
+
+3. 성능 저하: 내부 서버에서 바로 처리하는 것보다 외부 LLM API를 거쳐 오는 과정이 추가되므로, 응답 속도가 필연적으로 느려진다

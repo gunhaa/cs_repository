@@ -599,6 +599,9 @@
 ## MCP
 
 - [MCP란?](CS/MCP/MCP.md)
+- Server Features
+  - [Tool](CS/MCP/Tool.md)
+
 
 --- 
 
