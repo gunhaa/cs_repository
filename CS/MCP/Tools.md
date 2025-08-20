@@ -1,11 +1,11 @@
-# Tool
+# Tools
 
 ## Data type Tool
 
 - Tool
   - A tool definition includes
     - name: Unique identifier for the tool
-    - title: Optional human-readable name of the tool for display purposes.
+    - title: Optional human-readable name of the tool for display purposes
     - description: Human-readable description of functionality
     - inputSchema: JSON Schema defining expected parameters
     - outputSchema: Optional JSON Schema defining expected output structure

@@ -599,8 +599,10 @@
 ## MCP
 
 - [MCP란?](CS/MCP/MCP.md)
-- Server Features
-  - [Tool](CS/MCP/Tool.md)
+- MCP에서 가장 중요한 3가지 객체
+  - [Prompts](CS/MCP/Prompts.md)
+  - [Tools](CS/MCP/Tools.md)
+  - [Resources](CS/MCP/Resources.md)
 
 
 --- 
