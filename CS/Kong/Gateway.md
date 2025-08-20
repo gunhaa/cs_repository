@@ -10,6 +10,8 @@
 
 ## Kong gateway의 핵심 기능
 
+  ![images2](images/gateway2.png)
+
 1. Routing
 
 - 클라이언트로부터 들어온 요청을 미리 정의된 규칙에 따라 적절한 마이크로서비스로 전달한다
