@@ -10,7 +10,22 @@
 ## ​Data type Prompt
 
 - A prompt definition includes
+
   - name: Unique identifier for the prompt
   - title: Optional human-readable name of the prompt for display purposes
   - description: Optional human-readable description
   - arguments: Optional list of arguments for customization
+
+- 예시
+
+```java
+/**
+ * Stored Prompt 자체의 스펙을 정의하는 Record
+ * @param name 프롬프트의 고유 이름 (예: "weekly_report_generator")
+ * @param title 사용자에게 보여줄 제목 (예: "주간 매출 보고서 생성기")
+ * @param description 프롬프트에 대한 상세 설명
+ * @param arguments 이 프롬프트를 사용할 때 필요한 인자 목록
+ * @param template 실제 LLM에게 전달될 프롬프트 템플릿. 인자들은 {placeholder} 형태로 들어갑니다 ?? 이부분 애매함
+ */
+record PromptDefinition(String name, String title, String description, List<PromptArgument> arguments, String template) {}
+```

@@ -1,5 +1,9 @@
 # Tools
 
+- AI가 임무를 수행하기 위해 사용할 수 있는 구체적인 '행동' 또는 '기능'이다
+- AI가 작업을 수행하는 '어떻게(How)'를 가능하게 하며, 보통 외부 API를 호출하거나 DB를 조회하는 등 명확한 입출력이 있는 함수로 구현된다
+  - ex: `void sendEmail(String to, String subject, String body)`
+
 ## Data type Tool
 
 - Tool

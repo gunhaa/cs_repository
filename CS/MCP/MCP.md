@@ -1,5 +1,7 @@
 # Model Context Protocol / MCP
 
+![images1](images/mcp1.png)
+
 - MCP의 핵심은 REST API 규약을 배우고, 읽고, 지켜서 API 요청하기 번거로우니 LLM이 서버에서 해야하는 행동들을 구현한 Handler를 LLM이 가져오게하여 사용하는 서버이다
 - MCP는 '어떻게' 할지에 대한 고민을 LLM에게 맡기고, 개발자는 '무엇을' 할 수 있는지(핵심 기능)에만 집중할 수 있게 해주는 매우 효율적인 방식이다
 - 즉, MCP서버란 대화형으로 서버에 API를 요청하는 것이다
