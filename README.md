@@ -276,7 +276,10 @@
 - [UPDATE/DELETE의 실제동작](CS/Database/UpdateDelete.md)
 - [COMMIT의 실제 동작](CS/Database/Commit.md)
 - [보상 트랜잭션]
+- [고급 집계 함수](CS/Database/AggregateFunction.md)
+- [서브쿼리]
 - [윈도우 함수](CS/Database/WindowFunction.md)
+- [계층형 질의]
 
 > [원리와응용 2025] Lecture 9,10. Database Design - Joonseok Lee
 

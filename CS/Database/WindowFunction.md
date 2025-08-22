@@ -51,6 +51,9 @@
 | `COUNT()` | 파티션별 개수를 계산한다. | `SELECT name, department, COUNT(*) OVER (PARTITION BY department) AS dept_employee_count FROM employees;` |
 | `MAX()` / `MIN()` | 파티션별 최댓값/최솟값을 계산한다. | `SELECT name, salary, MAX(salary) OVER () AS highest_salary FROM employees;` |
 
+- 집계함수는 기본적으로 null값을 계산하지 않는다
+  - 하지만 count(*)의 경우만 null 값을 전부 계산하니 사용할때 주의해야 한다
+
 #### 다. 행 순서 함수 (Row Ordering Functions)
 
 | 함수명 | 설명 및 사용법 | 예제 (employees 테이블: name, department, salary) |
