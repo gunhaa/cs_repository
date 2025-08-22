@@ -32,6 +32,25 @@ FROM
   SALES;
 ```
 
+- 결과
+
+| BRAND | SEGMENT | SUM(QUANTITY) | 설명 |
+| :--- | :--- | :--- | :--- |
+| 삼성 | 스마트폰 | 150 | (BRAND, SEGMENT) 그룹핑 |
+| 삼성 | 노트북 | 50 | (BRAND, SEGMENT) 그룹핑 |
+| Apple | 스마트폰 | 80 | (BRAND, SEGMENT) 그룹핑 |
+| Apple | 태블릿 | 70 | (BRAND, SEGMENT) 그룹핑 |
+| LG | TV | 120 | (BRAND, SEGMENT) 그룹핑 |
+| 삼성 | NULL | 150 | (BRAND) 그룹핑 - 삼성 브랜드 총합 |
+| Apple | NULL | 150 | (BRAND) 그룹핑 - Apple 브랜드 총합 |
+| LG | NULL | 120 | (BRAND) 그룹핑 - LG 브랜드 총합 |
+| NULL | 스마트폰 | 180 | (SEGMENT) 그룹핑 - 스마트폰 세그먼트 총합 |
+| NULL | 노트북 | 50 | (SEGMENT) 그룹핑 - 노트북 세그먼트 총합 |
+| NULL | 태블릿 | 70 | (SEGMENT) 그룹핑 - 태블릿 세그먼트 총합 |
+| NULL | TV | 120 | (SEGMENT) 그룹핑 - TV 세그먼트 총합 |
+| NULL | NULL | 420 | () 그룹핑 - 전체 총합 |
+
+
 - GROUPING SET을 GROUP BY 로도 구현이 가능하지만 문제가 있다
   1. 동일한 테이블을 4번이나 읽는다
   2. SQL문이 너무 길어진다
@@ -59,6 +78,23 @@ GROUPING SETS
   ()
 );
 ```
+- 결과
+
+| BRAND | SEGMENT | SUM(QUANTITY) | 설명 |
+| :--- | :--- | :--- | :--- |
+| 삼성 | 스마트폰 | 150 | (BRAND, SEGMENT) 그룹핑 |
+| 삼성 | 노트북 | 50 | (BRAND, SEGMENT) 그룹핑 |
+| Apple | 스마트폰 | 80 | (BRAND, SEGMENT) 그룹핑 |
+| Apple | 태블릿 | 70 | (BRAND, SEGMENT) 그룹핑 |
+| LG | TV | 120 | (BRAND, SEGMENT) 그룹핑 |
+| 삼성 | NULL | 150 | (BRAND) 그룹핑 - 삼성 브랜드 총합 |
+| Apple | NULL | 150 | (BRAND) 그룹핑 - Apple 브랜드 총합 |
+| LG | NULL | 120 | (BRAND) 그룹핑 - LG 브랜드 총합 |
+| NULL | 스마트폰 | 180 | (SEGMENT) 그룹핑 - 스마트폰 세그먼트 총합 |
+| NULL | 노트북 | 50 | (SEGMENT) 그룹핑 - 노트북 세그먼트 총합 |
+| NULL | 태블릿 | 70 | (SEGMENT) 그룹핑 - 태블릿 세그먼트 총합 |
+| NULL | TV | 120 | (SEGMENT) 그룹핑 - TV 세그먼트 총합 |
+| NULL | NULL | 420 | () 그룹핑 - 전체 총합 |
 
 ## ROLL UP
 
@@ -83,8 +119,24 @@ GROUP BY
   )
 ```
 
-## CUBE
+| C1 | C2 | C3 | 집계함수(C4) | 설명 |
+| :--- | :--- | :--- | :--- | :--- |
+| 삼성 | 스마트폰 | 2024 | 100 | (C1, C2, C3) 그룹핑 |
+| 삼성 | 스마트폰 | 2025 | 120 | (C1, C2, C3) 그룹핑 |
+| 삼성 | 노트북 | 2024 | 50 | (C1, C2, C3) 그룹핑 |
+| Apple | 스마트폰 | 2024 | 80 | (C1, C2, C3) 그룹핑 |
+| Apple | 태블릿 | 2025 | 70 | (C1, C2, C3) 그룹핑 |
+| 삼성 | 스마트폰 | NULL | 220 | (C1, C2) 소계 |
+| 삼성 | 노트북 | NULL | 50 | (C1, C2) 소계 |
+| Apple | 스마트폰 | NULL | 80 | (C1, C2) 소계 |
+| Apple | 태블릿 | NULL | 70 | (C1, C2) 소계 |
+| 삼성 | NULL | NULL | 270 | (C1) 소계 |
+| Apple | NULL | NULL | 150 | (C1) 소계 |
+| NULL | NULL | NULL | 420 | () 전체 총계 |
 
+
+## CUBE
+ 
 - 지정된 GROUPING 컬럼의 다차원 소계를 생성하는데 사용된다
 - 지정 순서의 의미가없다(모든 조합을 출력)
   - 인자가 2개라면 2*2 = 4
@@ -110,3 +162,33 @@ GROUP BY
     ()
   )
 ```
+
+- 결과
+
+| C1 | C2 | C3 | 집계함수(C4) | 설명 |
+| :--- | :--- | :--- | :--- | :--- |
+| 삼성 | 스마트폰 | 2024 | 100 | (C1, C2, C3) 그룹핑 |
+| 삼성 | 스마트폰 | 2025 | 120 | (C1, C2, C3) 그룹핑 |
+| 삼성 | 노트북 | 2024 | 50 | (C1, C2, C3) 그룹핑 |
+| Apple | 스마트폰 | 2024 | 80 | (C1, C2, C3) 그룹핑 |
+| Apple | 태블릿 | 2025 | 70 | (C1, C2, C3) 그룹핑 |
+| 삼성 | 스마트폰 | NULL | 220 | (C1, C2) 소계 |
+| 삼성 | 노트북 | NULL | 50 | (C1, C2) 소계 |
+| Apple | 스마트폰 | NULL | 80 | (C1, C2) 소계 |
+| Apple | 태블릿 | NULL | 70 | (C1, C2) 소계 |
+| 삼성 | NULL | 2024 | 150 | (C1, C3) 소계 |
+| 삼성 | NULL | 2025 | 120 | (C1, C3) 소계 |
+| Apple | NULL | 2024 | 80 | (C1, C3) 소계 |
+| Apple | NULL | 2025 | 70 | (C1, C3) 소계 |
+| NULL | 스마트폰 | 2024 | 180 | (C2, C3) 소계 |
+| NULL | 스마트폰 | 2025 | 120 | (C2, C3) 소계 |
+| NULL | 노트북 | 2024 | 50 | (C2, C3) 소계 |
+| NULL | 태블릿 | 2025 | 70 | (C2, C3) 소계 |
+| 삼성 | NULL | NULL | 270 | (C1) 소계 |
+| Apple | NULL | NULL | 150 | (C1) 소계 |
+| NULL | 스마트폰 | NULL | 300 | (C2) 소계 |
+| NULL | 노트북 | NULL | 50 | (C2) 소계 |
+| NULL | 태블릿 | NULL | 70 | (C2) 소계 |
+| NULL | NULL | 2024 | 230 | (C3) 소계 |
+| NULL | NULL | 2025 | 190 | (C3) 소계 |
+| NULL | NULL | NULL | 420 | () 전체 총계 |
