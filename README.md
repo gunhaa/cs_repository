@@ -279,7 +279,7 @@
 - [고급 집계 함수](CS/Database/AggregateFunction.md)
 - [서브쿼리]
 - [윈도우 함수](CS/Database/WindowFunction.md)
-- [계층형 질의]
+- [계층형 질의](CS/Database/HierarchicalQuery.md)
 
 > [원리와응용 2025] Lecture 9,10. Database Design - Joonseok Lee
 
