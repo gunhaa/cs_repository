@@ -42,10 +42,10 @@
   - [알고리즘](#알고리즘)
     - [MIT 6.006 Introduction to Algorithms](#mit-6006-introduction-to-algorithms)
   - [프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략(종만북)](#프로그래밍-대회에서-배우는-알고리즘-문제-해결-전략종만북)
-  - [Kong Gateway](#Kong-Gateway)
-  - [Swagger](#Swagger)
-  - [MCP](#MCP)
-  - [Hashicorp Vault](#Hashicorp-Vault)
+  - [Kong Gateway](#kong-gateway)
+  - [Swagger](#swagger)
+  - [MCP](#mcp)
+  - [Hashicorp Vault](#hashicorp-vault)
   - [Jenkins-Docker-AWS](#jenkins-docker-aws)
   - [Docker \& Kubernetes: The Practical Guide - 2025 Edition](#docker--kubernetes-the-practical-guide---2025-edition)
   - [기술 면접](#기술-면접)
@@ -377,6 +377,8 @@
 - [CPU수준 자료형](CS/C/CPUDataType.md)
 - [저급어와 고급어](CS/C/LowHigh.md)
 - [컴파일러와 인터프리터](CS/C/CompilerInterpreter.md)
+- [Visual Studio](CS/C/VisualStudio.md)
+- [컴파일, 링크, 실행](CS/C/Compile.md)
 
 ---
 
@@ -611,8 +613,7 @@
   - [Tools](CS/MCP/Tools.md)
   - [Resources](CS/MCP/Resources.md)
 
-
---- 
+---
 
 ## Hashicorp Vault
 
