@@ -17,7 +17,7 @@ FROM
 START WITH
     manager_id IS NULL -- 시작점: 상사가 없는 김사장에서 시작
 CONNECT BY
-    -- PRIOR는 "부모 행의" 또는 "이전 레벨 행의" 라고 해석하면 된다
+    -- PRIOR는 "다음 노드" 라고 해석하면 된다
     PRIOR emp_id = manager_id; -- PRIOR 하위(자식) = 상위(부모)/ 순방향(Top-Down 전개)
     PRIOR manager_id = emp_id; -- PRIOR 상위(부모) = 하위(자식)/ 역방향(Bottom-Up 전개)
 ```

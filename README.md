@@ -597,6 +597,7 @@
 - [Kong Gateway](CS/Kong/Gateway.md)
 - [AdminAPI](CS/Kong/AdminAPI.md)
 - [Comsumer](CS/Kong/Consumer.md)
+- [Kong Docker Setting](CS/Kong/Setting.md)
 
 ---
 
