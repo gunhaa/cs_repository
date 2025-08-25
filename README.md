@@ -381,6 +381,7 @@
 - [컴파일, 링크, 실행](CS/C/Compile.md)
 - [Console/File](CS/C/Console.md)
   - [getchar()로 설명하는 I/O](CS/C/Getchar.md)
+- [Debugger](CS/C/Debugger.md)
 
 ---
 

@@ -33,9 +33,18 @@ int main(void)
 - getchar()/ putchar()
   - Buffered I/O
   - getchar() = "버퍼에서 하나씩 반환"
-- _getch() / _getche()
+- \_getch() / \_getche()
   - Non-Buffered I/O
   - 키보드의 입력 자체에 대한 감지(intterrupt를 감지)
   - 위 그림과 완전히 다른 아키텍처를 사용한다
   - Driver와 OS를 거치지만, File interface와 buffer를 거치지 않고 바로 반환
   - 진행을 원하면 키를 누르세요.. 에 사용된다
+
+### fgets() 함수의 동작
+
+- 유닉스 계열 운영체제(리눅스, macOS 등)와 C 언어에서는 하드웨어 장치(키보드, 마우스 등)를 파일처럼 다룬다. 이를 파일 인터페이스(File Interface) 라고 한다
+- fgets()는 file interface를 이용해 버퍼에서 가져온다(ex, getchar()의 경우 char를 가져온다)
+- keyboard는 file interface를 이용해서 가져온다 이곳의 이름이 stdin이다
+  - stdin (Standard Input): 표준 입력을 의미하는 파일 스트림이다. 기본적으로 키보드 입력에 연결되어 있다. 따라서 fgets() 함수의 stream 인자로 stdin을 전달하면, 파일이 아닌 키보드로부터 입력을 받게 된다
+- stdout은 console이다
+  - 기본적으로 콘솔(터미널 또는 명령 프롬프트 화면)에 연결되어 있다. printf(), puts()와 같은 함수들이 stdout을 통해 데이터를 출력한다.
