@@ -598,6 +598,7 @@
 - [Kong Gateway](CS/Kong/Gateway.md)
 - [AdminAPI](CS/Kong/AdminAPI.md)
 - [Comsumer](CS/Kong/Consumer.md)
+- [Route/Service](Cs/Kong/Route.md)
 - [Kong Docker Setting](CS/Kong/Setting.md)
 
 ---
@@ -729,3 +730,4 @@
 - [친절한 SQL 튜닝](https://www.yes24.com/Product/Goods/61254539)
 - [SQL 전문가 가이드](https://product.kyobobook.co.kr/detail/S000001399869)
 - [오라클 성능 고도화 원리와 해법 1,2](https://product.kyobobook.co.kr/detail/S000061696047)
+- [프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략](https://product.kyobobook.co.kr/detail/S000001032946)
