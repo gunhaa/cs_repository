@@ -382,6 +382,7 @@
 - [Console/File](CS/C/Console.md)
   - [getchar()로 설명하는 I/O](CS/C/Getchar.md)
 - [Debugger](CS/C/Debugger.md)
+- [연산자](CS/C/Operator.md)
 
 ---
 
