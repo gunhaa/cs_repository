@@ -619,12 +619,13 @@
 > https://modelcontextprotocol.io/
 
 - [MCP란?](CS/MCP/MCP.md)
-- MCP에서 가장 중요한 3가지 객체
+- @deprecated - MCP Server에서 가장 중요한 3가지 객체
   - [Prompts](CS/MCP/Prompts.md)
   - [Tools](CS/MCP/Tools.md)
   - [Resources](CS/MCP/Resources.md)
-- MCP Client/Server 공식 스펙
+- MCP Client/Server 공식 스펙(protocol version: 2025-06-18)
   - [MCP Client](CS/MCP/Client.md)
+  - [MCP Server](CS/MCP/Server.md)
 
 ---
 
