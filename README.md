@@ -386,6 +386,7 @@
 - [쓰레기 값](CS/C/GarbageValue.md)
 - [컴퓨터의 뺄셈](CS/C/Minus.md)
 - [배열](CS/C/Array.md)
+- [함수](CS/C/Function.md)
 
 ---
 
