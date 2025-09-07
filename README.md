@@ -387,6 +387,7 @@
 - [컴퓨터의 뺄셈](CS/C/Minus.md)
 - [배열](CS/C/Array.md)
 - [함수](CS/C/Function.md)
+- [포인터](CS/C/Pointer.md)
 
 ---
 
