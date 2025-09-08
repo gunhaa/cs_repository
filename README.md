@@ -432,6 +432,8 @@
 - [Reactor](CS/Webflux/Reactor.md)
   - [Hot/Cold Sequence](CS/Webflux/ColdHotSeq.md)
   - [Backpressure](CS/Webflux/Backpressure.md)
+  - [Sinks](CS/Webflux/Sinks.md)
+  - [Scheduler](CS/Webflux/Scheduler.md)
 
 ---
 
