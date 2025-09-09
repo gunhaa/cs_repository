@@ -119,3 +119,36 @@ int main(void)
   - GC를 C에서 구현해서 사용할 수도 있다
 - 메모리 해제에 대한 확실한 안내 필요
 - 할당된 메모리 크기 전달 문제 고려
+
+## 재귀 호출
+
+- 함수 코드 내부에서 다시 자신을 호출하는 것
+- 반복문과 Stack 자료구조를 합친 것
+  - recursive call은 stack/for로 표현 가능하다
+- 비선형 자료구조에서 매우 중요하게 활용
+  - 데이터가 나무(트리)나 그물(그래프)처럼 복잡하게 얽혀있을 때, 그 구조를 탐색하고 처리하는 데 재귀 호출이 매우 자연스럽고 효율적인 방법
+  - dfs()에서 미로를 탈출하기 위해서 사용, 막혔을 시 뒤로 감음
+- 함수 호출 오버헤드는 감수
+- 논리 오류 발생 시 StackOverFlow 발생
+
+## 가변 길이 입력에 의한 Stack Frame 손상
+
+```C
+void GetString(void)
+{
+    char szBuffer[8] = { 0 };
+    int nData = 0x11223344;
+    // 보안 결함이 있는 함수
+    // 8글자 입력시, 바로 옆의 nData가 오염된다
+    // 널 종료문자 \0 = 0x00이 덮어씌워지는 것이다
+    // 11223300으로 출력됨
+    gets(szBuffer);
+    printf("%s, %08X\n", szBuffer, nData);
+    return;
+}
+int main(void) 
+{
+    GetString();
+    return 0;
+}
+```
