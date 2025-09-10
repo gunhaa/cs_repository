@@ -293,6 +293,7 @@
 #### 김영한의 실전 데이터 베이스 입문 - SQL부터 차근차근
 
 - [데이터베이스 소개](CS/DatabaseKyh1/Database.md)
+- [SQL이란?](CS/DatabaseKyh1/SQL.md)
 
 #### 김영한의 실전 데이터 베이스 - 기본편
 
