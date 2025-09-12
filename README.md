@@ -296,6 +296,7 @@
 - [SQL이란?](CS/DatabaseKyh1/SQL.md)
 - [Database의 NULL](CS/DatabaseKyh1/Null.md)
 - [SQL의 실행순서](CS/DatabaseKyh1/SQLSequence.md)
+- [수업중 사용한 SQL](CS/DatabaseKyh1/UsedSQL.md)
 
 #### 김영한의 실전 데이터 베이스 - 기본편
 
