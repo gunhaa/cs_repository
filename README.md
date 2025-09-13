@@ -410,6 +410,7 @@
 - [함수](CS/C/Function.md)
 - [포인터](CS/C/Pointer.md)
 - [함수 응용](CS/C/FunctionLv2.md)
+- [구조체](CS/C/Struct.md)
 
 ---
 
