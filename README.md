@@ -419,6 +419,7 @@
 - [파일](CS/C/File.md)
 - [변수와 상수 고급이론](CS/C/Advanced.md)
 - [전처리기](CS/C/Preprocessor.md)
+- [함수 고급이론](CS/C/FunctionLv3.md)
 
 ---
 
