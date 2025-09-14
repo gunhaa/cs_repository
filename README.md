@@ -417,6 +417,7 @@
 - [함수 응용](CS/C/FunctionLv2.md)
 - [구조체](CS/C/Struct.md)
 - [파일](CS/C/File.md)
+- [변수와 상수 고급이론](CS/C/Advanced.md)
 
 ---
 
