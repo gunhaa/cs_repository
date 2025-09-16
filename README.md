@@ -31,6 +31,7 @@
       - [친절한 SQL 튜닝](#친절한-sql-튜닝)
   - [멀티스레드와 동시성](#멀티스레드와-동시성)
   - [C](#c)
+    - [독하게 C를 배운사람을 위한 선형 자료구조](#독하게-c를-배운사람을-위한-선형-자료구조)
   - [JAVA](#java)
     - [JPA](#jpa)
     - [SpringSecurity](#springsecurity)
@@ -422,6 +423,16 @@
 - [변수와 상수 고급이론](CS/C/Advanced.md)
 - [전처리기](CS/C/Preprocessor.md)
 - [함수 고급이론](CS/C/FunctionLv3.md)
+
+--- 
+
+### 독하게 C를 배운사람을 위한 선형 자료구조
+
+> Database Cli C, LinkedList로 구현
+
+> https://www.inflearn.com/course/%EB%8F%85%ED%95%98%EA%B2%8C-%EC%84%A0%ED%98%95-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-c
+
+- [Node](CS/CStructure/Node.md)
 
 ---
 
