@@ -309,7 +309,8 @@
 - [Join](CS/DatabaseKyh2/Join.md)
 - [SubQuery](CS/DatabaseKyh2/SubQuery.md)
 - [Union](CS/DatabaseKyh2/Union.md)
-- [CASE](CS/DatabaseKyh2/Case.md)
+- [Case](CS/DatabaseKyh2/Case.md)
+- [View](CS/DatabaseKyh2/View.md)
 
 #### 김영한의 실전 데이터 베이스 - 설계편
 
