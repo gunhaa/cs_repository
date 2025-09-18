@@ -158,4 +158,63 @@ explain select item_id, price, item_name from items where price between 50000 an
 
 1. 인덱스는 순서대로 사용(Index Left-Prefix Rule)
 2. 등호(=) 조건은 앞으로, 범위 조건(<,>)은 뒤로
+    - 범위 검색은 마지막에 한번만 사용하는 것이 가장 중요하다
 3. 정렬(ORDER BY)도 인덱스 순서를 따라야 한다
+
+### 복합 인덱스와 범위 조건
+
+```sql
+create index idx_items_category_price on items(category,price);
+
+-- 인덱스를 타긴탔으나, filtered가 10%밖에 되지 않는다
+-- 복합 인덱스에 범위 조건이 사용된다면, 이후에는 idx가 사용될 수 없다고 생각하는게 좋다
+-- 패션 이후의 price는 정렬이 되어있지 않은 상태라, (인덱스 안에서) 조회해야 한다
+-- 인덱스 안에서 조회하는 것은 그나마 효율적이긴 하지만, 최선의 전략은 아니다
+select * from items where category >= '패션' and price = 20000;
+explain select * from items where category >= '패션' and price = 20000;
+```
+
+- 복합 인덱스에서 어떤 컬럼에 범위 검색을 사용하는 순간, 그 뒤에 오는 컬럼들은 인덱스의 정렬 효과를 누릴 수 없게된다
+  - 인덱스는 뒤의 자료가 정렬이 되어있지 않다고 판단해, 끝까지 검색하는 비효율적인 상황이 발생한다
+  - 인덱스를 타긴 타지만, 제대로 타는 상황이 아니다
+    - 범위에 따라 뒤에 있는 n개의 인덱스를 전부 검사해야 할 수 도있다
+    - 문제가 터지기 좋은 상황이다
+- 따라서 인덱스를 설계할 때는 = 조건으로 사용될 컬럼을 범위 조건으로 사용될 컬럼보다 앞에 배치해야하는 것이 일반적인 최적화 전략이다
+
+#### 복합 인덱스 범위 쿼리 문제 해결방법
+
+```sql
+-- = 조건을 먼저 처리할 수 있도록 처리해야 한다
+-- 장애가 날 경우, 우선 서비스가 돌아가게 해야한다(임시 방편 인덱스 생성)
+create index idx_items_price_category_temp on items (price, category);
+-- price 가 먼저인 인덱스를 생성해 = 조건을 먼저 판별, 이후 gt/lt 조건을 판별시킨다
+```
+
+- 인덱스를 만드는 것도 방법이지만, 가장 좋은 법은 기존에 있는 인덱스를 최대한 잘 활용하는 것이 좋다
+  - IN절을 이용한 해결
+    - MySQL Optimizer는 in절을 하나의 큰 범위로 취급하지 않고, 여러개의 동등 비교(=) 조건의 묶음으로 인식한다
+      - category >= '패션'은 category in ('패션', '헬스/뷰티')와 논리적으로 간다
+  ```sql
+  explain select * from items where category >= '패션' and price = 20000;
+  -- in절로 변경
+  explain select * from items where category in ('패션', '헬스/뷰티') and price = 20000;
+  ```
+  - 핵심은 범위 검색을 동등 비교(=)의 여러 묶음으로 바꾸는 것이다
+  - in query는 다음과 같이 나누어 실행된다
+  ```sql
+  SELECT * FROM items WHERE category = '패션' AND price = 20000;
+  UNION ALL
+  SELECT * FROM items WHERE category = '헬스/뷰티' AND price = 20000;
+  ```
+  - 즉 optimizer는 index를 이용해 ('패션', 20000), ('헬스/뷰티', 20000) 지점으로 두 번의 정확한 위치탐색(seek)을 수행한다
+    - 이 과정에서 price의 조건이 반영되므로 불필요하게 데이터를 읽고 버리는 과정이 사라진다
+  - 결과적으로 >, <는 '연속된 범위'로 처리되어 복합 인덱스의 추가적인 활용을 막지만, IN은 '여러 개의 개별 지점'에 대한 동등 비교(=) 묶음으로 처리된다
+  - Optimizer는 in절의 각 값에 대해 인덱스를 사용한 효율적인 탐색(seek)을 여러 번 수행할 수 있으므로 복합 인덱스의 모든 컬럼을 효과적으로 사용할 수 있다
+
+#### 실무에서는 범위가 한정적인 컬럼에 이 `IN` 트릭을 자주 사용한다.
+
+- 예를 들어, 상품 상태를 나타내는 `status` 컬럼이 '판매중', '품절', '판매중지' 3가지 값만 가진다고 하자.
+- '판매중' 또는 '품절' 상태인 상품을 찾을 때 `WHERE status >= '판매중'` 과 같이 조회하는 것보다
+`WHERE status IN ('판매중', '품절')` 로 조회하는 것이 복합 인덱스를 활용하는 데 훨씬 유리할 수
+있다.
+- 물론, `IN` 절에 들어가는 값의 개수가 너무 많아지면 오히려 성능이 저하될 수도 있으므로, 항상 `EXPLAIN` 을 통해 실제 실행 계획을 확인하고 결정하는 것이 현명하다.
