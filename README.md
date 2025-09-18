@@ -311,6 +311,7 @@
 - [Union](CS/DatabaseKyh2/Union.md)
 - [Case](CS/DatabaseKyh2/Case.md)
 - [View](CS/DatabaseKyh2/View.md)
+- [Index-basic](CS/DatabaseKyh2/IndexBasic.md)
 
 #### 김영한의 실전 데이터 베이스 - 설계편
 
