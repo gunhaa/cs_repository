@@ -1,4 +1,4 @@
-# Index
+# Index Basic
 
 ## Index가 필요한 이유
 
