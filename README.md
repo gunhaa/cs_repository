@@ -314,6 +314,7 @@
 - [Index-basic](CS/DatabaseKyh2/IndexBasic.md)
 - [Index-advanced](CS/DatabaseKyh2/IndexAdvanced.md)
 - [Data Integrity](CS/DatabaseKyh2/DataIntegrity.md)
+- [사용 SQL](CS/DatabaseKyh2/UsedSQL.md)
 
 #### 김영한의 실전 데이터 베이스 - 설계편
 
