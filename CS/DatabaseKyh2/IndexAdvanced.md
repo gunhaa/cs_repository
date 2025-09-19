@@ -240,8 +240,6 @@ create index idx_items_price_category_temp on items (price, category);
 
 #### JOIN의 연결고리가 되는 컬럼(외래 키에 인덱스 사용)
 
-> FK는 성능을 위해 제거하고, 어플리케이션 레벨에서 체크하는 경우도 많다
-
 - JOIN의 성능은 연결고리가 되는 컬럼에 인덱스가 있는지 여부에 따라 극적으로 달라진다
 
 ```sql
