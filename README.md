@@ -33,6 +33,7 @@
   - [C](#c)
     - [독하게 C를 배운사람을 위한 선형 자료구조](#독하게-c를-배운사람을-위한-선형-자료구조)
   - [JAVA](#java)
+    - [JVM](#jvm)
     - [JPA](#jpa)
     - [SpringSecurity](#springsecurity)
     - [Webflux](#webflux)
@@ -432,7 +433,7 @@
 - [전처리기](CS/C/Preprocessor.md)
 - [함수 고급이론](CS/C/FunctionLv3.md)
 
---- 
+---
 
 ### 독하게 C를 배운사람을 위한 선형 자료구조
 
@@ -461,6 +462,12 @@
 
 ---
 
+### JVM
+
+- [JVM이란?](CS/JVM/JVM.md)
+
+---
+
 ### JPA
 
 - [JPA 최적화 순서](CS/JPA/JPA_Optimization.md)
@@ -475,7 +482,7 @@
 - [Session Fixation](CS/SpringSecurity/SessionFixation.md)
 - [JWT](CS/SpringSecurity/JWT.md)
 
---- 
+---
 
 ### Webflux
 
@@ -492,7 +499,7 @@
   - [Testing]
   - [Operator](CS/Webflux/Operator.md)
 - [SpringWebFlux]
-  
+
 ---
 
 ## Javascript
