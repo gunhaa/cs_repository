@@ -451,6 +451,7 @@
 - [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
+- [String](CS/JAVA/String2.md)
 - [String, StringBuilder, StringBuffer](CS/JAVA/String.md)
 - [JAVA의 접근 제어자](CS/JAVA/Encapsulation.md)
 - [System.out.println를 실무에서 절대 사용안하는 이유](CS/JAVA/sysout.md)
