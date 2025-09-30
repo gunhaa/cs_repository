@@ -467,6 +467,7 @@
 - [JVM이란?](CS/JVM/JVM.md)
 - [ClassLoader](CS/JVM/ClassLoader.md)
 - [JVM의 String의 관리](CS/JVM/String.md)
+- [JVM이 레지스터를 사용하지 않는 이유](CS/JVM/Register.md)
 
 ### OOP
 
