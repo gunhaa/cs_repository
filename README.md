@@ -451,7 +451,6 @@
 - [JAVA의 메모리](CS/JAVA/Memory.md)
 - [컴파일 과정](CS/JAVA/Compile.md)
 - ["한번 작성하면 어디서든 실행된다"의 의미](CS/JAVA/Mean.md)
-- [String](CS/JAVA/String2.md)
 - [String, StringBuilder, StringBuffer](CS/JAVA/String.md)
 - [JAVA의 접근 제어자](CS/JAVA/Encapsulation.md)
 - [System.out.println를 실무에서 절대 사용안하는 이유](CS/JAVA/sysout.md)
@@ -461,11 +460,13 @@
 - [Reflection](CS/JAVA/Reflection.md)
 - [버전별 특징](CS/JAVA/Version.md)
 - [바이트코드](CS/JAVA/ByteCode.md)
+- [Java Method가 Virtual Method와 같은 동작을 하는 원리](CS/JAVA/Method.md)
 
 ### JVM
 
 - [JVM이란?](CS/JVM/JVM.md)
 - [ClassLoader](CS/JVM/ClassLoader.md)
+- [JVM의 String의 관리](CS/JVM/String.md)
 
 ### OOP
 

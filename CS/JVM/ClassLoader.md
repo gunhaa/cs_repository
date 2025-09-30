@@ -1,5 +1,7 @@
 # ClassLoader
 
+> ClassLoader의 동작은 단순한 클래스 로드일 뿐이며, new연산과는 별도의 과정이다
+
 ![images1](images/classLoader.png)
 
 - 로딩, 검증, 준비, 초기화, 언로딩은 반드시 순서대로 해야한다
