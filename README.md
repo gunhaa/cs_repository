@@ -464,8 +464,13 @@
 
 ### JVM
 
+> [JVM 밑바닥까지 파헤치기](https://www.yes24.com/Product/Goods/126114513)
+
+> [널널한 개발자 JVM](https://www.inflearn.com/course/%EB%8F%85%ED%95%98%EA%B2%8C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-java-part2?gad_source=1&gad_campaignid=20714471420&gbraid=0AAAAADAClSAiZuh_0dabl5luw3TErqEhE&gclid=CjwKCAjw_-3GBhAYEiwAjh9fUATqUTlGHCf5ZYO85X9fdOtAx2WDmG3xCrv5ggd_O0roF8zewCB39hoCd7oQAvD_BwE)
+
 - [JVM이란?](CS/JVM/JVM.md)
 - [ClassLoader](CS/JVM/ClassLoader.md)
+- [Garbage Collector](CS/JVM/GarbageCollector.md)
 - [JVM의 String의 관리](CS/JVM/String.md)
 - [JVM이 레지스터를 사용하지 않는 이유](CS/JVM/Register.md)
 
