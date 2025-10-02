@@ -470,9 +470,11 @@
 
 - [JVM이란?](CS/JVM/JVM.md)
 - [ClassLoader](CS/JVM/ClassLoader.md)
-- [Garbage Collector](CS/JVM/GarbageCollector.md)
+- [Garbage Collector/Heap](CS/JVM/GarbageCollector.md)
 - [JVM의 String의 관리](CS/JVM/String.md)
 - [JVM이 레지스터를 사용하지 않는 이유](CS/JVM/Register.md)
+- [Object Memory layout & Hashcode](CS/JVM/Memory.md)
+- [Heap의 Metaspace와 Method 영역]
 
 ### OOP
 
