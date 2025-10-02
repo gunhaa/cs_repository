@@ -2,7 +2,7 @@
 
 - 아래 그림은 JVM Heap 영역의 구조이며, GC가 동작하는 방식이다
   ![images](images/garbageCollector1.png)
-
+  - Permanent 영역은 Heap영역에 포함이 되지 않는 Native 영역이며, OS의 메모리를 할당받는다
 - 어플리케이션 상황에 따라서 각 영역을 알맞게 튜닝하면 더 좋은 성능을 낼 수 있다
 
 ## Eden
