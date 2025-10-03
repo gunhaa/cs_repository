@@ -479,6 +479,7 @@
 ### OOP
 
 - [널널한 개발자/OOP](CS/OOP/NullNull.md)
+- [객체 지향의 사실과 오해](CS/OOP/ObjectFact.md)
 
 ### JPA
 
@@ -829,3 +830,4 @@
 - [오라클 성능 고도화 원리와 해법 1,2](https://product.kyobobook.co.kr/detail/S000061696047)
 - [프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략](https://product.kyobobook.co.kr/detail/S000001032946)
 - [스프링으로 시작하는 리액티브 프로그래밍 Spring WebFlux를 이용한 Non-Blocking 애플리케이션 구현](https://www.yes24.com/product/goods/118202569)
+- [객체 지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)
