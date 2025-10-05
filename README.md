@@ -487,6 +487,7 @@
 - [JVM이 레지스터를 사용하지 않는 이유](CS/JVM/Register.md)
 - [Object Memory layout & Hashcode](CS/JVM/Memory.md)
 - [Heap의 Metaspace와 Method 영역](CS/JVM/Heap.md)
+  - [Java의 메소드는 invokevirtual을 사용하는 것이 기본이다](CS/JVM/VirtualFunction.md)
 
 ### OOP
 
@@ -843,3 +844,4 @@
 - [프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략](https://product.kyobobook.co.kr/detail/S000001032946)
 - [스프링으로 시작하는 리액티브 프로그래밍 Spring WebFlux를 이용한 Non-Blocking 애플리케이션 구현](https://www.yes24.com/product/goods/118202569)
 - [객체 지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)
+- [동시성 프로그래밍](https://www.yes24.com/Product/Goods/108570426?pid=123487&cosemkid=go16534433513533699)
