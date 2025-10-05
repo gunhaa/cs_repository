@@ -30,6 +30,7 @@
     - [SQLP](#sqlp)
       - [친절한 SQL 튜닝](#친절한-sql-튜닝)
   - [멀티스레드와 동시성](#멀티스레드와-동시성)
+    - [동시성 프로그래밍](#동시성-프로그래밍)
   - [C](#c)
     - [독하게 C를 배운사람을 위한 선형 자료구조](#독하게-c를-배운사람을-위한-선형-자료구조)
   - [JAVA](#java)
@@ -400,6 +401,17 @@
 - [동시성 컬렉션](CS/MultiThreadAndConcurrency/Collection.md)
 - [스레드 풀과 Executor 프레임워크](CS/MultiThreadAndConcurrency/Executor.md)
 - [Future](CS/MultiThreadAndConcurrency/Future.md)
+
+--- 
+
+### 동시성 프로그래밍
+
+> [동시성 프로그래밍](https://www.yes24.com/Product/Goods/108570426?pid=123487&cosemkid=go16534433513533699)
+
+- [동시성 프로그래밍이란?](CS/Concurrency/ConcurrencyProgramming.md)
+  - [반도체의 구조](CS/Concurrency/Semiconductor.md)
+  - [CPU의 구조]
+  - 
 
 ---
 
