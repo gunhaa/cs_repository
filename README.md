@@ -488,6 +488,7 @@
 - [Object Memory layout & Hashcode](CS/JVM/Memory.md)
 - [Heap의 Metaspace와 Method 영역](CS/JVM/Heap.md)
   - [Java의 메소드는 invokevirtual을 사용하는 것이 기본이다](CS/JVM/VirtualFunction.md)
+- [Class의 종류](CS/JVM/Class.md)
 
 ### OOP
 
