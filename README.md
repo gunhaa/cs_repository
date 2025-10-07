@@ -408,11 +408,7 @@
 
 > [동시성 프로그래밍](https://www.yes24.com/Product/Goods/108570426?pid=123487&cosemkid=go16534433513533699)
 
-> 이 책을 공부하기 위해 C, Rust, ASM, OS 지식을 먼저 공부했음
-
 - [동시성 프로그래밍이란?](CS/Concurrency/ConcurrencyProgramming.md)
-  - [반도체의 구조](CS/Concurrency/Semiconductor.md)
-  - [CPU의 구조]
 - [동기처리1](CS/Concurrency/Synchronized1.md)
 
 ---
