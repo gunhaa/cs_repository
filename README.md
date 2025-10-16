@@ -494,6 +494,10 @@
 - [널널한 개발자/OOP](CS/OOP/NullNull.md)
 - [객체 지향의 사실과 오해](CS/OOP/ObjectFact.md)
 
+### Spring
+
+- [@Transactional 롤백 정책](CS/Spring/Transactional.md)
+
 ### JPA
 
 - [JPA 최적화 순서](CS/JPA/JPA_Optimization.md)
