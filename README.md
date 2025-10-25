@@ -17,7 +17,8 @@
     - [PintOS](#pintos)
     - [OS구조와 원리](#os구조와-원리)
   - [네트워크](#네트워크)
-    - [네트워크기초-크래프트맨](#네트워크기초-크래프트맨)
+    - [(학부 24-1) 통신 및 네트워크 개론](#학부-24-1-통신-및-네트워크-개론)
+    - [네트워크 기초](#네트워크-기초)
   - [데이터베이스](#데이터베이스)
     - [김영한 실전 데이터 베이스 로드맵](#김영한-실전-데이터-베이스-로드맵)
       - [김영한의 실전 데이터 베이스 입문 - SQL부터 차근차근](#김영한의-실전-데이터-베이스-입문---sql부터-차근차근)
@@ -36,6 +37,7 @@
   - [JAVA](#java)
     - [JVM](#jvm)
     - [OOP](#oop)
+    - [Spring](#spring)
     - [JPA](#jpa)
     - [SpringSecurity](#springsecurity)
     - [Webflux](#webflux)
@@ -259,7 +261,15 @@
 
 ---
 
-### 네트워크기초-크래프트맨
+### (학부 24-1) 통신 및 네트워크 개론
+
+> https://www.youtube.com/playlist?list=PL2fxOURY4wI4U438r2j1u0M6L5bxJ67Pi
+
+- [Lecture Overview](CS/NetworkIntro/Overview.md)
+
+---
+
+### 네트워크 기초
 
 > https://www.youtube.com/watch?v=dsoAkoxZ13o
 
