@@ -266,6 +266,8 @@
 > https://www.youtube.com/playlist?list=PL2fxOURY4wI4U438r2j1u0M6L5bxJ67Pi
 
 - [Lecture Overview](CS/NetworkIntro/Overview.md)
+- [Network Overview](CS/NetworkIntro/Network.md)
+- [Ethernet](CS/NetworkIntro/Ethernet.md)
 
 ---
 
