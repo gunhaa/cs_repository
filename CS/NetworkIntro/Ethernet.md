@@ -3,7 +3,7 @@
 - 하나의 LAN(Local Area Network) 내에서 장치 간 데이터를 전송하기 위한 프로토콜
   - 링크 계층의 기본 서비스는 단일 통신 링크상으로 데이터그램을 한 노드에서 인접 노드로 '이동' 시키는 것이다
   - 링크 계층의 프로토콜이 제공하는 서비스는 다음과 같다
-    1. 프레임화: Network layer의 packet을 frame으로 캡슐화한다
+    1. 프레임화: Link layer의 packet을 frame으로 캡슐화한다
     2. 링크 접속: 매체 접속 제어(mediun access control, MAC) protocol은 링크상 프레임을 전송하는 규칙을 명시한다. point to point의 경우 단순하게 동작하며, 하나의 broadcast link를 공유하는 경우 MAC이 node로부터의 전송을 조정한다 
     3. 신뢰적 전달: 신뢰적 전달 기능을 제공하는 경우 링크상에서 오류없이 전달된다. (TCP와 같은) 일부 트랜스포트 계층 프로토콜에서는 신뢰적 전달 서비스를 제공한다
     4. 오류 검출과 정정: 송신 노드에서 오류 검출 비트를 설정하게하고 수신 노드에서 오류 검사를 수행하게 함으로써 가능하다. Link layer의 일반적인 서비스이다
@@ -44,7 +44,7 @@
 - 데이터 비트를 이진 다항식(binary polynomial) 으로 보고, 송신 측에서 미리 정해진 생성 다항식(G(x)) 으로 나누어 나머지(R) 를 붙여 전송
 - 계산 복잡도가 다소 높아 소프트웨어 계층보다는 하드웨어 구현에 적합해서 link layer에서 사용된다
 
-#### 왜 검증을 Transport(TCP/UDP), Network Layer 두군데에서 함?
+#### 왜 검증을 Transport(TCP/UDP), Link Layer 두군데에서 함?
 
 - 링크 계층(Ethernet) 은 패킷의 가장 첫 전달 지점이다
   - 만약 여기서 비트 하나라도 잘못되면, 상위 계층으로 올라가는 모든 데이터가 잘못된다
@@ -107,7 +107,7 @@
 ### ARP (address Resoulution Protocol)
 
 - IP주소로부터 해당 장치의 MAC주소를 알아내는 protocol
-- Network Layer에서 캡슐화 전에 ARP를 사용해서 MAC주소 요청후 헤더에 추가시킨다(캡슐화)
+- Link Layer에서 캡슐화 전에 ARP를 사용해서 MAC주소 요청후 헤더에 추가시킨다(캡슐화)
 - IP주소로 ARP를 써야하는지는 서브넷 마스크를 보고 판별한다
   - 내 IP: `192.168.0.2`
   - 상대 IP: `192.168.0.10`
@@ -124,3 +124,15 @@
 4. 해당 IP를 가진 장치가 ARP Reply(유니캐스트)로 응답
 - "나야! 내 MAC은 00:11:22:33:44:55야."
 5. 송신자는 이 정보를 ARP 캐시 테이블에 저장
+
+### 스위치
+
+- 스위치(Switch)는 링크 계층(Layer 2) 장치로, MAC 주소를 이용해 프레임을 목적지 장치로 전달하는 역할을 한다.
+- switch는 목적지의 MAC주소를 자신의 테이블에서 찾아 없다면 받은 포트를 제외한 모든 포트로 프레임을 전송한다
+- TTL이 존재하여 일정 시간이 지나면 MAC테이블의 항목이 사라진다
+
+#### 스위치의 문제
+
+- Switch는 목적지가 자신이 아니라면 broadcasting하기 때문에(flooding) 무한 루프 문제(broadcasting storm)가 발생한다
+- 이 문제를 해결하기 위해 STP(spanning tree protocol)을 사용한다
+  - root switch를 정해 이를 토대로 우선 순위를 토대로 graph의 vertex를 차단해 무한 루프를 막는다
