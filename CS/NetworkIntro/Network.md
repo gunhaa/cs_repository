@@ -33,3 +33,4 @@
   - Layer의 input, output이 정해졌기에 내부 구현은 많은 벤더들이 여러가지 방식으로 개발하여 시간이 지날수록 효율적인 통신(인터넷)이 만들어지게 된 것이다
 - link layer에는 switch(내부 네트워크 내부 통신)
 - network layer에서는 router(다른 네트워크 간 연결)
+- 
