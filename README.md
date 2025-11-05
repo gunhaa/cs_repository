@@ -268,7 +268,8 @@
 
 - [Lecture Overview](CS/NetworkIntro/Overview.md)
 - [Network Overview](CS/NetworkIntro/Network.md)
-- [Ethernet](CS/NetworkIntro/Ethernet.md)
+- [Link Layer](CS/NetworkIntro/Link.md)
+  - [Wifi](CS/NetworkIntro/Wifi.md)
 
 ---
 
