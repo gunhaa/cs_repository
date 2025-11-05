@@ -45,7 +45,7 @@
 ## MIMO(Multiple Input Multiple Output)
 
 - Wi-Fi 4부터 MIMO가 물리계층에 도입되었다
-  - AP가 사용자의 upstream으로 request를 받을 때 사용자의 위치를 계산한 뒤, 송신 할 때 사용자의 위치를 파동의 위상 조정으로 빔을 형성한다(Beamforming)으로 단일 사용자에게 동시에 보내는 기술로 시작되었다(wifi4)
+  - AP가 사용자의 upstream으로 request를 받을 때 사용자의 위치를 계산한 뒤, 송신 할 때 사용자의 위치를 파동의 위상 조정으로 빔을 형성(Beamforming)으로 단일 사용자에게 동시에 보내는 기술로 시작되었다(wifi4)
   - 여러 사용자에게 동시에 보내는 기술은 wifi5에 도입되었다(MU - MIMO, Multi User MIMO)
   - Uplink + Downlink MU-MIMO 를 모두 지원하여 AP와 여러 사용자가 양방향으로 동시에 통신할 수 있게 되었다(wifi6) 
     - 여기에 OFDMA (Orthogonal Frequency Division Multiple Access)가 결합되어, 하나의 채널을 여러 주파수 조각(RU)으로 나누어 사용자별로 병렬 전송이 가능해졌다
