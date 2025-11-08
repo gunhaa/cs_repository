@@ -264,7 +264,9 @@
 
 ### (학부 24-1) 통신 및 네트워크 개론
 
-> https://www.youtube.com/playlist?list=PL2fxOURY4wI4U438r2j1u0M6L5bxJ67Pi
+> 강의: https://www.youtube.com/playlist?list=PL2fxOURY4wI4U438r2j1u0M6L5bxJ67Pi
+
+> 참고 자료(강의 교재와 다름): [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
 
 - [Lecture Overview](CS/NetworkIntro/Overview.md)
 - [Network Overview](CS/NetworkIntro/NetworkOverview.md)
