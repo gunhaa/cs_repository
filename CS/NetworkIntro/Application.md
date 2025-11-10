@@ -141,3 +141,15 @@ int main() {
     - 이로 인해 socket을 만드는 시간을 절약하고, tcp handshake 낭비를 덜하게되며 서버 측에서는 이로 인해 서버는 하나의 연결 위에서 여러 요청을 동시에 처리할 수 있어 병렬 응답이 가능하며, TCP 연결 생성 오버헤드가 줄어든다
   - HTTP/2의 멀티플렉싱(데이터의 통합)은 브라우저가 진행하며, 개발자는 개입할 수 없다
 - 요청 우선순위화, 서버 푸시, HTTP Header의 효율적인 압출을 제공한다
+
+## DNS, domain name service
+
+- DNS는 인터넷의 디렉터리 서비스이다
+- 사람의 식별 방법은 이름보다 주민 등록 번호가 좋은 것처럼, 인터넷 호스트도 식별할 수 있는 방법이 필요하다
+  - host name(호스트 이름)을 식별자로 사용한다 e.g. google.co.kr, naver.com
+  - host name을 사용한다면 기억하기 쉬워 사용자들이 좋아한다
+  - 하지만 host name은 인터넷에 host 위치에 대한 정보를 제공하지 않는다
+- 즉, 사람은 기억하기 쉬운 host name identifier를 좋아하지만, router는 고정 길이의 계층 구조를 가진 IP주소를 좋아한다
+  - 이런 선호 차이를 절충하기 위해 host name을 ip주소로 변환해주는 디렉터리 서비스가 필요하다
+  - 이것이 인터넷 DNS의 주요 임무이다
+- DNS는 DNS server의 계층구조로 구현된 분산 데이터베이스이며, host가 분산 데이터베이스로 질의하도록 허락하는 application layer protocol이다
