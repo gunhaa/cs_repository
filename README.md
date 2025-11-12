@@ -11,6 +11,8 @@
 단순하고 자유롭게 다루기 위해 GitHub에서 Markdown으로 학습 내용을 정리하고 있습니다.
 ```
 
+## INDEX
+
 - [개발 상식](#개발-상식)
   - [WebRTC](#webrtc)
   - [GITHUB](#github)
@@ -265,13 +267,14 @@
 
 > 강의: https://www.youtube.com/playlist?list=PL2fxOURY4wI4U438r2j1u0M6L5bxJ67Pi
 
-> 참고 자료(강의 교재와 다름): [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
+> 참고 자료: [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
 
 - [Lecture Overview](CS/NetworkIntro/Overview.md)
 - [Network Overview](CS/NetworkIntro/NetworkOverview.md)
 - [Link Layer](CS/NetworkIntro/Link.md)
   - [Wifi](CS/NetworkIntro/Wifi.md)
 - [Network Layer](CS/NetworkIntro/Network.md)
+  - [InterNetworking](CS/NetworkIntro/InterNetworking.md)
 - [Transport Layer](CS/NetworkIntro/Transport.md)
 - [Application Layer](CS/NetworkIntro/Application.md)
 
