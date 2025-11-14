@@ -24,3 +24,4 @@ destination port number, etc.
 - A TCP segment is encapsulated into an IP packet.
 - much more reliable
 
+### 3 way handshake - 4 way off
