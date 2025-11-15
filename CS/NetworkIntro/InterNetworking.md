@@ -48,6 +48,9 @@ address, it sends a DHCP request
 ## NAT Network Address Transalation/Translator
 
 - NAT
+  - def) private ip와 public ip의 주소 변환 기술
+    - why? 내부 사설 네트워크의 여러 장치가 하나의 공인 IP로 외부와 통신하도록 함
+    - how? 라우터가 패킷의 출발지(IP, Port) 또는 목적지(IP, Port) 정보를 바꿔서 전송
   - Network addresses quickly ran out.
   - A new addressing scheme of IPv6 requires new version of the Internet Protocol.
   - a quick fix to reuse IP addresses:
