@@ -162,6 +162,7 @@
 > https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98
 
 - [운영체제란?](CS/Joonion/OperationSystem.md)
+- [Process](CS/Joonion/Process.md)
 
 ---
 
@@ -293,6 +294,14 @@
 - [Network란?](CS/Network/CraftMan/Network.md)
 - [Internet Protocol](CS/Network/CraftMan/InternetProtocol.md)
 - [데이터 단위](CS/Network/CraftMan/Data.md)
+
+---
+
+### Socket
+
+> https://beej.us/guide/bgnet/
+
+
 
 ---
 
