@@ -16,6 +16,27 @@
   - modern operating systems have extended the process concept
     - to allow a process to have multiple threads(lightweight process) of execution
     - and thus perform more than one task at a time
+- Process have two possibilites for execution
+  - the parent continues to execute concurrently with its children
+  - the parent waits until some or all of its childrent have terminated
+- Process have two possibilites of address-space
+  - the child process is a duplicate of the parent process
+  - the child process has a new programs loaded into it
+- Process terminates
+  - when it finishes executing its final statement
+  - exit() system call: asks OS to delete it
+  - OS deallocated and reclaims all the resources:
+    - allocated memories, open files, and I/O buffers, etc
+- zombie and orphan
+  - zombie process: 실행이 끝났지만, 부모 프로세스가 wait()를 호출하지 않아 자식의 종료 정보를 회수하지 못함, 그래서 PCB가 커널에 남아 있음
+  - orphan process: 부모 프로세스가 먼저 종료되어, 부모가 사라진 자식 프로세스
+- in UNIX-like O/S
+  - a new process is created by the fork() system call
+  - the child process consists of a copy of the address space of the parent process
+  - both processes continue execution at the instruction after the fork() system call
+  - with one diff
+    - the return code for the fork() is zero for the child process, whereas 
+    - the nonzero pid of the child is returned to the parent process
 
 ### PCB(Process Control Block) e.g.TCB(Task Control Block)
 
@@ -36,4 +57,24 @@
 - Sceduling Queues
   - As processes enter the system, they are put into a ready queue, where they are ready and waiting to execute on a CPU's core
   - processes that are waiting for a certain event to occur are placed in a wait queue
-  - these queues are generally implemented in the linked lists of PBCs
+  - these queues are generally implemented in the linked lists of PCBs
+- Context Switching
+  - The context of a process is a represented in the PCB
+  - when an interrupt occurs, the system saves the current context of the running process, so that, later, it can restore that context when it should be resumed
+- The context switch is a task that
+  - switches the CPU core to another process
+  - performs a state save of the current process
+  - and a state restore of a diffrent process
+- A process may create several new processes
+
+# Interprocess Communication(IPC)
+
+- a process is independent
+  - if it does not share date with any other processses
+- a process is cooperating
+  - if it can affect or be affected by the other processes
+  - clearly, any processes that shares data with other processes is a cooperating process
+- IPC
+  - cooperating processes require an IPC mechanism
+    - that will allow them to exchange data
+    - that is, send data to and receive data from each other
