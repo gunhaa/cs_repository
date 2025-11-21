@@ -78,3 +78,19 @@
   - cooperating processes require an IPC mechanism
     - that will allow them to exchange data
     - that is, send data to and receive data from each other
+
+### IPC in shared-memory system
+
+- Consider the Producer-Consumer Problem
+  - to illistrate the concept of cooperating processes
+  - a common paradigm for cooperating process
+- Producer-Consumer problem
+  - A producer produces information that is consumed by a consumer
+  - e.g. a compiler produces assembly code, and a assembler consumes it, a web server produces an HTML file, and a browser consumes it
+- (Consumer - Producer)A solution using shared memory
+  - To allow producer and consumer to run concurrently
+  - let a buffer of items be available
+    - a producer can fill the buffer and a consumer can empty the buffer
+  - a shared memory is a region memory
+    - that is shared by the producer and consumer processes
+  - the CODE for accessing and manipulating the shared memory be written explicitly by the application programmer
