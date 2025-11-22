@@ -94,3 +94,102 @@
   - a shared memory is a region memory
     - that is shared by the producer and consumer processes
   - the CODE for accessing and manipulating the shared memory be written explicitly by the application programmer
+
+### Message-Passing
+
+- O/S provides the means for cooperating processes
+  - to communicate with each other via a message-passing facility
+- Two operations of the message-passing facility
+  - send(message)
+  - receive(message)
+- Comminication links
+  - if two processes P and Q want to communicate
+    - the must send to and receiv messages from each other
+  - this comm. link can be implemented in a variety of ways
+    - direct or indirect communication
+    - synchronous and asynchornous communication
+    - automatic or explicit buffering
+- Under direct communication(process 직접 통신, socket 통신과 유사)
+  - each process that wants to communicate
+    - must explicitly name the recipent or sender of the communication
+  - The primitives of the scheme
+    - send(P, msg) - send a message to process P
+    - receive(Q, msg) - receiv a message from process Q
+  - The properties of communication links in this scheme
+    - Links are established automatically
+    - A link is associated with exactly two processes
+    - There exists exactly one link between each pair of processes
+- Under indirect communication(server-client(port) 모델과 유사)
+  - the messages are sent to and received from mailboxes or ports
+  - a mailbox(also reffered to as ports)
+    - can be viewed abstractly as an object
+    - into which messages can be placed by processes and
+    - from which messages can be removed
+  - The primitives of the scheme
+    - send(A, msg) - send a message to mailbox A
+    - receive(A, msg) - receive a message from mailbox A
+  - diffrent design option for implementation
+    - blocking or non-blocking
+
+### Examples of IPC System
+
+- Shared memory: POSIX Shared Memory
+  - POSIX: Protable Operating System Interface(for unix)
+  - unix에서 정한 system call interface로, windows는 따르지않고, linux도 따르지않던 추세였으나 현재는 대부분 맞추는 방향으로 가고 있다(가장 다른 것은 epoll), macOS는 매우 준수하게 지켰다
+- Messages Passing: Pipes
+  - One of the earliest IPC mechanism on UNIX systems
+
+#### POSIX Shared memory
+
+- is organized using memory-mapped files
+  - which associate the region of shared memory with a file
+- First, create a shared-memory object(0666 = 권한, permission)
+  - `fd = shm_open(name, O_CREAT | ORDWR, 0666);`
+- Configure the size of the object in bytes
+  - `ftruncate(fd, 4096)`
+- Finally, establish a memory-mapped file
+  - `mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);`
+
+#### Pipes
+
+- one of the first IPC mechanisms in early UNIX systems
+- A pipe acts as a conduit(통로) allowing two processes to communicate
+- four issues of pipe implementation
+  1. does the pipe allow unidirectional or bidirectional communication
+  2. in the case of two-way comm., is it half-duple or full duplex
+  3. Must a relationship exist between the communicating process? such as parent-child
+  4. can the pipes communicate over a network
+- Two common types of pipes
+  - Ordinary pipes
+    - cannot be accessed from outside the process that created it
+    - Typically, a parent process creates a pipe and uses it to communicate with a child process that it created
+    - allow two processes to communicate in producer-consumer fashion
+      - the producer writes to one end of the pipe(write end)
+      - the consumer reads from the other end(read end)
+    - unindirectional: only one-way communication is possilbe
+    - if need two-way communication, use two pipes
+    - on UNIX systems ordinary pipes are constructed using the function
+      - `pipe(int fd[])`
+      - `fd[0]`: the read end of the pipe
+      - `fd[1]`: the write end
+  - Named pipes
+    - can be accessed without a parent-child relationship
+
+### Communication in Client-Server Systems
+
+- process간 통신에도 client-server 전략을 사용할 수 있다
+- Two other strategies in client-server systems
+  - sockets
+    - are defined as endpoints for communication
+  - RPC's (Remote Procedure Calls)
+    - abstracts procedure calls between processes on networked systems
+- Socket is
+  - identified by an IP address concatenated with a port number
+- RPC system is
+  - hides the details allow communication to take place
+    - by providing a stub(proxy function) on the client side
+  - the stub of client-side locates the server and
+    - marshals the parameters
+  - the stub of server-side received this message
+    - unpacks the marshalled parameters and
+    - performs the procedure on the server
