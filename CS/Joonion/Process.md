@@ -189,7 +189,7 @@
   - hides the details allow communication to take place
     - by providing a stub(proxy function) on the client side
   - the stub of client-side locates the server and
-    - marshals the parameters
+    - marshals(직렬화, byte stream으로 변환시킴) the parameters
   - the stub of server-side received this message
     - unpacks the marshalled parameters and
     - performs the procedure on the server
