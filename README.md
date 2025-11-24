@@ -166,6 +166,7 @@
 - [운영체제란?](CS/Joonion/OperationSystem.md)
 - [Process](CS/Joonion/Process.md)
 - [Thread](CS/Joonion/Thread.md)
+- [CPU Scheduling](CS/Joonion/CPUScheduling.md)
 
 ---
 
