@@ -167,6 +167,7 @@
 - [Process](CS/Joonion/Process.md)
 - [Thread](CS/Joonion/Thread.md)
 - [CPU Scheduling](CS/Joonion/CPUScheduling.md)
+- [Synchronization tools](CS/Joonion/Synchronization.md)
 
 ---
 
