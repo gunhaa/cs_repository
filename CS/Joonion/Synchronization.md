@@ -134,3 +134,42 @@ while(test_and_set(&lock))
     - can be used to ensure mutual exclusion in situations
     - where there may be a single variable with race condition
   - 즉 아토믹 변수는 CAS연산의 응용이며, 이를 활용해 상호 배제/ 레이스 컨디션을 보장한다
+
+## Mutex Locks
+
+- Higher-level software tools to solve the CSP(critical section problem)
+  - Mutex Locks: the simplest tools for synchronization
+  - Semaphore: more robust, convenient, and effective tool
+  - Monitor: overcomes the demerits of mutex and semaphore
+  - Liveness: ensures for processes to make progress
+- Mutex Lock
+  - mutex: MUtual EXclusion
+  - to protect critical section and prevent race condition
+  - a process must acquire the lock before entering a critical section
+  - releases the lock when it exits the critical section
+- Two functions and one variable for the Mutex Locks
+  - `acquire()` and `release()`
+  - available: a Boolean variable whose value indicates
+    - if the lock is available or not
+  ```C
+  acquire() {
+    while (!available) {}
+      // busy waiting
+    available = false;
+  }
+
+  release() {
+    available = true;
+  }
+  ```
+  - calls to either acquire() and release() must be performed atomically
+  - can be implemented using the compare_and_swap operation
+  - the type of mutex lock using the method of busy waiting
+    - the process spins while waiting for the lock to become available
+  - however, spinlocks do have an advantage,
+    - in that no context switch is required waiting on a lock
+    - a context switch may take considerable time
+  - IN certain circumstances on multicore systems,
+    - spinlocks are the preferable choice for locking
+    - one thread can spin on one processing core
+    - while another thread performs its critical section on another core
