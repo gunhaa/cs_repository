@@ -173,3 +173,51 @@ while(test_and_set(&lock))
     - spinlocks are the preferable choice for locking
     - one thread can spin on one processing core
     - while another thread performs its critical section on another core
+
+## Semaphore
+
+- A semaphore S is 
+  - an integer variable that, aprat from initialization
+  - is accessed only through two standard atomic operations:
+  - wait() and signal(), or sometimes P() and V()
+- defining of wait() and signal()
+```C
+// 조건을 만족하지 못하면 spin 대기를 한다
+wait(S) {
+    S--;
+    while (S <= 0);
+        // busy wait
+}
+
+// 내가 사용을 중지하는 신호를 준다
+signal(S) {
+    S++;
+}
+```
+
+- All modifications to the integer value of the semphore
+  - in the wait() and signal() operations must be executed atomically
+- Binary and Counting Semaphores
+  - Binary Semaphore
+    - rang only between 0 and 1: similar to mutex lock
+  - Counting Semaphore
+    - range over and unrestricted domain
+    - can be used to resources with a finite number of instance
+- Semaphore Implementation
+  - Semaphores also suffer. from the problem of busy waiting
+  - To overcome this problem, modify the definition of P() and V()
+  - When a process executes the wait() operation
+    - and finds that the semaphore is not positive, it must wait
+    - rather than busy waiting, suspend itself and goes to the waiting queue
+  - When other process executes the signal() operation
+    - waiting processes can be restarted and placed into the ready queue
+
+## Monitors
+
+- The difficulty of using semaphores
+  - the semaphore is convenient and effective for synchoronization
+  - however, timing errors can happen
+    - if particular execution sequences take place
+    - these sequences do not always occur,
+    - and it is hard to detect
+    - 프로그래머가 제대로 코딩을 하면 생기지 않는 문제이지만, 사람이 실수를 할 수는 없기에 찾기 힘든 문제가 생기는 것이다
