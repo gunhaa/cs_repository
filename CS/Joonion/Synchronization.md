@@ -221,3 +221,101 @@ signal(S) {
     - these sequences do not always occur,
     - and it is hard to detect
     - 프로그래머가 제대로 코딩을 하면 생기지 않는 문제이지만, 사람이 실수를 할 수는 없기에 찾기 힘든 문제가 생기는 것이다
+- java에서는 wait()을 통해 wait set으로 보내고, notify()를 통해 깨운다
+  - wait()은 notify()가 없더라도 꺠어날 수 있어, while로 방어하는 로직이 best이다
+  - Spurious Wakeup이라고 부르며, java 정식 스펙이다(JLS)
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class ProducerConsumerExample {
+
+    // 1. 공유 자원: 유한한 크기의 버퍼
+    private static final int CAPACITY = 5;
+    private final Queue<Integer> buffer = new LinkedList<>();
+
+    // 2. 생산자 메서드
+    public void produce(int value) throws InterruptedException {
+        synchronized (buffer) { // 🔒 synchronized: 락 획득 (상호 배제)
+
+            // wait() 사용 (조건 불충족 시 대기)
+            // 버퍼가 가득 찼으면 (조건: buffer.size() < CAPACITY), 생산자는 락을 해제하고 대기
+            while (buffer.size() == CAPACITY) {
+                System.out.println("생산자: 버퍼 가득 참. 대기 시작. (Size: " + buffer.size() + ")");
+                buffer.wait(); // 락 해제 후 대기 셋(Wait Set)으로 이동
+                // 깨어나도 다시 조건 확인
+            }
+
+            // 조건 충족 시 작업 진행
+            buffer.add(value);
+            System.out.println("생산자: 아이템 생성 -> " + value + " (Size: " + buffer.size() + ")");
+
+            // notifyAll() 사용 (조건 충족 알림)
+            // 새로운 아이템을 추가했으니, 혹시 소비자가 기다리고 있다면 깨워줍니다.
+            buffer.notifyAll();
+            
+        } // synchronized: 블록을 나가며 락 해제
+    }
+
+    // 3. 소비자 메서드
+    public int consume() throws InterruptedException {
+        int value = -1;
+
+        synchronized (buffer) { // 🔒 synchronized: 락 획득 (상호 배제)
+
+            // wait() 사용 (조건 불충족 시 대기)
+            // 버퍼가 비어 있으면 (조건: !buffer.isEmpty()), 소비자는 락을 해제하고 대기
+            while (buffer.isEmpty()) {
+                System.out.println("소비자: 버퍼 비어 있음. 대기 시작. (Size: " + buffer.size() + ")");
+                buffer.wait(); // 락 해제 후 대기 셋(Wait Set)으로 이동
+                // 깨어나도 다시 조건 확인
+            }
+
+            // 조건 충족 시 작업 진행
+            value = buffer.poll();
+            System.out.println("소비자: 아이템 소비 <- " + value + " (Size: " + buffer.size() + ")");
+
+            // notifyAll() 사용 (조건 충족 알림)
+            // 아이템을 제거했으니, 혹시 생산자가 기다리고 있다면 깨워줍니다.
+            buffer.notifyAll(); 
+            
+        } // synchronized: 블록을 나가며 락 해제
+
+        return value;
+    }
+
+    // 메인 실행 부분 (스레드 생성 및 실행)
+    public static void main(String[] args) {
+        ProducerConsumerExample pc = new ProducerConsumerExample();
+        
+        // 생산자 스레드
+        Thread producer = new Thread(() -> {
+            try {
+                for (int i = 0; i < 10; i++) {
+                    pc.produce(i);
+                    Thread.sleep(100); // 시뮬레이션 지연
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        });
+        
+        // 소비자 스레드
+        Thread consumer = new Thread(() -> {
+            try {
+                for (int i = 0; i < 10; i++) {
+                    pc.consume();
+                    Thread.sleep(300); // 시뮬레이션 지연
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        producer.start();
+        consumer.start();
+    }
+}
+```
+- while 루프를 사용하면, 스레드가 깨어난 후 곧바로 임계 영역을 실행하는 대신, 루프의 조건문으로 돌아가 "내가 깨어날 조건이 정말 충족되었는지?"를 다시 확인한다(java의 best practice)
