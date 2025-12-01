@@ -2,7 +2,7 @@
 
 ```plaintext
 공부를 위해 여러 자료를 찾아보며 올바르고 자세한 자료를 찾기 어려운 경우가 많았습니다.
-그래서 시간 낭비를 줄이고자 전공책/ 공식문서를 바탕으로 올바른 자료를 찾아 정리하기 시작했습니다.
+그래서 시간 낭비를 줄이고자 전문가 강의/ 전공책/ 공식문서를 바탕으로 올바른 자료를 찾아 정리하기 시작했습니다.
 Markdown으로 학습 내용을 정리하고 있습니다.
 ```
 
@@ -166,6 +166,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Thread](CS/Joonion/Thread.md)
 - [CPU Scheduling](CS/Joonion/CPUScheduling.md)
 - [Synchronization tools](CS/Joonion/Synchronization.md)
+- [Deadlock](CS/Joonion/Deadlock.md)
 
 ---
 
