@@ -167,6 +167,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [CPU Scheduling](CS/Joonion/CPUScheduling.md)
 - [Synchronization tools](CS/Joonion/Synchronization.md)
 - [Deadlock](CS/Joonion/Deadlock.md)
+- [Main Memory](CS/Joonion/MainMemory.md)
 
 ---
 

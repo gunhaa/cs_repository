@@ -1,5 +1,7 @@
 # Synchronization Tools
 
+> 요약: 모든 동기화는 instruction set이 atomic하게 진행되지 않는 상황에서 context switching이 scheduler에 의해 발생해서 생기는 것이며 이를 막는 트릭들을 `synchronization tools`라고 하는 것이다
+
 - Cooperating processes
   - can either affect or be affected by each other
   - can share a logical address space or be allowed to share data
@@ -48,7 +50,6 @@
   - to make such a gurantee,
     - we require that the processes are synchronized in some way
     - to say, process(or thread) synchronization
-- **모든 동기화는 instruction set이 atomic하게 진행되지 않는 상황에서 context switching이 scheduler에 의해 발생해서 생기는 것이며 이를 막는 트릭들을 `synchronization tools`라고 하는 것이다
 
 ## The Critical Section Problem
 
