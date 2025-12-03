@@ -53,3 +53,38 @@
   - break physical memory into fixted-sized blocks(frames), 물리적 메모리를 프레임이라 불리는 같은 크기 블록으로 나눈다
   - and break logical memory into blocks of the same size(pages), 논리 메모리는 페이지라 불리는 같은 크기의 블록으로 나눈다
   - the logical address space is totally seperate from the physical address space
+- The page size(like the frame size)
+  - is defined by the hardware
+  - a power of 2: typically varying between 4KB and 1GB per page
+  - If the size of logical address space is 2^m and a page size is 2^n
+    - then the high-order m-n bits designate the page number,
+    - and the low-order n bits designate the page offset
+- TLB(Translation Look-Aside Buffer)
+   - TLB는 특수한 소형 하드웨어 캐시이다
+   - 메인 메모리에 페이지 테이블에 저장하면 context switching이 빨라지지만, memory access가 느려질 수 있다
+     1. TLB에 찾는 정보가 없으면 TLB 미스가 발생하고, CPU는 페이지 테이블을 참조하여 해당 가상 주소의 변환 정보를 찾는다
+     2. 페이지 테이블을 확인했을 때 해당 페이지가 RAM에 없다면 (유효 비트=0), 페이지 폴트가 발생하며 운영체제가 디스크에서 해당 페이지를 RAM으로 로드한 후 실행을 재개한다
+     3. 반면, 페이지 테이블에 정보가 있고 RAM에 있다면 (유효 비트=1), 물리 주소를 획득하여 TLB를 업데이트한 후 곧바로 RAM에 접근한다
+
+## Page Table
+
+- 현대 Page table은 Inverted Page table로 구성되어 있다(계층적 페이징, 해시 페이지 테이블도 많이 사용)
+  - Rather than having a page table, use an inverted page table
+    - only entry for each real page
+    - consisting of the virtual address
+    - with information about the process
+  - 가상주소는 일반적(IBM RT)으로 <process-id, page-number, offset>으로 구성되어 있다
+  - 역페이지 엔트리는 <process-id, page-number>로 이루어져있다
+    - 그래서 페이지 테이블에는 페이지 갯수만큼의 레코드가 필요하다
+    - 레코드가 많기에 빠른 접근을 위해 해시 테이블방식을 사용한다
+  - 역페이지 엔트리에 존재한다면 <index, offset>을 검색해 사용한다
+
+## Swapping
+
+- makes it possible for the total physical address space of all processes
+  - to exceed the readl physical memory of system
+- thus increasing the degree of multiprogramming in system
+- Process instructions and data must be in memory to be executed
+  - However, a process, or a portion of a process
+  - can be swapped temporally out of memory to a backing store
+  - and then brought back into memory for continued execution
