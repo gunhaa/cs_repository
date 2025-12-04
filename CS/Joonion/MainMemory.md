@@ -88,3 +88,4 @@
   - However, a process, or a portion of a process
   - can be swapped temporally out of memory to a backing store
   - and then brought back into memory for continued execution
+- 스와핑이 발전하고 고도화되어 다음 챕터에 나오는 virtual memory가 된다
